@@ -1,0 +1,245 @@
+import google.generativeai as genai
+import os
+from typing import List, Dict
+import json
+import asyncio
+from services.ml_service import ml_service
+
+class AIService:
+    def __init__(self):
+        self.dataset = {}
+        self.load_dataset()
+        
+        api_key = os.getenv("GEMINI_API_KEY")
+        if api_key:
+            genai.configure(api_key=api_key)
+            self.model = genai.GenerativeModel('gemini-2.5-flash')
+            self.has_key = True
+        else:
+            print("Warning: GEMINI_API_KEY not found. AI features will respond with mock data.")
+            self.has_key = False
+
+    def load_dataset(self):
+        try:
+            with open("backend/dataset.json", "r") as f:
+                self.dataset = json.load(f)
+            print("Loaded domain dataset.")
+        except FileNotFoundError:
+            print("No dataset.json found. Using generic knowledge.")
+            self.dataset = {}
+
+    async def get_chat_response(self, message: str, context: List[Dict[str, str]], student_profile: Dict = None) -> str:
+        if not self.has_key:
+            return "I am a mock AI. (Dataset loaded: {})".format(bool(self.dataset))
+        
+        # --- HYBRID LOGIC START ---
+        system_context = "You are an AI Study Assistant for Computer Science students."
+        
+        if student_profile:
+            system_context += f"""
+            You are talking to {student_profile.get('name')}, who is in semester {student_profile.get('current_semester')}.
+            Student Profile:
+            - Interests: {student_profile.get('interests')}
+            - Learning Style: {student_profile.get('learning_style')}
+            - Study Pace: {student_profile.get('study_pace')}
+            - Weak Subjects: {student_profile.get('weak_subjects')}
+            
+            Always tailor your advice to their learning style and pace. 
+            If they mention a weak subject, be extra explanatory.
+            """
+        
+        # 2. Inject simple RAG from dataset
+        if self.dataset:
+            system_context += f"\nRelevant Domain Knowledge: {json.dumps(self.dataset.get('study_resources', {}))}."
+        # --- HYBRID LOGIC END ---
+
+        history = []
+        for msg in context:
+            role = "user" if msg['role'] == "user" else "model"
+            history.append({"role": role, "parts": [msg['content']]})
+            
+        full_message = f"{system_context}\n\nUser Query: {message}" if system_context else message
+
+        chat = self.model.start_chat(history=history)
+        response = await chat.send_message_async(full_message)
+        return response.text
+
+    async def generate_fyp_suggestions_hybrid(self, student_id: str) -> Dict:
+        """Hybrid approach: Get ML calculated projects, then have AI explain them."""
+        # 1. Get Hard Data from Heuristics
+        recommendations = await ml_service.recommend_fyp_projects(student_id)
+        
+        if not recommendations:
+             return {"suggestions": [], "message": "No projects matched your skills yet. Try completing more courses!"}
+
+        if not self.has_key:
+            return {"suggestions": recommendations}
+
+        # 2. Have AI Polish/Explain the recommendations
+        prompt = f"""
+        I have calculated the 3 best Final Year Projects for this student based on their grades and interests.
+        
+        Calculated Recommendations:
+        {json.dumps(recommendations, default=str)}
+        
+        Task:
+        Rewrite the "rationale" for each project to be encouraging and exciting for the student. 
+        IMPORTANT: Preserve all other fields (title, description, score, match_score, category, matching_skills) exactly as they are.
+        Return JSON structure: {{ "suggestions": [ ... ] }}
+        """
+        
+        response = await self.model.generate_content_async(prompt)
+        try:
+            text = response.text.replace("```json", "").replace("```", "")
+            return json.loads(text)
+        except:
+            # Fallback to raw ML data if AI fails
+            return {"suggestions": recommendations}
+
+    async def generate_study_plan(self, student_profile: dict, courses: List[dict], completed_topics: List[str] = None) -> str:
+        """Generates a detailed weekly study plan based on student profile and progress."""
+        if not self.has_key:
+            return "Custom Study Plan: Focus on your enrolled courses daily."
+
+        resources_text = json.dumps(self.dataset.get('study_resources', {}))
+        
+        prompt = f"""
+        Act as an expert academic counselor for Computer Science. 
+        Create a highly personalized weekly study plan.
+        
+        Student Profile: {json.dumps(student_profile, default=str)}
+        Enrolled Courses: {json.dumps(courses, default=str)}
+        
+        Progress Info:
+        - Already Completed Topics: {json.dumps(completed_topics or [], default=str)}
+        
+        Guidelines:
+        1. Only include topics that ARE NOT in the 'Already Completed Topics' list.
+        2. Tailor the pace to the student's study pace ({student_profile.get('study_pace')}).
+        3. Match the learning style ({student_profile.get('learning_style')}).
+        4. Focus more time on weak subjects ({student_profile.get('weak_subjects')}).
+        5. Use these recommended resources where appropriate: {resources_text}
+        
+        Format: Return a Markdown table with columns: Day, Course, Topic, Activity, Time Estimate.
+        After the table, provide a short paragraph of motivation.
+        """
+        try:
+            response = await self.model.generate_content_async(prompt)
+            return response.text
+        except Exception as e:
+            print(f"Study Plan AI Error: {e}")
+            return "Could not generate a personalized study plan at this time. Focus on your upcoming topics!"
+
+    async def verify_submission(self, task_title: str, task_description: str, submission: str) -> Dict:
+        """Verifies if the student's submission matches the task requirements."""
+        if not self.has_key:
+             return {"verified": True, "feedback": "Mock Verification: Accepted."}
+
+        prompt = f"""
+        You are a strict but helpful Teaching Assistant.
+        
+        Task Title: {task_title}
+        Task Description: {task_description}
+        
+        Student Submission:
+        {submission}
+        
+        Action:
+        1. Determine if the submission correctly addresses the task.
+        2. If it's code, checks for basic logic errors (pseudo-run).
+        3. If it's theory, check for key concepts.
+        4. Ignore minor typos.
+        
+        Return JSON ONLY:
+        {{
+            "verified": true/false,
+            "feedback": "2-3 sentences explaining why it was accepted or rejected. Be constructive."
+        }}
+        """
+        
+        try:
+            response = await self.model.generate_content_async(prompt)
+            text = response.text.replace("```json", "").replace("```", "").strip()
+            return json.loads(text)
+        except Exception as e:
+            print(f"Verification AI Error: {e}")
+            return {"verified": False, "feedback": "AI verification failed. Please try again."}
+
+    async def summarize_progress(self, student_profile: dict, progress_list: List[dict]) -> str:
+        """Generates a encouraging and analytical summary of student progress."""
+        if not self.has_key:
+            return "You are making steady progress. Keep up the good work!"
+
+        prompt = f"""
+        Analyze the following student progress and provide a short, encouraging summary (2-3 sentences).
+        Student Name: {student_profile.get('name')}
+        Progress Data: {json.dumps(progress_list, default=str)}
+        
+        Task:
+        - Mention a specific course they are doing well in (highest accuracy/completion).
+        - Give a gentle nudge for courses with low progress.
+        - End with an encouraging closing statement.
+        """
+        try:
+            response = await self.model.generate_content_async(prompt)
+            return response.text
+        except Exception as e:
+            print(f"Progress Summary AI Error: {e}")
+            return "Great job on your progress so far! Keep focusing on your goals."
+
+    async def generate_fyp_suggestions(self, student_profile: dict) -> Dict:
+        # We replace this logic in the router to use generate_fyp_suggestions_hybrid if ID is available
+        # But keeping for compatibility
+        return {"error": "Use generate_fyp_suggestions_hybrid with student_id"}
+
+    async def generate_personalized_task(self, student_profile: dict, course_name: str, topic: str) -> Dict:
+        """Use Gemini to generate a specific task for a topic based on student learning style."""
+        if not self.has_key:
+            return {
+                "title": f"Practice: {topic}",
+                "description": f"Learn about {topic} in {course_name}. (Mock Task)",
+                "type": "theory"
+            }
+
+        prompt = f"""
+        Act as an expert CS educator. Generate a personalized learning task for a student.
+        
+        Student Profile:
+        - Name: {student_profile.get('name')}
+        - Learning Style: {student_profile.get('learning_style')}
+        - Study Pace: {student_profile.get('study_pace')}
+        - Interests: {student_profile.get('interests')}
+        
+        Context:
+        - Course: {course_name}
+        - Topic: {topic}
+        
+        Task:
+        1. Create a "title" that is engaging.
+        2. Create a "description" that is a specific challenge or question (not just "study this"). 
+           - If style is 'Practice', make it a coding challenge.
+           - If style is 'Reading', make it a deep-dive research question.
+           - If style is 'Visual', ask them to create a diagram or flowchart.
+        3. Assign a "type" (theory, coding, or mcq).
+        
+        Return ONLY a JSON object:
+        {{
+            "title": "Clear Task Title",
+            "description": "Specific detailed instruction/question",
+            "type": "coding/theory/mcq"
+        }}
+        """
+        
+        try:
+            response = await self.model.generate_content_async(prompt)
+            text = response.text.replace("```json", "").replace("```", "").strip()
+            return json.loads(text)
+        except Exception as e:
+            print(f"AI Task Generation Error: {e}")
+            return {
+                "title": f"Study {topic}",
+                "description": f"Review and master {topic} for the {course_name} course.",
+                "type": "theory"
+            }
+
+ai_service = AIService()

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+motor
+beanie
+google-generativeai
+python-dotenv
+pydantic
+numpy
+scikit-learn
+ollama

@@ -1,0 +1,26 @@
+{
+  "fyp_ideas": [
+    {
+      "title": "AI-Powered Traffic Control",
+      "category": "Computer Vision",
+      "difficulty": "Hard",
+      "description": "Use CCTV footage to optimize traffic light timings in real-time."
+    },
+    {
+      "title": "Blockchain Voting System",
+      "category": "Blockchain",
+      "difficulty": "Medium",
+      "description": "Decentralized voting app to ensure transparency and security."
+    },
+    {
+      "title": "Augmented Reality Educational App",
+      "category": "AR/VR",
+      "difficulty": "Medium",
+      "description": "Interactive mobile app for teaching complex biology concepts using AR."
+    }
+  ],
+  "study_resources": {
+    "Data Structures": ["https://visualgo.net", "Introduction to Algorithms (CLRS)"],
+    "Machine Learning": ["Andrew Ng Coursera", "Fast.ai"]
+  }
+}

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Flutter
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+flutter_app/build/
+
+# Android
+android/local.properties
+flutter_app/android/local.properties
+.gradle/
+flutter_app/android/.gradle/
+*.jks
+*.keystore
+
+# iOS
+ios/Flutter/Generated.xcconfig
+flutter_app/ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Isolate.snapshot
+ios/flutter_assets/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.iml
