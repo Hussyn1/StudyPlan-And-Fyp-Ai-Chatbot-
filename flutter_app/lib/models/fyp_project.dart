@@ -1,4 +1,5 @@
 class FYPProject {
+  final String? id;
   final String title;
   final String description;
   final int score;
@@ -8,6 +9,7 @@ class FYPProject {
   final String rationale;
 
   FYPProject({
+    this.id,
     required this.title,
     required this.description,
     required this.score,
@@ -19,6 +21,7 @@ class FYPProject {
 
   factory FYPProject.fromJson(Map<String, dynamic> json) {
     return FYPProject(
+      id: json['_id'] ?? json['id']?.toString(),
       title: json['title'] ?? '',
       description: json['description'] ?? '',
       score: json['score'] ?? 0,

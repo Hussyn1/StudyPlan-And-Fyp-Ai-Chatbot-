@@ -28,11 +28,13 @@ class _FypScreenState extends State<FypScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Text('Tasks & FYP'),
           bottom: const TabBar(
-            indicatorColor: Colors.indigo,
-            labelColor: Colors.indigo,
+            indicatorColor: Colors.white,
+            labelColor: Colors.white,
             unselectedLabelColor: Colors.grey,
             tabs: [
               Tab(text: 'Learning Tasks', icon: Icon(Icons.assignment)),
@@ -87,6 +89,8 @@ class _FypScreenState extends State<FypScreen> {
                   final updatedTask = await taskController.generateAiTask(task.id ?? '');
                   Get.back(); // Close loading dialog
                   
+                  if (!mounted) return;
+                  
                   if (updatedTask != null) {
                     _showTaskSubmissionDialog(context, updatedTask);
                   } else {
@@ -106,9 +110,8 @@ class _FypScreenState extends State<FypScreen> {
   void _showTaskSubmissionDialog(BuildContext context, dynamic task) {
     final TextEditingController answerController = TextEditingController();
 
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
+    Get.dialog(
+      AlertDialog(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -152,16 +155,61 @@ class _FypScreenState extends State<FypScreen> {
                 Get.snackbar('Error', 'Please enter some content');
                 return;
               }
-              final success = await taskController.submitTask(
+              final response = await taskController.submitTask(
                 task.id ?? '',
                 answerController.text,
               );
-              if (success) {
-                Get.back();
-                Get.snackbar('Success', 'Task submitted! Progress updated.',
-                    snackPosition: SnackPosition.BOTTOM,
-                    backgroundColor: Colors.indigo,
-                    colorText: Colors.white);
+              
+              if (response != null) {
+                Get.back(); // Close submission dialog
+                
+                final bool verified = response['verified'] ?? false;
+                final int score = response['score'] ?? 0;
+                final String feedback = response['feedback'] ?? 'No feedback provided.';
+
+                Get.dialog(
+                  AlertDialog(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    title: Row(
+                      children: [
+                        Icon(
+                          verified ? Icons.check_circle : Icons.error,
+                          color: verified ? Colors.green : Colors.red,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(verified ? 'Task Accepted' : 'Refinement Needed'),
+                      ],
+                    ),
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: verified ? Colors.green[50] : Colors.red[50],
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            'Score: $score%',
+                            style: TextStyle(
+                              color: verified ? Colors.green[700] : Colors.red[700],
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(feedback),
+                      ],
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Get.back(),
+                        child: const Text('Got it!'),
+                      ),
+                    ],
+                  ),
+                );
               }
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo, foregroundColor: Colors.white),

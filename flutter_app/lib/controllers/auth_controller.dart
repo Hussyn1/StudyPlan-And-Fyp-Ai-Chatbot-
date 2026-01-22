@@ -1,12 +1,19 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app/models/models.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/api_service.dart';
+import 'chat_controller.dart';
+import 'progress_controller.dart';
+import 'fyp_controller.dart';
+import 'task_controller.dart';
 
 class AuthController extends GetxController {
   final ApiService _apiService = apiService;
   
   // Reactive variables
   final Rx<String?> studentId = Rx<String?>(null);
+  final Rx<Student?> currentStudent = Rx<Student?>(null);
   final RxBool isLoading = false.obs;
   final Rx<String?> errorMessage = Rx<String?>(null);
   final RxBool isAuthenticated = false.obs;
@@ -24,6 +31,7 @@ class AuthController extends GetxController {
     if (id != null && id.isNotEmpty) {
       studentId.value = id;
       isAuthenticated.value = true;
+      await getStudentProfile(); // Fetch profile details on start
     }
     isInitialized.value = true;
   }
@@ -54,6 +62,16 @@ class AuthController extends GetxController {
       }
     } catch (e) {
       errorMessage.value = e.toString();
+      Get.snackbar(
+        'Login Failed', 
+        errorMessage.value!,
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red[800],
+        colorText: Colors.white,
+        margin: const EdgeInsets.all(16),
+        borderRadius: 12,
+        icon: const Icon(Icons.error_outline, color: Colors.white),
+      );
       isLoading.value = false;
       return false;
     }
@@ -82,12 +100,32 @@ class AuthController extends GetxController {
       }
     } catch (e) {
       errorMessage.value = e.toString();
+      Get.snackbar(
+        'Registration Failed', 
+        errorMessage.value!,
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red[800],
+        colorText: Colors.white,
+        margin: const EdgeInsets.all(16),
+        borderRadius: 12,
+        icon: const Icon(Icons.error_outline, color: Colors.white),
+      );
       isLoading.value = false;
       return false;
     }
   }
 
   Future<void> logout() async {
+    // Clear all user-specific controllers
+    try {
+      Get.find<ChatController>().clearData();
+      Get.find<ProgressController>().clearData();
+      Get.find<FypController>().clearData();
+      Get.find<TaskController>().clearData();
+    } catch (e) {
+      print("Error clearing controllers: $e");
+    }
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('student_id');
     studentId.value = null;
@@ -98,11 +136,28 @@ class AuthController extends GetxController {
     if (studentId.value == null) return false;
     isLoading.value = true;
     try {
-      await _apiService.putRequest('students/${studentId.value}', updateData);
+      final response = await _apiService.putRequest('students/${studentId.value}', updateData);
+      currentStudent.value = Student.fromJson(response); // Update reactive profile
+      
+      Get.snackbar(
+        'Success', 
+        'Profile updated successfully',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.green[800],
+        colorText: Colors.white,
+      );
+      
       isLoading.value = false;
       return true;
     } catch (e) {
       errorMessage.value = e.toString();
+      Get.snackbar(
+        'Update Failed', 
+        errorMessage.value!,
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red[800],
+        colorText: Colors.white,
+      );
       isLoading.value = false;
       return false;
     }
@@ -138,8 +193,10 @@ class AuthController extends GetxController {
     if (studentId.value == null) return null;
     try {
       final response = await _apiService.getRequest('students/${studentId.value}');
+      currentStudent.value = Student.fromJson(response);
       return response as Map<String, dynamic>;
     } catch (e) {
+      print("Error fetching profile: $e");
       return null;
     }
   }

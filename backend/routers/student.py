@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from models import Student, Task, Progress, Course
+from models import Student, Task, Progress, Course, FYPProject
 from services.ai_service import ai_service
+from services.ml_service import ml_service
 from typing import List, Optional
 from datetime import datetime
 from pydantic import BaseModel
@@ -19,6 +20,9 @@ class StudentCreate(BaseModel):
     learning_style: str = "Reading"
 
 class StudentUpdate(BaseModel):
+    name: Optional[str] = None
+    uni_name: Optional[str] = None
+    current_semester: Optional[int] = None
     interests: Optional[List[str]] = None
     weak_subjects: Optional[List[str]] = None
     study_pace: Optional[str] = None
@@ -26,6 +30,11 @@ class StudentUpdate(BaseModel):
 
 class EnrollmentRequest(BaseModel):
     course_ids: List[str]
+
+class TaskSubmissionRequest(BaseModel):
+    student_id: str
+    task_id: str
+    submission_content: str
 
 @router.post("/students")
 async def create_student(student_data: StudentCreate):
@@ -101,35 +110,92 @@ async def get_tasks(student_id: str, course_id: Optional[str] = None):
     return tasks
 
 @router.post("/tasks/submit")
-async def submit_task(student_id: str, task_id: str, submission_content: str):
-    task = await Task.get(task_id)
+async def submit_task(submission: TaskSubmissionRequest):
+    task = await Task.get(submission.task_id)
     if not task:
         raise HTTPException(status_code=404, detail="Task not found")
     
-    if task.status == "completed":
-        return {"status": "success", "message": "Task already completed"}
+    # Store submission
+    task.submission = submission.submission_content
+    
+    # AI Verification
+    try:
+        verification = await ai_service.verify_submission(
+            task.title,
+            task.description,
+            submission.submission_content
+        )
+    except Exception as e:
+        print(f"Error during AI verification: {e}")
+        return {
+            "status": "error",
+            "message": "AI Verification service is temporarily unavailable. Your work is saved, please try verifying again later.",
+            "verified": False,
+            "feedback": "Connectivity error."
+        }
+    
+    task.ai_feedback = verification.get("feedback", "No feedback provided.")
+    task.score = verification.get("score", 0)
+    task.verified = verification.get("verified", task.score >= 50)
+    
+    # Ensure a non-zero score if verified but AI returned 0 or missing score
+    if task.verified and task.score == 0:
+        task.score = 70
+    
+    print(f"DEBUG: Task {submission.task_id} score: {task.score}, verified: {task.verified}")
 
-    task.status = "completed"
-    task.completed_at = datetime.now()
+    if task.verified:
+        task.status = "completed"
+        task.completed_at = datetime.now()
+        
+        # Update progress
+        try:
+            if task.course_id:
+                progress = await Progress.find_one(
+                    Progress.student_id == submission.student_id,
+                    Progress.course_id == task.course_id
+                )
+                if progress:
+                    # Get all completed tasks for this course to calculate average score
+                    completed_tasks = await Task.find(
+                        Task.student_id == submission.student_id,
+                        Task.course_id == task.course_id,
+                        Task.status == "completed"
+                    ).to_list()
+                    
+                    # Include current task if not already in the list
+                    total_scores = sum(t.score for t in completed_tasks)
+                    if not any(t.id == task.id for t in completed_tasks):
+                        total_scores += task.score
+                        count = len(completed_tasks) + 1
+                    else:
+                        count = len(completed_tasks)
+                    
+                    progress.tasks_completed = count
+                    progress.accuracy = count / progress.total_tasks if progress.total_tasks > 0 else 0
+                    progress.grade = (total_scores / count) if count > 0 else 0
+                    
+                    print(f"DEBUG: New progress: {progress.tasks_completed}/{progress.total_tasks} (Avg Score: {progress.grade}%)")
+                    
+                    if progress.tasks_completed == progress.total_tasks:
+                       progress.status = "completed"
+                    
+                    await progress.save()
+        except Exception as e:
+            print(f"Error updating progress: {e}")
+            # We don't return error here because task was already verified and saved
+    else:
+        print(f"DEBUG: Task NOT verified. Feedback: {task.ai_feedback}")
+    
     await task.save()
     
-    # Update progress
-    if task.course_id:
-        progress = await Progress.find_one(
-            Progress.student_id == student_id,
-            Progress.course_id == task.course_id
-        )
-        if progress:
-            progress.tasks_completed += 1
-            if progress.total_tasks > 0:
-                progress.accuracy = (progress.tasks_completed / progress.total_tasks)
-            
-            if progress.tasks_completed == progress.total_tasks:
-                progress.status = "completed"
-            
-            await progress.save()
-    
-    return {"status": "success", "message": "Task submitted and progress updated"}
+    return {
+        "status": "success" if task.verified else "failed",
+        "verified": task.verified,
+        "score": task.score,
+        "feedback": task.ai_feedback,
+        "message": "Task submitted and graded by AI"
+    }
 
 class TaskSubmission(BaseModel):
     submission_content: str
@@ -144,47 +210,161 @@ async def verify_task(task_id: str, submission: TaskSubmission):
         return {"status": "success", "verified": True, "message": "Task already completed"}
 
     # AI Verification
-    verification_result = await ai_service.verify_submission(
-        task.title,
-        task.description,
-        submission.submission_content
-    )
+    try:
+        verification_result = await ai_service.verify_submission(
+            task.title,
+            task.description,
+            submission.submission_content
+        )
+    except Exception as e:
+        print(f"Error during AI verification: {e}")
+        return {
+            "status": "error", 
+            "verified": False, 
+            "message": "Something went wrong with AI verification. Please try again later."
+        }
     
-    if verification_result.get("verified", False):
+    task.score = verification_result.get("score", 0)
+    task.verified = verification_result.get("verified", task.score >= 50)
+    task.ai_feedback = verification_result.get("feedback", "No feedback.")
+
+    # Ensure a non-zero score if verified but AI returned 0 or missing score
+    if task.verified and task.score == 0:
+        task.score = 70
+
+    if task.verified:
         # Mark as completed if verified
         task.status = "completed"
         task.completed_at = datetime.now()
         await task.save()
         
-        # Update progress (Reusing logic)
-        if task.course_id:
-            progress = await Progress.find_one(
-                Progress.student_id == task.student_id,
-                Progress.course_id == task.course_id
-            )
-            if progress:
-                progress.tasks_completed += 1
-                if progress.total_tasks > 0:
-                    progress.accuracy = (progress.tasks_completed / progress.total_tasks)
-                
-                if progress.tasks_completed == progress.total_tasks:
-                    progress.status = "completed"
-                
-                await progress.save()
-                
-        return {
-            "status": "success", 
-            "verified": True, 
-            "message": "Great job! Your submission was accepted.",
-            "feedback": verification_result.get("feedback")
-        }
-    else:
-        return {
-            "status": "success", 
-            "verified": False, 
-            "message": "Submission needs improvement.",
-            "feedback": verification_result.get("feedback")
-        }
+        # Update progress
+        try:
+            if task.course_id:
+                progress = await Progress.find_one(
+                    Progress.student_id == task.student_id,
+                    Progress.course_id == task.course_id
+                )
+                if progress:
+                    completed_tasks = await Task.find(
+                        Task.student_id == task.student_id,
+                        Task.course_id == task.course_id,
+                        Task.status == "completed"
+                    ).to_list()
+                    
+                    total_scores = sum(t.score for t in completed_tasks)
+                    if not any(t.id == task.id for t in completed_tasks):
+                        total_scores += task.score
+                        count = len(completed_tasks) + 1
+                    else:
+                        count = len(completed_tasks)
+                    
+                    progress.tasks_completed = count
+                    progress.accuracy = count / progress.total_tasks if progress.total_tasks > 0 else 0
+                    progress.grade = (total_scores / count) if count > 0 else 0
+                    
+                    print(f"DEBUG: New progress: {progress.tasks_completed}/{progress.total_tasks} (Avg Score: {progress.grade}%)")
+                    
+                    if progress.tasks_completed == progress.total_tasks:
+                        progress.status = "completed"
+                    
+                    await progress.save()
+        except Exception as e:
+            print(f"Error updating progress: {e}")
+        if task.verified:
+            # Check for auto-generation of new tasks if this was the last one
+            try:
+                await check_and_generate_remedial_tasks(task.student_id)
+            except Exception as e:
+                print(f"Error generating remedial tasks: {e}")
+
+            return {
+                "status": "success", 
+                "verified": True, 
+                "score": task.score,
+                "message": f"Great job! Your submission scored {task.score}%.",
+                "feedback": task.ai_feedback
+            }
+    
+    return {
+        "status": "success", 
+        "verified": False, 
+        "score": task.score,
+        "message": "Submission needs improvement.",
+        "feedback": task.ai_feedback
+    }
+
+async def check_and_generate_remedial_tasks(student_id: str):
+    """
+    Checks if the student has completed all tasks. 
+    If so, generates remedial tasks for weak areas.
+    """
+    # 1. Check for any pending tasks
+    pending_count = await Task.find(
+        Task.student_id == student_id,
+        Task.status == "pending"
+    ).count()
+    
+    if pending_count > 0:
+        return # Still has work to do
+        
+    print(f"DEBUG: Student {student_id} has 0 pending tasks. Checking for weak areas...")
+    
+    # 2. Identify weak areas (Low accuracy or failed tasks)
+    weak_areas = await ml_service.identify_weak_areas(student_id)
+    
+    if not weak_areas:
+        print("DEBUG: No weak areas found. Good job!")
+        return
+
+    # 3. Generate 1 remedial task for the top weak area
+    # We explicitly take only the first one to avoid overwhelming them
+    target = weak_areas[0] 
+    course_name = target['course_name']
+    
+    # Needs course_id for the task
+    # Find progress record to get course_id
+    progress = await Progress.find_one(
+        Progress.student_id == student_id, 
+        Progress.course_name == course_name
+    )
+    
+    if not progress:
+        return
+
+    student = await Student.get(student_id)
+    
+    # Generate Task
+    print(f"DEBUG: Generating remedial task for {course_name} (Accuracy: {target['accuracy']})")
+    
+    ai_task = await ai_service.generate_personalized_task(
+        student.dict(),
+        course_name,
+        f"Remedial Practice for {course_name}" # Using course name as topic proxy for now, ideally we need granular topics
+    )
+    
+    new_task = Task(
+        student_id=student_id,
+        course_id=progress.course_id,
+        title=ai_task.get("title", f"Review {course_name}"),
+        description=ai_task.get("description", "A personalized practice task to improve your score."),
+        type=ai_task.get("type", "theory"),
+        difficulty="medium",
+        status="pending"
+    )
+    await new_task.insert()
+    
+    # Update Progress Stats
+    progress.total_tasks += 1
+    # Recalculate accuracy (denominator changed)
+    progress.accuracy = progress.tasks_completed / progress.total_tasks
+    # Reset status if it was completed, now they have more work!
+    if progress.status == "completed":
+        progress.status = "ongoing"
+        
+    await progress.save()
+    
+    print(f"DEBUG: Remedial task created: {new_task.title}. Progress updated.")
 
 @router.post("/tasks/{task_id}/ai-generate")
 async def generate_task_content(task_id: str):
@@ -255,6 +435,16 @@ async def get_fyp_suggestions(student_id: str):
     # Use Hybrid Service
     suggestions = await ai_service.generate_fyp_suggestions_hybrid(student_id)
     return suggestions
+
+@router.get("/fyp/details/{project_id}")
+async def get_fyp_details(project_id: str):
+    project = await FYPProject.get(project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    
+    details = await ai_service.generate_project_details(project.title, project.description)
+    return details
+
 @router.get("/students/{student_id}/study-plan")
 async def get_study_plan(student_id: str):
     student = await Student.get(student_id)

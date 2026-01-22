@@ -38,26 +38,27 @@ class TaskController extends GetxController {
     }
   }
 
-  Future<bool> submitTask(String taskId, String content) async {
+  Future<Map<String, dynamic>?> submitTask(String taskId, String content) async {
     final authController = Get.find<AuthController>();
     final studentId = authController.studentId.value;
 
     if (studentId == null) {
       errorMessage.value = 'Not authenticated';
-      return false;
+      return null;
     }
 
     try {
-      await _apiService.submitTask(studentId, taskId, content);
+      final response = await _apiService.submitTask(studentId, taskId, content);
       
       // Refresh tasks and progress
       await loadTasks();
       Get.find<ProgressController>().loadProgress();
       
-      return true;
+      return response;
     } catch (e) {
       errorMessage.value = e.toString();
-      return false;
+      Get.snackbar('Submission Failed', errorMessage.value!);
+      return null;
     }
   }
 
@@ -80,5 +81,11 @@ class TaskController extends GetxController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  void clearData() {
+    tasks.clear();
+    errorMessage.value = null;
+    isLoading.value = false;
   }
 }

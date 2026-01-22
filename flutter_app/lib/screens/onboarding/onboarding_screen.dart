@@ -82,6 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Onboarding: Step ${_currentStep + 1} of 3'),
         automaticallyImplyLeading: false,
@@ -114,13 +115,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: Obx(() => ElevatedButton(
             onPressed: authController.isLoading.value ? null : _nextStep,
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.indigo,
-              foregroundColor: Colors.white,
-              minimumSize: const Size(double.infinity, 50),
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              minimumSize: const Size(double.infinity, 56),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             ),
             child: authController.isLoading.value 
-              ? const CircularProgressIndicator(color: Colors.white)
-              : Text(_currentStep == 2 ? 'Finish' : 'Next'),
+              ? const CircularProgressIndicator(color: Colors.black)
+              : Text(_currentStep == 2 ? 'Finish' : 'Next', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           )),
         ),
       ),
@@ -139,7 +141,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Your Semester Courses',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const SizedBox(height: 8),
           const Text(
@@ -154,8 +156,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 final course = semesterCourses[index];
                 final isSelected = selectedCourseIds.contains(course['id'] ?? course['_id']);
                 return CheckboxListTile(
-                  title: Text(course['name']),
-                  subtitle: Text(course['code']),
+                  title: Text(course['name'], style: const TextStyle(color: Colors.white)),
+                  subtitle: Text(course['code'], style: const TextStyle(color: Colors.grey)),
                   value: isSelected,
                   onChanged: (val) {
                     setState(() {
@@ -166,7 +168,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       }
                     });
                   },
-                  activeColor: Colors.indigo,
+                  activeColor: Colors.white,
+                  checkColor: Colors.black,
                 );
               },
             ),
@@ -184,7 +187,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Areas of Interest',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const SizedBox(height: 8),
           const Text(
@@ -199,7 +202,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: availableInterests.map((interest) {
                 final isSelected = selectedInterests.contains(interest);
                 return FilterChip(
-                  label: Text(interest),
+                  label: Text(interest, style: TextStyle(color: isSelected ? Colors.black : Colors.white70)),
                   selected: isSelected,
                   onSelected: (selected) {
                     setState(() {
@@ -210,8 +213,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       }
                     });
                   },
-                  selectedColor: Colors.indigo.withOpacity(0.2),
-                  checkmarkColor: Colors.indigo,
+                  selectedColor: Colors.white,
+                  checkmarkColor: Colors.black,
+                  backgroundColor: Colors.grey[900],
+                  side: BorderSide(color: Colors.white.withOpacity(0.1)),
                 );
               }).toList(),
             ),
@@ -229,11 +234,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Personalize Your Plan',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const SizedBox(height: 24),
-          const Text('Study Pace', style: TextStyle(fontWeight: FontWeight.bold)),
-          const SizedBox(height: 8),
+          const Text('Study Pace', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const SizedBox(height: 12),
           SegmentedButton<String>(
             segments: const [
               ButtonSegment(value: 'Slow', label: Text('Slow')),
@@ -242,26 +247,45 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
             selected: {selectedPace},
             onSelectionChanged: (set) => setState(() => selectedPace = set.first),
+            style: SegmentedButton.styleFrom(
+              backgroundColor: Colors.black,
+              selectedBackgroundColor: Colors.white,
+              selectedForegroundColor: Colors.black,
+              foregroundColor: Colors.white70,
+            ),
           ),
-          const SizedBox(height: 24),
-          const Text('Learning Style', style: TextStyle(fontWeight: FontWeight.bold)),
-          const SizedBox(height: 8),
+          const SizedBox(height: 32),
+          const Text('Learning Style', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const SizedBox(height: 12),
           DropdownButtonFormField<String>(
             value: selectedStyle,
+            dropdownColor: Colors.grey[900],
+            style: const TextStyle(color: Colors.white),
             items: ['Visual', 'Reading', 'Practice', 'Auditary']
-                .map((s) => DropdownMenuItem(value: s, child: Text(s)))
+                .map((s) => DropdownMenuItem(value: s, child: Text(s, style: const TextStyle(color: Colors.white))))
                 .toList(),
             onChanged: (val) => setState(() => selectedStyle = val!),
-            decoration: const InputDecoration(border: OutlineInputBorder()),
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.grey[900],
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
+            ),
           ),
-          const SizedBox(height: 24),
-          const Text('Weak Subjects (Optional)', style: TextStyle(fontWeight: FontWeight.bold)),
-          const SizedBox(height: 8),
+          const SizedBox(height: 32),
+          const Text('Weak Subjects (Optional)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const SizedBox(height: 12),
           TextField(
-            decoration: const InputDecoration(
+            style: const TextStyle(color: Colors.white),
+            decoration: InputDecoration(
               hintText: 'e.g. Mathematics, Algorithms',
-              border: OutlineInputBorder(),
+              hintStyle: const TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.grey[900],
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
               helperText: 'Type subjects you struggle with, separate by comma',
+              helperStyle: const TextStyle(color: Colors.grey),
             ),
             onChanged: (val) {
               setState(() {

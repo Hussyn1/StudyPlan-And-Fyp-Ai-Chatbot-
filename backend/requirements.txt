@@ -8,3 +8,5 @@ pydantic
 numpy
 scikit-learn
 ollama
+certifi
+httpx

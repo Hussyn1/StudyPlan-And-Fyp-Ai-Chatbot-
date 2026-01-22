@@ -46,18 +46,35 @@ class ProgressController extends GetxController {
 
     isAiLoading.value = true;
     try {
+      print("DEBUG_AI: Fetching insights for $studentId...");
       // Load summary and plan in parallel
       final results = await Future.wait([
         _apiService.getProgressSummary(studentId),
         _apiService.getStudyPlan(studentId),
       ]);
       
+      print("DEBUG_AI: Summary length: ${results[0].length}");
+      print("DEBUG_AI: Plan length: ${results[1].length}");
+      
       progressSummary.value = results[0];
       studyPlan.value = results[1];
+      
+      print("DEBUG_AI: Data assigned to Rx variables.");
     } catch (e) {
-      print("Error loading AI insights: $e");
+      print("DEBUG_AI: Error loading AI insights: $e");
+      errorMessage.value = e.toString();
+      Get.snackbar('AI Assistant Busy', 'Could not refresh AI insights. Try again later.');
     } finally {
       isAiLoading.value = false;
     }
+  }
+
+  void clearData() {
+    progressList.clear();
+    studyPlan.value = '';
+    progressSummary.value = '';
+    errorMessage.value = null;
+    isLoading.value = false;
+    isAiLoading.value = false;
   }
 }

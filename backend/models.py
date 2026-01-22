@@ -37,6 +37,10 @@ class Task(Document):
     difficulty: str # easy, medium, hard
     created_at: datetime = datetime.now()
     completed_at: Optional[datetime] = None
+    ai_feedback: Optional[str] = None
+    verified: Optional[bool] = None
+    score: int = 0  # Percentage score (0-100)
+    submission: Optional[str] = None
     
     class Settings:
         name = "tasks"

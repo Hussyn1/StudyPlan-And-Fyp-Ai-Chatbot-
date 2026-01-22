@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/progress_controller.dart';
@@ -25,30 +26,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text('My Learning Dashboard'),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () => progressController.loadProgress(),
           ),
-          IconButton(
-            icon: const Icon(Icons.logout),
-            tooltip: 'Logout',
-            onPressed: () {
-              Get.find<AuthController>().logout();
-              Get.offAllNamed('/login');
-            },
-          ),
         ],
       ),
       body: Obx(() {
         if (progressController.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator(color: Colors.white));
         }
 
         if (progressController.progressList.isEmpty) {
-          return const Center(child: Text('No progress data available.'));
+          return const Center(child: Text('No progress data available.', style: TextStyle(color: Colors.white70)));
         }
 
         // Show list with AI summary at the top
@@ -57,60 +52,75 @@ class _DashboardScreenState extends State<DashboardScreen> {
           children: [
             // AI Summary Section
             FadeInDown(
-              child: Card(
-                color: Colors.indigo[50],
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[900]!.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(color: Colors.white.withOpacity(0.1)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(Icons.auto_awesome, color: Colors.indigo),
-                          const SizedBox(width: 8),
-                          Text(
-                            'AI Progress Insights',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.indigo[900],
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: const Icon(Icons.auto_awesome, color: Colors.indigoAccent, size: 20),
+                              ),
+                              const SizedBox(width: 12),
+                              const Text(
+                                'AI Learning Coach',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 16),
+                          if (progressController.isAiLoading.value && progressController.progressSummary.isEmpty)
+                            const LinearProgressIndicator(minHeight: 2, backgroundColor: Colors.black, color: Colors.white)
+                          else
+                            Text(
+                              progressController.progressSummary.value.isEmpty
+                                  ? "Complete some tasks to get AI feedback on your progress!"
+                                  : progressController.progressSummary.value,
+                              style: const TextStyle(fontSize: 15, height: 1.5, color: Colors.white70),
+                            ),
+                          const SizedBox(height: 20),
+                          ElevatedButton.icon(
+                            onPressed: () => Get.to(() => const StudyPlanScreen()),
+                            icon: const Icon(Icons.calendar_month),
+                            label: const Text('Weekly Study Plan'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.black,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                              elevation: 0,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 8),
-                      if (progressController.isAiLoading.value && progressController.progressSummary.isEmpty)
-                        const LinearProgressIndicator()
-                      else
-                        Text(
-                          progressController.progressSummary.value.isEmpty
-                              ? "Complete some tasks to get AI feedback on your progress!"
-                              : progressController.progressSummary.value,
-                          style: const TextStyle(fontSize: 15, height: 1.4),
-                        ),
-                      const SizedBox(height: 12),
-                      SizedBox(
-                        width: double.infinity,
-                        child: OutlinedButton.icon(
-                          onPressed: () => Get.to(() => const StudyPlanScreen()),
-                          icon: const Icon(Icons.calendar_month),
-                          label: const Text('View Weekly Study Plan'),
-                          style: OutlinedButton.styleFrom(
-                            foregroundColor: Colors.indigo,
-                            side: const BorderSide(color: Colors.indigo),
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
             ),
             const SizedBox(height: 24),
-            Text(
+            const Text(
               'Course Progress',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
             ),
             const SizedBox(height: 12),
             ...progressController.progressList.map((progress) {

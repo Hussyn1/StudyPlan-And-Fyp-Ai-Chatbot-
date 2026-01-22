@@ -32,20 +32,30 @@ class ChatController extends GetxController {
     try {
       final response = await _apiService.chat(studentId, message);
       
+      final bool isError = response['is_error'] ?? false;
+      
       // Add AI response
       messages.add(ChatMessage(
         message: response['response'] ?? 'No response',
         sender: MessageSender.assistant,
         timestamp: DateTime.now(),
       ));
+
+      if (isError) {
+        errorMessage.value = response['response'];
+      }
     } catch (e) {
       errorMessage.value = e.toString();
+      // We don't show snackbar here because the chat bubble itself can show the error message 
+      // or we can just append an error message to the list.
     } finally {
       isLoading.value = false;
     }
   }
 
-  void clearMessages() {
+  void clearData() {
     messages.clear();
+    errorMessage.value = null;
+    isLoading.value = false;
   }
 }

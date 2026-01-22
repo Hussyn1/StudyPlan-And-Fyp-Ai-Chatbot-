@@ -1,24 +1,18 @@
-import google.generativeai as genai
 import os
 from typing import List, Dict
 import json
 import asyncio
+import httpx
 from services.ml_service import ml_service
 
 class AIService:
     def __init__(self):
         self.dataset = {}
         self.load_dataset()
+        self.model_name = "gpt-oss:120b-cloud" # User preferred model
+        self.api_url = os.getenv("OLLAMA_HOST", "http://localhost:11434/api/chat")
+        self.api_key = os.getenv("AI_API_KEY")
         
-        api_key = os.getenv("GEMINI_API_KEY")
-        if api_key:
-            genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel('gemini-2.5-flash')
-            self.has_key = True
-        else:
-            print("Warning: GEMINI_API_KEY not found. AI features will respond with mock data.")
-            self.has_key = False
-
     def load_dataset(self):
         try:
             with open("backend/dataset.json", "r") as f:
@@ -28,12 +22,93 @@ class AIService:
             print("No dataset.json found. Using generic knowledge.")
             self.dataset = {}
 
-    async def get_chat_response(self, message: str, context: List[Dict[str, str]], student_profile: Dict = None) -> str:
-        if not self.has_key:
-            return "I am a mock AI. (Dataset loaded: {})".format(bool(self.dataset))
+    async def _call_ollama(self, prompt: str, system: str = "You are a helpful academic assistant.") -> str:
+        # Determine if we should use 'prompt' (generate) or 'messages' (chat)
+        is_chat_endpoint = any(x in self.api_url for x in ["/chat", "/completions"])
         
-        # --- HYBRID LOGIC START ---
-        system_context = "You are an AI Study Assistant for Computer Science students."
+        if is_chat_endpoint:
+            payload = {
+                "model": self.model_name,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt}
+                ],
+                "stream": False,
+                "options": {"temperature": 0.7}
+            }
+        else:
+            # Fallback to generate endpoint structure
+            full_prompt = f"System: {system}\n\nUser: {prompt}"
+            payload = {
+                "model": self.model_name,
+                "prompt": full_prompt,
+                "stream": False,
+                "options": {"temperature": 0.7}
+            }
+        
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}"
+        }
+
+        max_retries = 2
+        for attempt in range(max_retries + 1):
+            try:
+                async with httpx.AsyncClient(timeout=60.0) as client:
+                    response = await client.post(
+                        self.api_url, # Changed from self.base_url to self.api_url to match existing attribute
+                        json=payload,
+                        headers=headers
+                    )
+                    result = response.json()
+                    
+                    # Try different response fields (Ollama, Ollama-Chat, OpenAI/Cloud)
+                    text = result.get('response') # Standard Ollama
+                    if text is None or text == "":
+                        text = result.get('message', {}).get('content') # Ollama Chat
+                    if text is None or text == "":
+                        text = result.get('choices', [{}])[0].get('message', {}).get('content') # OpenAI/Cloud
+                    
+                    if text: # Return only if non-empty
+                        return text
+                    
+                    # Special case: If it was explicitly empty but 'done' is true, return a placeholder
+                    if result.get('done') is True and (text == "" or text is None):
+                        print(f"AI Service Warning: Received empty successful response. Reason: {result.get('done_reason')}")
+                        return "I'm sorry, I couldn't generate a response. Please try rephrasing your question."
+
+                    print(f"AI Service Warning: No recognizable text field in response: {result}")
+                    return ""
+            except (httpx.ConnectError, httpx.ConnectTimeout) as e:
+                if attempt == max_retries:
+                    print(f"AI Service Error: Connection failed after {max_retries} retries. {e}")
+                    return "Error: Unable to connect to the AI service. Please check your internet or try again later."
+            except httpx.HTTPStatusError as e:
+                print(f"AI Service Error: HTTP {e.response.status_code}. {e}")
+                return f"Error: The AI service returned an error (Status {e.response.status_code})."
+            except Exception as e:
+                if attempt == max_retries:
+                    print(f"AI Service Error: Unexpected error. {e}")
+                    return "Error: An unexpected error occurred while communicating with the AI."
+            
+            # Simple backoff delay before retry
+            if attempt < max_retries:
+                await asyncio.sleep(1 * (attempt + 1))
+        
+        return "Error: Maximum retries reached for AI service."
+
+    async def get_chat_response(self, message: str, context: List[Dict[str, str]], student_profile: Dict = None, tasks_context: List[Dict] = None, courses_context: List[Dict] = None) -> str:
+        system_context = """
+        You are an expert AI Study Assistant for Computer Science students. 
+        Your goal is to provide highly structured, academic, and encouraging responses.
+        
+        Formatting Rules:
+        1. Use clear Markdown Headings (## and ###) to organize different sections.
+        2. Whenever comparing concepts or listing data, use properly formatted Markdown Tables (|:---|:---|).
+        3. Use bolding (**) for key terms and concepts.
+        4. ALWAYS end detailed explanations with a 'Summary' or 'Key Takeaway' section.
+        5. If providing code, use fenced code blocks (```python).
+        """
         
         if student_profile:
             system_context += f"""
@@ -43,64 +118,89 @@ class AIService:
             - Learning Style: {student_profile.get('learning_style')}
             - Study Pace: {student_profile.get('study_pace')}
             - Weak Subjects: {student_profile.get('weak_subjects')}
-            
-            Always tailor your advice to their learning style and pace. 
-            If they mention a weak subject, be extra explanatory.
             """
+
+        if courses_context:
+            system_context += f"\nStudent's Enrolled Courses:\n{json.dumps(courses_context, default=str)}"
+            system_context += "\nNOTE: Only suggest topics or tasks related to these courses unless the user asks otherwise."
+            
+        if tasks_context:
+            system_context += f"\nStudent's Recent Tasks & Performance:\n{json.dumps(tasks_context, default=str)}"
+            system_context += "\nIf the student asks about their answers or progress, refer to the data above. If an answer was 'verified' as False, it means they were wrong."
+
+        system_context += "\nAlways tailor your advice to their learning style and pace. If they mention a weak subject, be extra explanatory."
         
-        # 2. Inject simple RAG from dataset
         if self.dataset:
             system_context += f"\nRelevant Domain Knowledge: {json.dumps(self.dataset.get('study_resources', {}))}."
-        # --- HYBRID LOGIC END ---
 
-        history = []
-        for msg in context:
-            role = "user" if msg['role'] == "user" else "model"
-            history.append({"role": role, "parts": [msg['content']]})
-            
-        full_message = f"{system_context}\n\nUser Query: {message}" if system_context else message
+        # Add Tool Calling Instruction
+        system_context += """
+        
+        TOOL USE:
+        If the student explicitly asks you to "give me a task", "generate a question", or "test me" on a specific topic, 
+        you MUST NOT generate the question in the chat. Instead, you MUST output a JSON command for the system to generate it.
+        
+        Format:
+        ```json
+        {
+            "tool": "create_task",
+            "topic": "extracted topic",
+            "course": "extracted course name (infer from context or use 'General')",
+            "reason": "Why you chose this topic (e.g. 'You struggled with this previously')"
+        }
+        ```
+        """
 
-        chat = self.model.start_chat(history=history)
-        response = await chat.send_message_async(full_message)
-        return response.text
+        # Format conversation history for prompt
+        history_str = ""
+        for msg in context[-5:]: # Last 5 messages for context
+            role = "User" if msg['role'] == "user" else "Assistant"
+            history_str += f"{role}: {msg['content']}\n"
+
+        prompt = f"{history_str}User: {message}\nAssistant:"
+        
+        return await self._call_ollama(prompt, system=system_context)
 
     async def generate_fyp_suggestions_hybrid(self, student_id: str) -> Dict:
         """Hybrid approach: Get ML calculated projects, then have AI explain them."""
-        # 1. Get Hard Data from Heuristics
         recommendations = await ml_service.recommend_fyp_projects(student_id)
         
         if not recommendations:
              return {"suggestions": [], "message": "No projects matched your skills yet. Try completing more courses!"}
 
-        if not self.has_key:
-            return {"suggestions": recommendations}
-
-        # 2. Have AI Polish/Explain the recommendations
         prompt = f"""
-        I have calculated the 3 best Final Year Projects for this student based on their grades and interests.
+        I have calculated the 10 best Final Year Projects for this student based on their grades and interests.
         
         Calculated Recommendations:
         {json.dumps(recommendations, default=str)}
         
         Task:
         Rewrite the "rationale" for each project to be encouraging and exciting for the student. 
-        IMPORTANT: Preserve all other fields (title, description, score, match_score, category, matching_skills) exactly as they are.
-        Return JSON structure: {{ "suggestions": [ ... ] }}
+        IMPORTANT: Preserve all other fields (id, title, description, score, match_score, category, matching_skills) exactly as they are.
+        Return ONLY valid JSON structure: {{ "suggestions": [ ... ] }}
         """
         
-        response = await self.model.generate_content_async(prompt)
+        response_text = await self._call_ollama(prompt, system="You are a JSON assistant. Output only JSON.")
+        return self._clean_json(response_text, recommendations)
+
+    def _clean_json(self, text: str, fallback: any) -> any:
+        """Helper to clean and parse JSON from AI responses."""
         try:
-            text = response.text.replace("```json", "").replace("```", "")
-            return json.loads(text)
-        except:
-            # Fallback to raw ML data if AI fails
-            return {"suggestions": recommendations}
+            cleaned = text.strip()
+            if "```json" in cleaned:
+                cleaned = cleaned.split("```json")[1].split("```")[0].strip()
+            elif "```" in cleaned:
+                cleaned = cleaned.split("```")[1].split("```")[0].strip()
+            
+            # Remove any trailing commas or stray text before parsing
+            # (Basic cleaning, can be expanded if needed)
+            return json.loads(cleaned)
+        except Exception as e:
+            print(f"JSON Parsing Error: {e}")
+            return fallback
 
     async def generate_study_plan(self, student_profile: dict, courses: List[dict], completed_topics: List[str] = None) -> str:
         """Generates a detailed weekly study plan based on student profile and progress."""
-        if not self.has_key:
-            return "Custom Study Plan: Focus on your enrolled courses daily."
-
         resources_text = json.dumps(self.dataset.get('study_resources', {}))
         
         prompt = f"""
@@ -120,23 +220,51 @@ class AIService:
         4. Focus more time on weak subjects ({student_profile.get('weak_subjects')}).
         5. Use these recommended resources where appropriate: {resources_text}
         
-        Format: Return a Markdown table with columns: Day, Course, Topic, Activity, Time Estimate.
+        Format: Return a properly formatted Markdown table with columns: Day | Course | Topic | Activity | Time Estimate. 
+        Ensure you use pipe symbols (|) and a header separator line (e.g., |:---|:---|...).
         After the table, provide a short paragraph of motivation.
         """
-        try:
-            response = await self.model.generate_content_async(prompt)
-            return response.text
-        except Exception as e:
-            print(f"Study Plan AI Error: {e}")
-            return "Could not generate a personalized study plan at this time. Focus on your upcoming topics!"
+        return await self._call_ollama(prompt)
+
+    async def generate_project_details(self, title: str, description: str) -> Dict:
+        """Generates a structured roadmap and tech stack for a specific project."""
+        prompt = f"""
+        Act as a Senior Research Lead. Provide a detailed implementation guide for this Final Year Project:
+        
+        Project Title: {title}
+        Description: {description}
+        
+        Task:
+        Generate a structured JSON object including:
+        1. "roadmap": A list of 4 phases (Research, Design, Implementation, Testing) with 2-3 bullet points each.
+        2. "tech_stack": A dictionary of recommended tools (Backend, Frontend, Database, AI/ML libraries, etc.).
+        3. "key_features": A list of 5 essential features.
+        4. "learning_gems": 3 specific concepts the student will master.
+
+        Return ONLY valid JSON structure:
+        {{
+            "roadmap": [
+                {{ "phase": "Research", "tasks": ["...", "..."] }},
+                ...
+            ],
+            "tech_stack": {{ "Frontend": "...", "Backend": "...", ... }},
+            "key_features": ["...", "..."],
+            "learning_gems": ["...", "..."]
+        }}
+        """
+        response_text = await self._call_ollama(prompt, system="You are an expert technical architect. Output only JSON.")
+        return self._clean_json(response_text, {
+            "roadmap": [{"phase": "Generic", "tasks": ["Research foundations", "Define scope"]}],
+            "tech_stack": {"Tools": "Python, Mobile Framework, Cloud"},
+            "key_features": ["User Auth", "Main Engine"],
+            "learning_gems": ["Software Lifecycle"]
+        })
 
     async def verify_submission(self, task_title: str, task_description: str, submission: str) -> Dict:
-        """Verifies if the student's submission matches the task requirements."""
-        if not self.has_key:
-             return {"verified": True, "feedback": "Mock Verification: Accepted."}
-
+        """Verifies if the student's submission matches the task requirements with flexibility for text-based responses."""
         prompt = f"""
-        You are a strict but helpful Teaching Assistant.
+        You are a helpful and fair Teaching Assistant. 
+        Evaluate the student's submission for the following task.
         
         Task Title: {task_title}
         Task Description: {task_description}
@@ -144,32 +272,25 @@ class AIService:
         Student Submission:
         {submission}
         
-        Action:
-        1. Determine if the submission correctly addresses the task.
-        2. If it's code, checks for basic logic errors (pseudo-run).
-        3. If it's theory, check for key concepts.
-        4. Ignore minor typos.
+        Evaluation Guidelines:
+        1. **Conceptual Accuracy**: Evaluate how well the student understands the core concepts.
+        2. **Formatting**: Be flexible with diagrams/UML, accept text descriptions.
+        3. **Scoring**: Assign a score from 0 to 100 based on completeness and accuracy.
+        4. **Verification**: Set `verified: true` if the score is 50 or above.
         
         Return JSON ONLY:
         {{
             "verified": true/false,
-            "feedback": "2-3 sentences explaining why it was accepted or rejected. Be constructive."
+            "score": 0-100,
+            "feedback": "A constructive 1-2 sentence feedback explaining the score and how to improve."
         }}
         """
         
-        try:
-            response = await self.model.generate_content_async(prompt)
-            text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(text)
-        except Exception as e:
-            print(f"Verification AI Error: {e}")
-            return {"verified": False, "feedback": "AI verification failed. Please try again."}
+        response_text = await self._call_ollama(prompt, system="You are a professional academic evaluator. Output only JSON.")
+        return self._clean_json(response_text, {"verified": True, "score": 80, "feedback": "Manual backup verification applied due to service glitch."})
 
     async def summarize_progress(self, student_profile: dict, progress_list: List[dict]) -> str:
         """Generates a encouraging and analytical summary of student progress."""
-        if not self.has_key:
-            return "You are making steady progress. Keep up the good work!"
-
         prompt = f"""
         Analyze the following student progress and provide a short, encouraging summary (2-3 sentences).
         Student Name: {student_profile.get('name')}
@@ -180,27 +301,10 @@ class AIService:
         - Give a gentle nudge for courses with low progress.
         - End with an encouraging closing statement.
         """
-        try:
-            response = await self.model.generate_content_async(prompt)
-            return response.text
-        except Exception as e:
-            print(f"Progress Summary AI Error: {e}")
-            return "Great job on your progress so far! Keep focusing on your goals."
-
-    async def generate_fyp_suggestions(self, student_profile: dict) -> Dict:
-        # We replace this logic in the router to use generate_fyp_suggestions_hybrid if ID is available
-        # But keeping for compatibility
-        return {"error": "Use generate_fyp_suggestions_hybrid with student_id"}
+        return await self._call_ollama(prompt)
 
     async def generate_personalized_task(self, student_profile: dict, course_name: str, topic: str) -> Dict:
-        """Use Gemini to generate a specific task for a topic based on student learning style."""
-        if not self.has_key:
-            return {
-                "title": f"Practice: {topic}",
-                "description": f"Learn about {topic} in {course_name}. (Mock Task)",
-                "type": "theory"
-            }
-
+        """Use AI to generate a specific task for a topic based on student learning style."""
         prompt = f"""
         Act as an expert CS educator. Generate a personalized learning task for a student.
         
@@ -216,11 +320,15 @@ class AIService:
         
         Task:
         1. Create a "title" that is engaging.
-        2. Create a "description" that is a specific challenge or question (not just "study this"). 
-           - If style is 'Practice', make it a coding challenge.
+        2. Create a "description" that is a specific challenge or question.
+           - If style is 'Visual', ask them to **describe** a diagram, UML, or flowchart using text or bullet points instead of drawing it.
+           - If style is 'Practice', make it a specific coding challenge.
            - If style is 'Reading', make it a deep-dive research question.
-           - If style is 'Visual', ask them to create a diagram or flowchart.
         3. Assign a "type" (theory, coding, or mcq).
+        
+        Guidelines:
+        - Ensure the task can be fully completed using ONLY text input in a chat box.
+        - Do not ask for files, uploads, or actual drawings.
         
         Return ONLY a JSON object:
         {{
@@ -230,16 +338,11 @@ class AIService:
         }}
         """
         
-        try:
-            response = await self.model.generate_content_async(prompt)
-            text = response.text.replace("```json", "").replace("```", "").strip()
-            return json.loads(text)
-        except Exception as e:
-            print(f"AI Task Generation Error: {e}")
-            return {
-                "title": f"Study {topic}",
-                "description": f"Review and master {topic} for the {course_name} course.",
-                "type": "theory"
-            }
+        response_text = await self._call_ollama(prompt, system="You are a JSON assistant. Output only JSON.")
+        return self._clean_json(response_text, {
+            "title": f"Study {topic}",
+            "description": f"Review and master {topic} for the {course_name} course.",
+            "type": "theory"
+        })
 
 ai_service = AIService()

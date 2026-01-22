@@ -37,13 +37,34 @@ class ApiService {
     ));
   }
 
+  // Centralized Error Handler
+  String _handleError(dynamic e) {
+    if (e is DioException) {
+      if (e.type == DioExceptionType.connectionTimeout || 
+          e.type == DioExceptionType.receiveTimeout || 
+          e.type == DioExceptionType.sendTimeout) {
+        return "Connection timed out. Please check your internet.";
+      } else if (e.type == DioExceptionType.connectionError) {
+        return "Unable to connect to the server. Is it running?";
+      } else if (e.response != null) {
+        // Server responded with error
+        final data = e.response?.data;
+        if (data is Map && data.containsKey('message')) {
+          return data['message'];
+        }
+        return "Server Error: ${e.response?.statusCode}";
+      }
+    }
+    return "An unexpected error occurred: ${e.toString()}";
+  }
+
   // Generic POST
   Future<dynamic> postRequest(String endpoint, Map<String, dynamic> data) async {
     try {
       final response = await _dio.post(endpoint, data: data);
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -53,7 +74,7 @@ class ApiService {
       final response = await _dio.get(endpoint, queryParameters: queryParameters);
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -63,7 +84,7 @@ class ApiService {
       final response = await _dio.put(endpoint, data: data);
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -83,7 +104,7 @@ class ApiService {
       });
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -92,7 +113,7 @@ class ApiService {
       final response = await _dio.get('progress/$studentId');
       return response.data as List<dynamic>;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -104,7 +125,7 @@ class ApiService {
       });
       return response.data as List<dynamic>;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -113,7 +134,16 @@ class ApiService {
       final response = await _dio.get('fyp/suggestions/$studentId');
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> getFypDetails(String projectId) async {
+    try {
+      final response = await _dio.get('fyp/details/$projectId');
+      return response.data;
+    } catch (e) {
+      throw _handleError(e);
     }
   }
 
@@ -122,7 +152,7 @@ class ApiService {
       final response = await _dio.get('courses');
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -135,7 +165,7 @@ class ApiService {
       });
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
@@ -144,25 +174,46 @@ class ApiService {
       final response = await _dio.post('tasks/$taskId/ai-generate');
       return response.data;
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> generateNewTask(String studentId, String courseId, String topic) async {
+    try {
+      final response = await _dio.post('chat/generate-task', data: {
+        'student_id': studentId,
+        'course_id': courseId,
+        'topic': topic,
+      });
+      return response.data;
+    } catch (e) {
+      throw _handleError(e);
     }
   }
 
   Future<String> getStudyPlan(String studentId) async {
     try {
       final response = await _dio.get('students/$studentId/study-plan');
-      return response.data['study_plan'] ?? '';
+      final data = response.data;
+      if (data is Map) {
+        return data['study_plan']?.toString() ?? '';
+      }
+      return '';
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 
   Future<String> getProgressSummary(String studentId) async {
     try {
       final response = await _dio.get('students/$studentId/progress-summary');
-      return response.data['summary'] ?? '';
+      final data = response.data;
+      if (data is Map) {
+        return data['summary']?.toString() ?? '';
+      }
+      return '';
     } catch (e) {
-      rethrow;
+      throw _handleError(e);
     }
   }
 }

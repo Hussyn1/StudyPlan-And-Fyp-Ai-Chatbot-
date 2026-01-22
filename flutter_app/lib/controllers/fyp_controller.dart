@@ -36,4 +36,19 @@ class FypController extends GetxController {
       isLoading.value = false;
     }
   }
+
+  Future<Map<String, dynamic>?> loadFypDetails(String projectId) async {
+    try {
+      return await _apiService.getFypDetails(projectId);
+    } catch (e) {
+      Get.snackbar('Error', e.toString(), snackPosition: SnackPosition.BOTTOM);
+      return null;
+    }
+  }
+
+  void clearData() {
+    suggestions.clear();
+    errorMessage.value = null;
+    isLoading.value = false;
+  }
 }

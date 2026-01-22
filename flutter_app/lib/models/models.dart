@@ -74,6 +74,7 @@ class Task {
   final String status; // pending, completed, failed
   final String type; // theory, coding, mcq
   final String difficulty; // easy, medium, hard
+  final int score;
   final DateTime createdAt;
   final DateTime? completedAt;
 
@@ -86,6 +87,7 @@ class Task {
     required this.status,
     required this.type,
     required this.difficulty,
+    this.score = 0,
     required this.createdAt,
     this.completedAt,
   });
@@ -100,6 +102,7 @@ class Task {
       status: json['status'] ?? 'pending',
       type: json['type'] ?? 'theory',
       difficulty: json['difficulty'] ?? 'medium',
+      score: json['score'] ?? 0,
       createdAt: json['created_at'] != null 
           ? DateTime.parse(json['created_at']) 
           : DateTime.now(),

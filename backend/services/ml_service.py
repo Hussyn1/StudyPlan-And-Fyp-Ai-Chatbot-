@@ -88,6 +88,7 @@ class MLService:
                 
             if match_score > 0:
                 recommendations.append({
+                    "id": str(fyp.id),
                     "title": fyp.title,
                     "description": fyp.description,
                     "score": min(match_score, 100),
@@ -99,6 +100,6 @@ class MLService:
         
         # Sort by score
         recommendations.sort(key=lambda x: x['score'], reverse=True)
-        return recommendations[:3]
+        return recommendations[:10]
 
 ml_service = MLService()
