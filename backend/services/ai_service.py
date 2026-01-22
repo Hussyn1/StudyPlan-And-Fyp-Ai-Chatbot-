@@ -15,11 +15,15 @@ class AIService:
         
     def load_dataset(self):
         try:
-            with open("backend/dataset.json", "r") as f:
+            # Robust path finding: Get the directory of this file (services/) then go up one level
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            file_path = os.path.join(base_dir, "dataset.json")
+            
+            with open(file_path, "r") as f:
                 self.dataset = json.load(f)
             print("Loaded domain dataset.")
         except FileNotFoundError:
-            print("No dataset.json found. Using generic knowledge.")
+            print("Warning: dataset.json not found. Using generic knowledge.")
             self.dataset = {}
 
     async def _call_ollama(self, prompt: str, system: str = "You are a helpful academic assistant.") -> str:
