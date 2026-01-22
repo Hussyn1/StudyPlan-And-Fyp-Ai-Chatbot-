@@ -13,17 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-async def seed_data():
-    # Initialize database connection
-    uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
-    print(f"Connecting to: {uri[:20]}...")
-    client = AsyncIOMotorClient(uri)
-    
-    await init_beanie(database=client.ai_chatbot_db, document_models=[
-        Student, Course, Task, Progress, ChatSession, FYPProject
-    ])
-    
-    print("Connected to MongoDB!")
+async def seed_initial_data():
+    print("Checking if data seeding is required...")
     
     # 1. Seed Courses
     courses_data = [

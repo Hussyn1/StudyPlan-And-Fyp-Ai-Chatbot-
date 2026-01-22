@@ -58,6 +58,11 @@ class AIService:
         max_retries = 2
         for attempt in range(max_retries + 1):
             try:
+                # DEBUG: Print exact connection details for Render logs
+                safe_key = self.api_key[:5] + "..." if self.api_key else "None"
+                print(f"DEBUG: Connecting to AI Service at: {self.api_url}")
+                print(f"DEBUG: Is Chat Endpoint: {is_chat_endpoint} | Key present: {bool(self.api_key)}")
+                
                 async with httpx.AsyncClient(timeout=60.0) as client:
                     response = await client.post(
                         self.api_url, # Changed from self.base_url to self.api_url to match existing attribute

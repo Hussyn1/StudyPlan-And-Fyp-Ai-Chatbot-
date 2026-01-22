@@ -35,6 +35,10 @@ async def global_exception_handler(request: Request, exc: Exception):
 async def on_startup():
     try:
         await init_db()
+        
+        # Auto-seed data if needed
+        from seed_mongo import seed_initial_data
+        await seed_initial_data()
     except Exception as e:
         print("\n" + "="*50)
         print(f"CRITICAL ERROR: Could not connect to MongoDB.")
