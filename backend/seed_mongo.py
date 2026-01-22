@@ -27,14 +27,40 @@ async def seed_initial_data():
         # Semester 2
         {"code": "CS201", "name": "Object Oriented Programming", "semester": 2, "topics": ["Classes & Objects", "Inheritance", "Polymorphism", "Encapsulation", "Exception Handling"]},
         {"code": "CS202", "name": "Discrete Mathematics", "semester": 2, "topics": ["Set Theory", "Propositional Logic", "Graph Theory", "Combinatorics", "Number Theory"]},
-        
+        {"code": "MATH201", "name": "Linear Algebra", "semester": 2},
+        {"code": "PHY101", "name": "Physics", "semester": 2},
+
         # Semester 3
         {"code": "CS301", "name": "Data Structures", "semester": 3, "topics": ["Linked Lists", "Stacks & Queues", "Trees", "Graphs", "Hashing"]},
+        {"code": "CS302", "name": "Computer Organization", "semester": 3},
         {"code": "CS303", "name": "Database Systems", "semester": 3, "topics": ["ER Models", "SQL", "Normalization", "Indexing", "Transactions"]},
-        
-        # Higher semesters
+        {"code": "MATH301", "name": "Probability & Statistics", "semester": 3},
+
+        # Semester 4
+        {"code": "CS401", "name": "Algorithms", "semester": 4},
+        {"code": "CS402", "name": "Operating Systems", "semester": 4},
+        {"code": "CS403", "name": "Computer Networks", "semester": 4},
+        {"code": "CS404", "name": "Software Engineering", "semester": 4},
+
+        # Semester 5
+        {"code": "CS501", "name": "Artificial Intelligence", "semester": 5},
+        {"code": "CS502", "name": "Web Technologies", "semester": 5},
+        {"code": "CS503", "name": "Computer Graphics", "semester": 5},
+        {"code": "CS504", "name": "Theory of Computation", "semester": 5},
+
+        # Semester 6
         {"code": "CS601", "name": "Machine Learning", "semester": 6, "topics": ["Linear Regression", "Logistic Regression", "Decision Trees", "Neural Networks", "Clustering"]},
+        {"code": "CS602", "name": "Information Security", "semester": 6},
         {"code": "CS603", "name": "Mobile Development", "semester": 6, "topics": ["Flutter Basics", "Widgets", "State Management", "Local Data", "External APIs"]},
+        {"code": "CS604", "name": "Compiler Construction", "semester": 6},
+
+        # Semester 7
+        {"code": "CS701", "name": "Deep Learning", "semester": 7},
+        {"code": "CS702", "name": "Cloud Computing", "semester": 7},
+        {"code": "CS703", "name": "Natural Language Processing", "semester": 7},
+
+        # Semester 8
+        {"code": "CS801", "name": "FYP-I", "semester": 8},
     ]
     
     for c_data in courses_data:
