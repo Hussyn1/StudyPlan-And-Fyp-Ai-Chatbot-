@@ -39,7 +39,7 @@ class AIService:
                     {"role": "user", "content": prompt}
                 ],
                 "stream": False,
-                "options": {"temperature": 0.7}
+                "temperature": 0.7  # Moved to top-level for OpenAI/Groq compatibility
             }
         else:
             # Fallback to generate endpoint structure
@@ -48,7 +48,7 @@ class AIService:
                 "model": self.model_name,
                 "prompt": full_prompt,
                 "stream": False,
-                "options": {"temperature": 0.7}
+                "temperature": 0.7
             }
         
         headers = {
