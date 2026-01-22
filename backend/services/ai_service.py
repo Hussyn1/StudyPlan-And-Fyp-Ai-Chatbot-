@@ -9,7 +9,8 @@ class AIService:
     def __init__(self):
         self.dataset = {}
         self.load_dataset()
-        self.model_name = "gpt-oss:120b-cloud" # User preferred model
+        # Make model name configurable (e.g. 'llama3-8b-8192' for Groq, 'meta-llama/Meta-Llama-3-8B-Instruct' for HF)
+        self.model_name = os.getenv("AI_MODEL_NAME", "gpt-oss:120b-cloud") 
         self.api_url = os.getenv("OLLAMA_HOST", "http://localhost:11434/api/chat")
         self.api_key = os.getenv("AI_API_KEY")
         
