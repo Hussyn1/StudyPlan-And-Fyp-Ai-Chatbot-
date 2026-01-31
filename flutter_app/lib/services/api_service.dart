@@ -216,6 +216,17 @@ class ApiService {
       throw _handleError(e);
     }
   }
+
+  Future<Map<String, dynamic>> getInterestRoadmap(String studentId, String? interest) async {
+    try {
+      final response = await _dio.get('students/$studentId/roadmap', queryParameters: {
+        if (interest != null && interest.isNotEmpty) 'interest': interest,
+      });
+      return response.data;
+    } catch (e) {
+      throw _handleError(e);
+    }
+  }
 }
 
 final apiService = ApiService();

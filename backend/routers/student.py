@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 from models import Student, Task, Progress, Course, FYPProject
 from services.ai_service import ai_service
 from services.ml_service import ml_service
+from utils.csv_manager import csv_manager
 from typing import List, Optional
 from datetime import datetime
 from pydantic import BaseModel
@@ -64,7 +65,7 @@ async def update_student(student_id: str, update_data: StudentUpdate):
 
 @router.get("/courses/semester/{semester}")
 async def get_semester_courses(semester: int):
-    courses = await Course.find(Course.semester == semester).to_list()
+    courses = csv_manager.get_semester_courses(semester)
     return courses
 
 @router.post("/students/{student_id}/enroll")
@@ -75,19 +76,27 @@ async def enroll_courses(student_id: str, enrollment: EnrollmentRequest):
     
     # Initialize progress for each enrolled course
     for course_id in enrollment.course_ids:
-        course = await Course.get(course_id)
+        # course = await Course.get(course_id) # Old Mongo way
+        
+        # Check CSV for course
+        course = None
+        for c in csv_manager.get_courses():
+            if str(c['id']) == str(course_id):
+                course = c
+                break
+        
         if course:
             # Check if progress already exists
             existing = await Progress.find_one(
                 Progress.student_id == student_id,
-                Progress.course_id == course_id
+                Progress.course_id == str(course_id)
             )
             if not existing:
                 progress = Progress(
                     student_id=student_id,
-                    course_id=course_id,
-                    course_name=course.name,
-                    total_tasks=len(course.topics) # Simple logic: 1 task per topic
+                    course_id=str(course_id),
+                    course_name=course['name'],
+                    total_tasks=len(course.get('topics', [])) # Use CSV topics
                 )
                 await progress.insert()
                 
@@ -376,7 +385,11 @@ async def generate_task_content(task_id: str):
         return task
 
     student = await Student.get(task.student_id)
-    course = await Course.get(task.course_id)
+    course = None
+    for c in csv_manager.get_courses():
+        if str(c['id']) == str(task.course_id):
+            course = c
+            break
     
     if not student or not course:
          raise HTTPException(status_code=404, detail="Student or Course not found")
@@ -384,7 +397,7 @@ async def generate_task_content(task_id: str):
     # Call AI service to generate a real task
     ai_task = await ai_service.generate_personalized_task(
         student.dict(), 
-        course.name, 
+        course['name'], 
         task.title # The topic is currently stored in title
     )
     
@@ -396,12 +409,18 @@ async def generate_task_content(task_id: str):
     return task
 
 async def generate_tasks_for_student(student_id: str, course_id: str):
-    course = await Course.get(course_id)
+    # course = await Course.get(course_id)
+    course = None
+    for c in csv_manager.get_courses():
+        if str(c['id']) == str(course_id):
+            course = c
+            break
+
     if not course:
         return
     
     # Create a task for each topic
-    for topic in course.topics:
+    for topic in course.get('topics', []):
         # Check if task already exists
         existing = await Task.find_one(
             Task.student_id == student_id,
@@ -413,7 +432,7 @@ async def generate_tasks_for_student(student_id: str, course_id: str):
                 student_id=student_id,
                 course_id=course_id,
                 title=topic,
-                description=f"Learn and master the concepts of {topic} in {course.name}.",
+                description=f"Learn and master the concepts of {topic} in {course['name']}.",
                 type="theory",
                 difficulty="medium"
             )
@@ -438,11 +457,11 @@ async def get_fyp_suggestions(student_id: str):
 
 @router.get("/fyp/details/{project_id}")
 async def get_fyp_details(project_id: str):
-    project = await FYPProject.get(project_id)
+    project = csv_manager.get_fyp_project_by_id(project_id)
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
     
-    details = await ai_service.generate_project_details(project.title, project.description)
+    details = await ai_service.generate_project_details(project['title'], project['description'])
     return details
 
 @router.get("/students/{student_id}/study-plan")
@@ -480,3 +499,19 @@ async def get_progress_summary(student_id: str):
         [p.dict() for p in progress_list]
     )
     return {"summary": summary}
+
+@router.get("/students/{student_id}/roadmap")
+async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
+    student = await Student.get(student_id)
+    if not student:
+        raise HTTPException(status_code=404, detail="Student not found")
+    
+    target_interest = interest
+    if not target_interest:
+        if student.interests:
+            target_interest = student.interests[0]
+        else:
+            target_interest = "Computer Science General"
+            
+    roadmap = await ai_service.generate_interest_roadmap(student.dict(), target_interest)
+    return roadmap

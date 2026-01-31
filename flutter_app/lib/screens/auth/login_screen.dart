@@ -15,6 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _rollNumberController = TextEditingController();
   final _passwordController = TextEditingController();
   final AuthController authController = Get.find<AuthController>();
+  bool _obscurePassword = true;
 
   @override
   void dispose() {
@@ -111,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 20),
                       TextFormField(
                         controller: _passwordController,
-                        obscureText: true,
+                        obscureText: _obscurePassword,
                         style: const TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           labelText: 'Password',
@@ -127,6 +128,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
                           ),
                           prefixIcon: const Icon(Icons.lock_outline, color: Colors.grey),
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _obscurePassword = !_obscurePassword;
+                              });
+                            },
+                          ),
                         ),
                         validator: (value) => value!.isEmpty ? 'Enter password' : null,
                       ),

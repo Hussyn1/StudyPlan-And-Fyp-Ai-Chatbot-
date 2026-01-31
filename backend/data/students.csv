@@ -1,0 +1,1001 @@
+roll_number,password,name,uni_name,current_semester,interests,weak_subjects,study_pace,learning_style
+21F-9545,1234,Hina Khan,PU,6,Security,,Slow,Practice
+24F-6062,1234,Sara Malik,UET,1,Cloud|Web|AI/ML,,Fast,Practice
+22F-9492,1234,Ahmed Malik,COMSATS,5,Security|IoT,Calculus|Programming,Moderate,Reading
+23F-3669,1234,Zainab Mirza,NUST,2,AI/ML,,Moderate,Reading
+20F-9308,1234,Zainab Raza,PU,8,Security,,Fast,Visual
+24F-4889,1234,Usman Malik,UET,1,Web|AI/ML|AR/VR,,Moderate,Practice
+22F-2256,1234,Bilal Hussain,COMSATS,5,AI/ML|Game Dev|Web,,Moderate,Practice
+23F-2202,1234,Zainab Mirza,PU,3,Security,,Moderate,Reading
+23F-8067,1234,Usman Ahmed,IBA,2,IoT|Blockchain|Web,Calculus|Programming,Moderate,Practice
+23F-1001,1234,Bilal Iqbal,NUST,2,AR/VR|Mobile|Security,Calculus|Programming,Fast,Visual
+22F-6686,1234,Ali Khan,UET,5,Security|Blockchain,,Fast,Reading
+23F-5759,1234,Sara Malik,IBA,3,Mobile,,Moderate,Reading
+22F-5217,1234,Zainab Shah,FAST NUCES,4,Web,,Slow,Reading
+21F-3013,1234,Ayesha Khan,NUST,7,Game Dev|AR/VR,Calculus|Programming,Fast,Reading
+24F-2033,1234,Bilal Hussain,LUMS,1,Data Science|Security,,Slow,Practice
+23F-4280,1234,Sara Sheikh,COMSATS,3,AI/ML|Mobile,Calculus|Programming,Slow,Visual
+22F-5454,1234,Usman Ahmed,LUMS,4,Security,,Slow,Visual
+21F-4948,1234,Usman Shah,COMSATS,7,Game Dev|AR/VR,,Slow,Reading
+22F-8474,1234,Zainab Raza,COMSATS,5,Security|IoT|Data Science,Calculus|Programming,Moderate,Visual
+23F-4920,1234,Omar Raza,IBA,3,Blockchain|Mobile|Cloud,Calculus|Programming,Fast,Reading
+22F-7407,1234,Saad Sheikh,LUMS,4,IoT,,Fast,Visual
+22F-1233,1234,Omar Shah,IBA,5,Web,,Fast,Visual
+23F-7170,1234,Ayesha Malik,FAST NUCES,3,AI/ML,,Fast,Practice
+22F-5020,1234,Zainab Malik,UET,5,Mobile,,Fast,Reading
+22F-3480,1234,Usman Malik,UET,5,AI/ML|Data Science,Calculus|Programming,Fast,Practice
+20F-7132,1234,Hina Ahmed,NUST,8,Game Dev|Data Science,,Moderate,Practice
+20F-2158,1234,Ali Raza,LUMS,8,Mobile,Calculus|Programming,Fast,Reading
+23F-1844,1234,Sara Shah,LUMS,2,Web|AI/ML,,Slow,Practice
+20F-1366,1234,Ahmed Khan,NUST,8,Data Science,,Fast,Visual
+22F-6584,1234,Hina Iqbal,FAST NUCES,4,AR/VR|Cloud,,Moderate,Practice
+23F-2792,1234,Usman Mirza,UET,3,Web|Game Dev,,Slow,Visual
+22F-2875,1234,Ali Mirza,UET,5,Cloud|Game Dev|Security,Calculus|Programming,Slow,Visual
+21F-8502,1234,Hina Shah,LUMS,7,Game Dev,Calculus|Programming,Fast,Practice
+23F-5525,1234,Saad Butt,IBA,2,Cloud|Mobile|Blockchain,,Fast,Reading
+21F-4772,1234,Ayesha Ahmed,NUST,6,Cloud|Security|AR/VR,,Slow,Visual
+21F-9116,1234,Sara Butt,NUST,6,Data Science|AR/VR|Game Dev,Calculus|Programming,Moderate,Practice
+21F-9727,1234,Ahmed Khan,LUMS,6,AI/ML|Game Dev,,Fast,Visual
+22F-5097,1234,Saad Butt,NUST,5,Data Science,Calculus|Programming,Slow,Reading
+21F-5819,1234,Ahmed Sheikh,PU,6,Security|AR/VR,,Fast,Reading
+23F-8633,1234,Hina Shah,FAST NUCES,2,Blockchain|Mobile|Data Science,Calculus|Programming,Moderate,Reading
+22F-5668,1234,Bilal Khan,COMSATS,4,IoT|AI/ML,,Slow,Visual
+23F-9328,1234,Ali Butt,COMSATS,3,Blockchain|Web,,Slow,Practice
+23F-1997,1234,Sara Butt,IBA,2,IoT,,Moderate,Practice
+24F-5469,1234,Saad Butt,LUMS,1,Game Dev,,Fast,Practice
+24F-5242,1234,Saad Malik,NUST,1,AR/VR|Game Dev|AI/ML,Calculus|Programming,Moderate,Visual
+21F-6584,1234,Bilal Shah,FAST NUCES,7,Blockchain,Calculus|Programming,Fast,Visual
+21F-4646,1234,Zainab Malik,IBA,6,Web|Data Science|AR/VR,Calculus|Programming,Moderate,Practice
+24F-7056,1234,Ayesha Iqbal,COMSATS,1,Security|IoT,,Fast,Practice
+23F-8399,1234,Ali Malik,IBA,3,Web|Mobile,,Moderate,Practice
+24F-8181,1234,Zainab Shah,FAST NUCES,1,AR/VR,,Moderate,Practice
+22F-2147,1234,Ahmed Hussain,PU,5,IoT|Blockchain|Web,,Moderate,Practice
+21F-5284,1234,Hina Sheikh,FAST NUCES,7,Game Dev|Blockchain,Calculus|Programming,Slow,Visual
+22F-4430,1234,Ali Ahmed,UET,4,Mobile,Calculus|Programming,Fast,Visual
+21F-9354,1234,Bilal Malik,FAST NUCES,7,AR/VR|Game Dev|Cloud,,Moderate,Visual
+21F-9588,1234,Sara Mirza,IBA,6,Security|Game Dev,,Slow,Practice
+21F-6092,1234,Fatima Khan,IBA,7,Security|AI/ML,,Moderate,Visual
+24F-3665,1234,Ali Hussain,UET,1,Cloud|AR/VR|Web,,Fast,Practice
+22F-1723,1234,Sara Butt,PU,4,IoT|Game Dev|Data Science,Calculus|Programming,Slow,Visual
+24F-7511,1234,Usman Sheikh,LUMS,1,AI/ML|Web|Cloud,,Moderate,Reading
+20F-4100,1234,Ayesha Ahmed,FAST NUCES,8,IoT,,Slow,Reading
+23F-9950,1234,Ahmed Hussain,PU,3,Security|AR/VR|IoT,,Slow,Visual
+22F-9517,1234,Omar Mirza,COMSATS,4,AR/VR,,Slow,Practice
+21F-4096,1234,Maria Butt,PU,6,AI/ML|Cloud,,Slow,Practice
+20F-9488,1234,Zainab Hussain,UET,8,Security,Calculus|Programming,Moderate,Visual
+22F-7201,1234,Bilal Iqbal,LUMS,4,AI/ML,,Slow,Reading
+23F-7672,1234,Saad Iqbal,COMSATS,2,Game Dev,,Moderate,Visual
+21F-1008,1234,Bilal Iqbal,PU,7,Blockchain|Web|AR/VR,,Moderate,Visual
+23F-1479,1234,Sara Butt,NUST,2,Security|Mobile|IoT,,Slow,Reading
+22F-5354,1234,Sara Butt,UET,4,Mobile|Web,,Fast,Practice
+20F-3648,1234,Fatima Sheikh,UET,8,Data Science,,Fast,Visual
+20F-1902,1234,Maria Iqbal,NUST,8,Security,,Slow,Visual
+21F-8406,1234,Hina Butt,UET,7,Game Dev|Mobile|IoT,,Slow,Reading
+23F-1892,1234,Hina Ahmed,PU,2,Data Science|AR/VR|Game Dev,Calculus|Programming,Fast,Practice
+21F-7722,1234,Zainab Iqbal,NUST,6,Cloud|AR/VR|AI/ML,,Slow,Practice
+23F-1366,1234,Ahmed Raza,LUMS,3,Game Dev|Data Science|Mobile,,Slow,Reading
+24F-8631,1234,Ali Sheikh,IBA,1,AI/ML,Calculus|Programming,Fast,Practice
+20F-3770,1234,Zainab Iqbal,LUMS,8,AR/VR|Web|Cloud,Calculus|Programming,Slow,Visual
+22F-5759,1234,Ahmed Malik,COMSATS,4,IoT|Cloud|Data Science,Calculus|Programming,Slow,Visual
+21F-3045,1234,Saad Mirza,NUST,6,AR/VR|Security,,Fast,Visual
+22F-8341,1234,Maria Shah,COMSATS,5,AR/VR|Security|Blockchain,,Fast,Practice
+23F-2359,1234,Sara Raza,UET,3,Security,,Slow,Practice
+23F-9902,1234,Zainab Malik,NUST,3,Web,,Moderate,Visual
+24F-8876,1234,Sara Malik,IBA,1,Security|Data Science|Cloud,,Slow,Practice
+23F-7131,1234,Ali Shah,IBA,2,AI/ML|IoT,,Moderate,Visual
+23F-7990,1234,Fatima Hussain,PU,3,AR/VR|IoT|Data Science,Calculus|Programming,Fast,Practice
+21F-2571,1234,Maria Butt,LUMS,7,Web,Calculus|Programming,Moderate,Reading
+22F-8191,1234,Omar Malik,PU,5,Game Dev|AR/VR,,Slow,Visual
+22F-5114,1234,Omar Sheikh,COMSATS,5,Game Dev|Mobile|Data Science,Calculus|Programming,Moderate,Reading
+21F-4221,1234,Ali Khan,FAST NUCES,6,Blockchain|Data Science|AR/VR,,Fast,Practice
+22F-9860,1234,Usman Shah,COMSATS,4,Security|Game Dev|AR/VR,,Moderate,Practice
+20F-1456,1234,Fatima Shah,PU,8,Game Dev|Mobile,,Fast,Reading
+24F-7301,1234,Ayesha Mirza,UET,1,AR/VR|Cloud|Web,,Fast,Practice
+23F-3745,1234,Saad Sheikh,COMSATS,2,AR/VR,Calculus|Programming,Fast,Practice
+23F-3133,1234,Ahmed Shah,IBA,3,Data Science|AI/ML|Blockchain,,Fast,Visual
+22F-7038,1234,Zainab Shah,UET,4,AI/ML|Web,,Fast,Visual
+22F-3787,1234,Bilal Khan,IBA,4,Mobile|Cloud,,Fast,Practice
+24F-7160,1234,Ali Iqbal,COMSATS,1,Web|Game Dev|Security,Calculus|Programming,Moderate,Visual
+24F-1140,1234,Saad Khan,IBA,1,Security|Cloud,Calculus|Programming,Moderate,Visual
+23F-7835,1234,Bilal Khan,FAST NUCES,3,IoT|Security|Data Science,,Moderate,Reading
+21F-5613,1234,Saad Ahmed,NUST,7,AR/VR|Data Science,,Fast,Visual
+24F-1712,1234,Bilal Shah,UET,1,AI/ML|AR/VR|Cloud,,Slow,Reading
+23F-4088,1234,Ahmed Raza,UET,2,Mobile|Cloud|Game Dev,,Fast,Practice
+24F-5802,1234,Zainab Malik,UET,1,Data Science|Game Dev,,Slow,Practice
+21F-8006,1234,Fatima Butt,UET,7,AI/ML|Blockchain,Calculus|Programming,Fast,Visual
+22F-2228,1234,Zainab Butt,FAST NUCES,4,Security|Game Dev|AR/VR,,Moderate,Visual
+21F-6660,1234,Maria Sheikh,FAST NUCES,7,Web|Blockchain|AR/VR,,Moderate,Visual
+24F-1673,1234,Ayesha Khan,COMSATS,1,Data Science,Calculus|Programming,Fast,Reading
+23F-2735,1234,Fatima Butt,IBA,2,Web|AI/ML|Data Science,,Fast,Reading
+23F-7649,1234,Fatima Khan,PU,3,Security|Game Dev,,Moderate,Practice
+21F-8718,1234,Maria Raza,FAST NUCES,7,AI/ML|Mobile,Calculus|Programming,Moderate,Practice
+20F-4575,1234,Ahmed Shah,LUMS,8,AR/VR|Blockchain|Mobile,Calculus|Programming,Fast,Visual
+24F-5668,1234,Usman Shah,UET,1,IoT|AI/ML|Mobile,,Moderate,Visual
+23F-4876,1234,Usman Hussain,LUMS,3,Blockchain,,Fast,Practice
+23F-8824,1234,Bilal Shah,FAST NUCES,2,Blockchain|Cloud|IoT,,Slow,Practice
+23F-3929,1234,Usman Sheikh,UET,2,Web|Mobile|Security,Calculus|Programming,Fast,Practice
+23F-7902,1234,Ali Hussain,FAST NUCES,2,AR/VR|Mobile,Calculus|Programming,Moderate,Visual
+22F-5599,1234,Usman Khan,COMSATS,5,Mobile|Blockchain|Data Science,,Slow,Reading
+23F-7940,1234,Maria Mirza,IBA,3,Web|Cloud,,Fast,Visual
+23F-9389,1234,Ahmed Sheikh,LUMS,3,IoT|AI/ML|Data Science,,Fast,Practice
+21F-7887,1234,Omar Butt,PU,6,IoT|Game Dev,,Slow,Visual
+22F-6687,1234,Ali Ahmed,LUMS,4,Cloud,,Slow,Visual
+23F-4161,1234,Saad Shah,PU,2,AI/ML|Game Dev|AR/VR,,Moderate,Practice
+21F-4807,1234,Maria Butt,FAST NUCES,7,AR/VR|AI/ML|Web,,Fast,Visual
+22F-2921,1234,Bilal Hussain,PU,5,Data Science,,Moderate,Visual
+23F-7692,1234,Bilal Malik,UET,2,AR/VR,Calculus|Programming,Slow,Visual
+21F-1985,1234,Sara Khan,LUMS,6,AR/VR|Game Dev|Blockchain,,Moderate,Reading
+23F-7450,1234,Bilal Sheikh,FAST NUCES,2,Game Dev|Mobile,,Moderate,Practice
+23F-9769,1234,Ali Raza,NUST,3,AR/VR,Calculus|Programming,Slow,Practice
+21F-3248,1234,Zainab Iqbal,PU,7,Security,,Moderate,Reading
+21F-3673,1234,Bilal Butt,FAST NUCES,7,Web|Blockchain|Data Science,,Slow,Reading
+20F-5357,1234,Zainab Malik,NUST,8,Game Dev|Mobile,,Moderate,Visual
+22F-2705,1234,Sara Khan,PU,4,Data Science|Game Dev|Mobile,,Moderate,Visual
+22F-7497,1234,Saad Iqbal,LUMS,5,Web|AI/ML,Calculus|Programming,Moderate,Practice
+23F-8844,1234,Omar Sheikh,LUMS,3,Cloud,,Fast,Practice
+21F-7570,1234,Fatima Malik,IBA,6,Security|AI/ML,Calculus|Programming,Fast,Visual
+21F-7780,1234,Ayesha Malik,IBA,7,Blockchain,,Slow,Reading
+20F-8043,1234,Omar Iqbal,FAST NUCES,8,Game Dev|Web|IoT,,Moderate,Practice
+23F-4035,1234,Fatima Iqbal,IBA,2,Cloud|Blockchain,Calculus|Programming,Fast,Practice
+23F-4341,1234,Zainab Shah,LUMS,2,Game Dev|AR/VR,,Moderate,Practice
+21F-5359,1234,Fatima Shah,IBA,6,Cloud|Security|AR/VR,,Moderate,Reading
+22F-1648,1234,Sara Raza,IBA,4,Blockchain|Web|Data Science,,Moderate,Reading
+24F-5648,1234,Ayesha Sheikh,PU,1,Cloud|IoT,Calculus|Programming,Moderate,Visual
+22F-5297,1234,Fatima Ahmed,UET,4,Cloud|AR/VR|Security,,Slow,Visual
+21F-9086,1234,Hina Ahmed,FAST NUCES,7,Web|Game Dev|AR/VR,,Slow,Practice
+23F-8780,1234,Ayesha Khan,NUST,3,AI/ML|AR/VR|Cloud,,Moderate,Visual
+21F-9117,1234,Ali Ahmed,NUST,7,Security|Game Dev|Mobile,,Slow,Visual
+22F-1425,1234,Fatima Malik,PU,4,AR/VR,Calculus|Programming,Moderate,Visual
+21F-6000,1234,Saad Khan,FAST NUCES,6,AI/ML|Blockchain,,Slow,Practice
+23F-5729,1234,Ayesha Mirza,COMSATS,2,IoT|AI/ML,,Moderate,Reading
+21F-1657,1234,Zainab Shah,UET,7,Web|Security|Game Dev,,Moderate,Practice
+22F-5252,1234,Zainab Iqbal,NUST,4,IoT|Blockchain|Mobile,Calculus|Programming,Fast,Practice
+22F-1732,1234,Zainab Malik,FAST NUCES,5,Blockchain|AR/VR|Security,Calculus|Programming,Fast,Visual
+21F-5723,1234,Zainab Raza,UET,7,Game Dev|Security,,Fast,Practice
+24F-1031,1234,Saad Hussain,NUST,1,AI/ML|Mobile|Game Dev,Calculus|Programming,Slow,Reading
+22F-7627,1234,Bilal Shah,FAST NUCES,4,AI/ML|Data Science|Security,,Moderate,Practice
+23F-8613,1234,Ayesha Iqbal,UET,2,Game Dev,,Moderate,Reading
+22F-3370,1234,Fatima Malik,UET,5,AR/VR,,Moderate,Practice
+22F-8398,1234,Ahmed Shah,IBA,4,IoT|Blockchain,,Slow,Visual
+22F-9781,1234,Sara Malik,FAST NUCES,5,AR/VR|Mobile,,Fast,Visual
+24F-7495,1234,Maria Shah,COMSATS,1,Game Dev|Data Science|Cloud,,Slow,Reading
+23F-4260,1234,Maria Malik,LUMS,3,AI/ML|Cloud,Calculus|Programming,Slow,Visual
+24F-9387,1234,Ayesha Malik,COMSATS,1,AI/ML|Data Science|Blockchain,Calculus|Programming,Moderate,Practice
+23F-1748,1234,Hina Shah,PU,3,Mobile|AI/ML,,Moderate,Visual
+23F-7007,1234,Saad Mirza,UET,3,Game Dev,,Fast,Practice
+23F-7478,1234,Saad Hussain,FAST NUCES,2,Blockchain|Mobile|Data Science,,Fast,Practice
+23F-2214,1234,Ayesha Ahmed,COMSATS,3,IoT,,Moderate,Visual
+23F-2157,1234,Ali Butt,LUMS,2,Security|Web,Calculus|Programming,Moderate,Reading
+21F-2160,1234,Ayesha Khan,LUMS,6,Web|Game Dev|Mobile,Calculus|Programming,Moderate,Reading
+23F-7130,1234,Ali Malik,LUMS,2,IoT,,Fast,Practice
+21F-1782,1234,Usman Iqbal,IBA,6,Security,,Slow,Visual
+22F-2221,1234,Bilal Malik,COMSATS,4,Game Dev,Calculus|Programming,Moderate,Visual
+24F-1286,1234,Ayesha Shah,PU,1,Blockchain|Mobile|AI/ML,Calculus|Programming,Moderate,Visual
+21F-9981,1234,Ali Shah,LUMS,6,Cloud|Data Science,,Fast,Reading
+23F-3953,1234,Saad Ahmed,FAST NUCES,3,Security|Web,,Moderate,Reading
+23F-6308,1234,Ahmed Hussain,COMSATS,3,Mobile|Security|Game Dev,,Moderate,Visual
+24F-6103,1234,Maria Iqbal,COMSATS,1,Blockchain|Game Dev|Cloud,,Fast,Practice
+20F-3867,1234,Bilal Sheikh,PU,8,IoT|Data Science|AR/VR,Calculus|Programming,Slow,Practice
+22F-7206,1234,Omar Raza,COMSATS,5,Cloud,,Slow,Practice
+24F-7485,1234,Bilal Khan,LUMS,1,Web,,Moderate,Practice
+20F-4961,1234,Hina Raza,UET,8,AI/ML,,Fast,Visual
+20F-6117,1234,Ayesha Iqbal,UET,8,Blockchain,Calculus|Programming,Slow,Reading
+21F-7246,1234,Usman Butt,LUMS,6,AI/ML|Mobile|Blockchain,,Moderate,Visual
+21F-4283,1234,Zainab Ahmed,NUST,7,Cloud,,Slow,Reading
+23F-1466,1234,Zainab Hussain,FAST NUCES,2,Game Dev|Data Science|Security,Calculus|Programming,Slow,Visual
+21F-8329,1234,Omar Malik,NUST,7,Web|Mobile,,Slow,Practice
+23F-6726,1234,Fatima Sheikh,IBA,3,Security|AR/VR|Game Dev,Calculus|Programming,Slow,Reading
+22F-1234,1234,Ayesha Iqbal,LUMS,5,Web|Mobile|Data Science,,Slow,Visual
+20F-8216,1234,Omar Iqbal,NUST,8,Game Dev|AR/VR|Web,,Slow,Practice
+20F-7720,1234,Hina Khan,UET,8,Security|AI/ML|IoT,Calculus|Programming,Fast,Practice
+22F-4311,1234,Ayesha Iqbal,IBA,5,AI/ML|Data Science,Calculus|Programming,Fast,Visual
+21F-3318,1234,Zainab Sheikh,FAST NUCES,7,Security|Mobile,,Moderate,Practice
+23F-9728,1234,Saad Ahmed,UET,3,Data Science|AI/ML|AR/VR,,Moderate,Visual
+23F-7051,1234,Ayesha Malik,COMSATS,2,Web|Mobile,Calculus|Programming,Slow,Reading
+23F-8562,1234,Fatima Hussain,LUMS,3,Data Science|Web|Game Dev,Calculus|Programming,Fast,Visual
+24F-9307,1234,Omar Mirza,IBA,1,Cloud,,Moderate,Visual
+21F-1637,1234,Sara Shah,COMSATS,7,Data Science|Security|IoT,,Moderate,Practice
+21F-4696,1234,Ahmed Hussain,IBA,6,Game Dev,Calculus|Programming,Slow,Visual
+22F-3384,1234,Omar Ahmed,LUMS,5,Security,Calculus|Programming,Fast,Practice
+23F-8879,1234,Bilal Malik,NUST,2,AR/VR|Mobile|Cloud,Calculus|Programming,Fast,Reading
+22F-6020,1234,Maria Malik,FAST NUCES,4,Security,,Moderate,Visual
+23F-5339,1234,Maria Iqbal,NUST,2,AR/VR,,Slow,Reading
+21F-9137,1234,Saad Khan,FAST NUCES,7,Security|Mobile|Web,,Fast,Reading
+22F-2658,1234,Bilal Khan,IBA,4,Data Science|IoT|Game Dev,,Fast,Reading
+23F-6696,1234,Zainab Mirza,LUMS,2,Web,Calculus|Programming,Slow,Visual
+22F-3182,1234,Hina Hussain,NUST,4,Mobile|Game Dev|Security,Calculus|Programming,Slow,Reading
+21F-7366,1234,Ayesha Mirza,PU,6,AR/VR|Cloud|Data Science,Calculus|Programming,Slow,Practice
+21F-1615,1234,Zainab Malik,COMSATS,6,Data Science,,Slow,Visual
+20F-7703,1234,Sara Mirza,PU,8,Cloud,,Moderate,Practice
+24F-6252,1234,Ali Ahmed,COMSATS,1,IoT|AR/VR,,Moderate,Visual
+22F-5842,1234,Fatima Shah,COMSATS,5,IoT,,Moderate,Practice
+22F-5284,1234,Usman Ahmed,UET,5,Blockchain|Game Dev,,Moderate,Practice
+21F-4087,1234,Ayesha Raza,NUST,6,Mobile|Cloud,,Moderate,Reading
+23F-1642,1234,Ahmed Sheikh,NUST,2,Data Science|Game Dev|Cloud,,Slow,Visual
+23F-2250,1234,Saad Raza,FAST NUCES,3,Cloud,,Moderate,Reading
+21F-2135,1234,Saad Malik,COMSATS,7,IoT,,Slow,Visual
+21F-1240,1234,Ali Hussain,PU,6,Mobile|Web|AR/VR,,Fast,Visual
+23F-7009,1234,Omar Sheikh,COMSATS,2,Web,,Slow,Practice
+23F-9583,1234,Ahmed Sheikh,COMSATS,2,AI/ML,Calculus|Programming,Slow,Reading
+20F-2070,1234,Ayesha Raza,IBA,8,Security|AI/ML|Blockchain,,Fast,Practice
+21F-2375,1234,Usman Butt,LUMS,7,Data Science,,Fast,Practice
+22F-7001,1234,Zainab Khan,UET,5,Mobile|Blockchain|AR/VR,,Moderate,Reading
+24F-9673,1234,Zainab Ahmed,IBA,1,AI/ML,,Moderate,Practice
+21F-3281,1234,Saad Hussain,PU,6,Blockchain,Calculus|Programming,Slow,Reading
+23F-1092,1234,Ahmed Butt,IBA,2,Blockchain|Web,,Moderate,Practice
+22F-7098,1234,Ayesha Mirza,LUMS,4,Game Dev,,Fast,Reading
+22F-4116,1234,Ayesha Shah,LUMS,4,Mobile,,Slow,Reading
+21F-5657,1234,Sara Raza,FAST NUCES,6,Game Dev|AI/ML|Blockchain,Calculus|Programming,Slow,Reading
+23F-8572,1234,Ahmed Raza,UET,2,Security,Calculus|Programming,Slow,Practice
+21F-5770,1234,Omar Malik,LUMS,7,Mobile|Cloud|AI/ML,,Fast,Visual
+21F-4684,1234,Bilal Raza,NUST,7,Cloud|IoT|Data Science,,Fast,Visual
+20F-7182,1234,Omar Shah,NUST,8,Mobile,,Moderate,Reading
+22F-9128,1234,Omar Raza,COMSATS,5,Game Dev|IoT|Blockchain,Calculus|Programming,Slow,Reading
+22F-3239,1234,Maria Mirza,FAST NUCES,4,Security,Calculus|Programming,Fast,Reading
+23F-1643,1234,Hina Raza,LUMS,3,Data Science|Blockchain,,Slow,Reading
+21F-9137,1234,Saad Khan,LUMS,6,Cloud|Data Science,Calculus|Programming,Fast,Visual
+21F-5215,1234,Sara Ahmed,PU,7,Blockchain|Security,,Moderate,Reading
+22F-9259,1234,Ayesha Raza,COMSATS,5,Security,Calculus|Programming,Fast,Practice
+22F-5769,1234,Omar Butt,NUST,5,AR/VR,,Moderate,Reading
+22F-6461,1234,Maria Hussain,IBA,4,Mobile,Calculus|Programming,Moderate,Visual
+24F-5170,1234,Zainab Butt,NUST,1,Web|Cloud,Calculus|Programming,Fast,Visual
+23F-6265,1234,Saad Ahmed,NUST,2,Web|Security,,Moderate,Visual
+21F-1440,1234,Maria Raza,NUST,6,AR/VR|Web|AI/ML,Calculus|Programming,Slow,Practice
+23F-5722,1234,Ahmed Shah,COMSATS,3,Cloud|AR/VR|Security,,Moderate,Reading
+22F-5353,1234,Fatima Hussain,FAST NUCES,5,AR/VR,,Moderate,Practice
+22F-7352,1234,Sara Ahmed,NUST,5,AI/ML|Web,,Fast,Reading
+22F-7395,1234,Zainab Hussain,COMSATS,4,Security,Calculus|Programming,Moderate,Visual
+20F-5567,1234,Omar Khan,FAST NUCES,8,Mobile,,Fast,Practice
+23F-7805,1234,Saad Ahmed,FAST NUCES,3,Security|Cloud|Game Dev,,Fast,Reading
+24F-2850,1234,Fatima Mirza,NUST,1,Data Science,,Moderate,Visual
+22F-7486,1234,Bilal Sheikh,COMSATS,5,Blockchain,,Fast,Visual
+23F-7715,1234,Usman Ahmed,IBA,3,Mobile|Cloud,Calculus|Programming,Moderate,Visual
+20F-3283,1234,Hina Shah,PU,8,Security|AI/ML,,Slow,Practice
+23F-9846,1234,Maria Malik,NUST,3,AI/ML|Data Science|Cloud,Calculus|Programming,Slow,Practice
+22F-4489,1234,Hina Butt,PU,5,Blockchain|Cloud,,Moderate,Practice
+22F-6147,1234,Saad Shah,UET,5,IoT|Mobile|AI/ML,Calculus|Programming,Fast,Reading
+24F-1436,1234,Ahmed Ahmed,UET,1,Mobile,Calculus|Programming,Fast,Reading
+21F-5374,1234,Bilal Malik,COMSATS,7,IoT,,Slow,Visual
+23F-1797,1234,Fatima Malik,FAST NUCES,2,Game Dev,,Slow,Visual
+21F-2929,1234,Zainab Butt,UET,6,AI/ML|Game Dev,,Moderate,Visual
+22F-5564,1234,Maria Iqbal,PU,4,Mobile|Cloud|Blockchain,Calculus|Programming,Moderate,Reading
+23F-1844,1234,Omar Ahmed,LUMS,3,Game Dev|AR/VR|Security,,Slow,Practice
+20F-2346,1234,Maria Sheikh,COMSATS,8,AI/ML,Calculus|Programming,Moderate,Visual
+23F-3186,1234,Zainab Butt,PU,2,Blockchain,,Moderate,Practice
+23F-1364,1234,Sara Malik,COMSATS,3,Web|Data Science|IoT,,Slow,Practice
+20F-3404,1234,Hina Iqbal,IBA,8,Data Science|IoT|AI/ML,,Slow,Practice
+21F-6270,1234,Omar Sheikh,LUMS,7,AR/VR|Cloud|Mobile,,Slow,Practice
+20F-8489,1234,Sara Hussain,COMSATS,8,IoT,Calculus|Programming,Fast,Practice
+23F-9177,1234,Maria Hussain,COMSATS,2,Mobile,Calculus|Programming,Slow,Practice
+22F-4119,1234,Maria Sheikh,LUMS,5,Data Science|Blockchain|Game Dev,,Fast,Reading
+22F-9684,1234,Fatima Malik,NUST,5,Mobile|Security,Calculus|Programming,Fast,Practice
+23F-5125,1234,Usman Sheikh,PU,2,AI/ML,Calculus|Programming,Slow,Reading
+22F-2288,1234,Ahmed Khan,LUMS,4,Game Dev|Cloud|AR/VR,,Moderate,Reading
+22F-4699,1234,Sara Khan,FAST NUCES,5,Web|Blockchain,Calculus|Programming,Fast,Visual
+24F-4754,1234,Hina Iqbal,PU,1,AR/VR|Data Science|Game Dev,,Slow,Reading
+21F-2123,1234,Fatima Raza,FAST NUCES,6,IoT|Mobile|Game Dev,,Slow,Reading
+22F-4138,1234,Zainab Ahmed,UET,5,Mobile,,Slow,Practice
+21F-6283,1234,Fatima Ahmed,PU,7,Web,Calculus|Programming,Slow,Practice
+24F-3375,1234,Hina Butt,COMSATS,1,Security,,Moderate,Visual
+23F-3143,1234,Hina Shah,LUMS,2,AI/ML|AR/VR,,Fast,Visual
+22F-6798,1234,Ali Raza,PU,5,Game Dev,,Moderate,Practice
+22F-8914,1234,Ahmed Raza,UET,4,Data Science|Game Dev|Blockchain,,Fast,Practice
+21F-3894,1234,Usman Mirza,NUST,7,Game Dev,,Slow,Practice
+22F-1567,1234,Ahmed Mirza,NUST,5,Security,,Moderate,Reading
+21F-6797,1234,Ali Butt,IBA,6,Web|Blockchain,,Moderate,Practice
+23F-9294,1234,Ahmed Mirza,NUST,2,Security|AR/VR,Calculus|Programming,Fast,Visual
+22F-3954,1234,Bilal Ahmed,COMSATS,4,Mobile|Web|AR/VR,,Fast,Visual
+21F-3982,1234,Zainab Iqbal,LUMS,7,Cloud|AR/VR,,Slow,Reading
+21F-8381,1234,Omar Raza,UET,6,Mobile|Data Science|Blockchain,,Slow,Reading
+23F-2259,1234,Fatima Ahmed,NUST,2,AI/ML|Game Dev|Security,Calculus|Programming,Slow,Reading
+20F-8622,1234,Ali Khan,LUMS,8,IoT|Security|Blockchain,Calculus|Programming,Slow,Visual
+23F-3354,1234,Bilal Mirza,COMSATS,3,AI/ML|Security|Mobile,,Fast,Practice
+21F-6221,1234,Bilal Raza,PU,6,Game Dev,,Slow,Reading
+22F-1206,1234,Usman Hussain,NUST,5,Mobile|Security|Web,Calculus|Programming,Moderate,Reading
+20F-9992,1234,Omar Iqbal,IBA,8,AI/ML|Blockchain|AR/VR,,Slow,Practice
+22F-5027,1234,Sara Raza,NUST,5,Blockchain|IoT,Calculus|Programming,Moderate,Practice
+23F-7807,1234,Ayesha Sheikh,IBA,2,Data Science,,Fast,Practice
+22F-8528,1234,Omar Raza,UET,5,Blockchain|IoT|Mobile,,Moderate,Practice
+20F-1535,1234,Bilal Ahmed,FAST NUCES,8,Cloud|AR/VR,,Fast,Practice
+21F-1027,1234,Fatima Raza,IBA,6,Blockchain,Calculus|Programming,Slow,Practice
+22F-4214,1234,Ali Mirza,IBA,4,Game Dev|Cloud|Blockchain,Calculus|Programming,Fast,Visual
+21F-4805,1234,Bilal Sheikh,FAST NUCES,6,Blockchain|Cloud|Web,,Moderate,Reading
+23F-1882,1234,Hina Khan,NUST,3,Game Dev,,Moderate,Practice
+22F-4047,1234,Ahmed Iqbal,PU,5,Blockchain,,Moderate,Visual
+23F-4441,1234,Usman Raza,NUST,3,AR/VR,Calculus|Programming,Slow,Visual
+24F-4222,1234,Ahmed Shah,IBA,1,AR/VR|AI/ML|Game Dev,Calculus|Programming,Fast,Practice
+24F-9181,1234,Bilal Malik,PU,1,IoT|Security,Calculus|Programming,Slow,Reading
+23F-7219,1234,Fatima Shah,FAST NUCES,2,Mobile|Data Science,,Fast,Reading
+20F-4594,1234,Saad Shah,COMSATS,8,Web|AI/ML|Mobile,,Fast,Visual
+20F-4638,1234,Bilal Ahmed,COMSATS,8,Mobile|Cloud|Blockchain,Calculus|Programming,Fast,Reading
+22F-1155,1234,Maria Khan,LUMS,4,Game Dev|Security|IoT,,Slow,Visual
+22F-2434,1234,Omar Hussain,COMSATS,4,AR/VR|Mobile|Cloud,,Moderate,Reading
+24F-5196,1234,Ali Ahmed,LUMS,1,AI/ML|Cloud,Calculus|Programming,Moderate,Practice
+23F-4955,1234,Usman Malik,FAST NUCES,2,Cloud,Calculus|Programming,Slow,Visual
+21F-3336,1234,Sara Mirza,IBA,7,IoT|Mobile,,Slow,Reading
+22F-6520,1234,Maria Khan,LUMS,5,IoT,,Fast,Reading
+21F-5314,1234,Ayesha Sheikh,NUST,6,Security,Calculus|Programming,Fast,Practice
+21F-5446,1234,Usman Ahmed,LUMS,7,AR/VR|Web,,Fast,Reading
+20F-8219,1234,Ali Sheikh,IBA,8,AR/VR|Blockchain,,Fast,Reading
+21F-9808,1234,Ayesha Khan,LUMS,6,IoT,,Moderate,Visual
+23F-2513,1234,Saad Khan,LUMS,2,Security,Calculus|Programming,Slow,Visual
+24F-8844,1234,Usman Mirza,LUMS,1,AR/VR|Web,Calculus|Programming,Moderate,Reading
+23F-5190,1234,Hina Iqbal,COMSATS,3,AI/ML,Calculus|Programming,Slow,Reading
+23F-2136,1234,Saad Butt,FAST NUCES,3,Data Science|AR/VR,Calculus|Programming,Fast,Visual
+24F-5310,1234,Saad Malik,UET,1,IoT|AR/VR|AI/ML,,Slow,Visual
+21F-3690,1234,Ali Sheikh,LUMS,7,IoT|AR/VR,,Slow,Practice
+22F-7524,1234,Hina Iqbal,NUST,5,Mobile,Calculus|Programming,Moderate,Practice
+21F-9225,1234,Saad Hussain,LUMS,7,Blockchain,,Moderate,Visual
+24F-3045,1234,Hina Raza,UET,1,Security|Web|Data Science,,Fast,Visual
+21F-2834,1234,Hina Sheikh,COMSATS,7,Security|IoT,,Slow,Reading
+22F-6863,1234,Ayesha Khan,IBA,5,Security|Cloud|AR/VR,,Slow,Practice
+20F-7819,1234,Ayesha Raza,IBA,8,Security,Calculus|Programming,Slow,Reading
+21F-5031,1234,Ayesha Butt,COMSATS,7,Cloud,,Moderate,Practice
+20F-5713,1234,Saad Ahmed,LUMS,8,Blockchain,,Fast,Reading
+22F-2111,1234,Ali Sheikh,IBA,4,AI/ML|Data Science|Web,,Slow,Practice
+23F-8394,1234,Bilal Raza,FAST NUCES,2,Blockchain,,Moderate,Reading
+21F-9487,1234,Ayesha Shah,COMSATS,7,AR/VR|Mobile|Security,,Fast,Practice
+21F-1914,1234,Zainab Iqbal,UET,6,Web|AR/VR|Data Science,,Fast,Visual
+23F-4500,1234,Usman Mirza,LUMS,2,Blockchain|Web|Data Science,Calculus|Programming,Fast,Reading
+20F-3801,1234,Usman Butt,NUST,8,Data Science|IoT,Calculus|Programming,Moderate,Practice
+23F-8439,1234,Hina Butt,NUST,2,Data Science|AI/ML,,Slow,Reading
+22F-5360,1234,Sara Iqbal,UET,4,AI/ML|IoT,,Moderate,Practice
+21F-8868,1234,Bilal Hussain,COMSATS,6,Security|AI/ML|Cloud,,Slow,Visual
+22F-1400,1234,Ahmed Mirza,NUST,4,IoT,,Slow,Visual
+20F-6233,1234,Zainab Butt,NUST,8,AR/VR|Cloud|Mobile,,Fast,Practice
+21F-7059,1234,Ali Malik,UET,7,AR/VR|Data Science|Cloud,Calculus|Programming,Slow,Reading
+21F-4230,1234,Ayesha Ahmed,UET,7,Mobile|Cloud|AI/ML,,Fast,Reading
+22F-8569,1234,Omar Iqbal,LUMS,4,AI/ML|AR/VR|Security,,Moderate,Visual
+22F-2597,1234,Omar Raza,LUMS,4,Game Dev|Data Science|AI/ML,Calculus|Programming,Slow,Reading
+22F-8204,1234,Usman Shah,UET,5,AI/ML,,Fast,Reading
+20F-4344,1234,Zainab Raza,NUST,8,AI/ML|Mobile|Web,,Fast,Practice
+21F-9981,1234,Hina Mirza,LUMS,7,IoT|Cloud|AI/ML,Calculus|Programming,Moderate,Visual
+21F-2358,1234,Omar Hussain,NUST,7,AR/VR,,Slow,Practice
+23F-5361,1234,Hina Raza,PU,2,AI/ML|AR/VR,Calculus|Programming,Fast,Visual
+23F-7278,1234,Hina Raza,COMSATS,2,Security|AR/VR,Calculus|Programming,Moderate,Visual
+20F-3218,1234,Fatima Sheikh,COMSATS,8,Data Science,Calculus|Programming,Fast,Visual
+21F-2557,1234,Ali Mirza,NUST,6,Security|Blockchain|Cloud,,Slow,Reading
+22F-7750,1234,Ali Shah,PU,4,AI/ML,,Moderate,Visual
+24F-7727,1234,Maria Ahmed,LUMS,1,Security,,Slow,Reading
+20F-8437,1234,Saad Sheikh,COMSATS,8,IoT|AI/ML|Cloud,Calculus|Programming,Slow,Practice
+24F-6604,1234,Omar Ahmed,PU,1,Security|Game Dev|AI/ML,,Moderate,Practice
+22F-8911,1234,Maria Butt,LUMS,5,IoT|Game Dev|Web,Calculus|Programming,Slow,Reading
+21F-7966,1234,Hina Malik,LUMS,7,AI/ML|Security,,Fast,Visual
+23F-5795,1234,Ahmed Butt,FAST NUCES,3,Security,Calculus|Programming,Fast,Visual
+21F-5248,1234,Hina Mirza,FAST NUCES,6,AR/VR|IoT,Calculus|Programming,Slow,Practice
+21F-6844,1234,Bilal Raza,FAST NUCES,7,IoT,,Fast,Practice
+22F-5892,1234,Bilal Mirza,PU,5,Mobile|Blockchain,,Slow,Reading
+24F-8435,1234,Hina Sheikh,COMSATS,1,Game Dev|Web,,Fast,Visual
+22F-5368,1234,Omar Sheikh,IBA,5,IoT|Web|Blockchain,Calculus|Programming,Moderate,Reading
+23F-4839,1234,Hina Ahmed,UET,3,Security|Cloud,,Slow,Practice
+23F-9067,1234,Sara Raza,UET,3,Mobile,Calculus|Programming,Moderate,Reading
+20F-4870,1234,Saad Ahmed,COMSATS,8,Blockchain,Calculus|Programming,Moderate,Reading
+20F-1732,1234,Zainab Sheikh,LUMS,8,Cloud,,Fast,Practice
+21F-6628,1234,Maria Hussain,NUST,7,AR/VR,Calculus|Programming,Moderate,Visual
+21F-3099,1234,Hina Mirza,PU,7,Data Science,,Moderate,Practice
+21F-4533,1234,Fatima Mirza,UET,6,AI/ML|IoT,Calculus|Programming,Slow,Practice
+23F-3579,1234,Maria Ahmed,FAST NUCES,3,Web|Blockchain|Security,Calculus|Programming,Slow,Visual
+21F-5920,1234,Saad Khan,UET,6,AR/VR|Mobile|Cloud,,Slow,Reading
+21F-9808,1234,Ayesha Butt,PU,6,Game Dev|Security,Calculus|Programming,Fast,Reading
+23F-6001,1234,Bilal Butt,NUST,2,Mobile|AR/VR|IoT,,Slow,Reading
+23F-1369,1234,Maria Shah,COMSATS,3,IoT,,Moderate,Visual
+21F-6527,1234,Ayesha Shah,IBA,7,IoT,,Moderate,Practice
+21F-8252,1234,Maria Khan,NUST,7,IoT|Security,,Fast,Visual
+21F-5180,1234,Omar Iqbal,NUST,6,Game Dev|Cloud,,Fast,Practice
+22F-4917,1234,Sara Shah,FAST NUCES,4,Mobile,,Fast,Practice
+23F-3070,1234,Hina Sheikh,FAST NUCES,3,Mobile|Blockchain|Web,,Fast,Visual
+21F-4777,1234,Sara Iqbal,IBA,6,Security|Mobile,Calculus|Programming,Fast,Visual
+20F-6974,1234,Ali Hussain,PU,8,AI/ML|Mobile,Calculus|Programming,Slow,Reading
+21F-1694,1234,Ayesha Ahmed,FAST NUCES,7,Game Dev,,Slow,Visual
+23F-1341,1234,Saad Ahmed,PU,2,AI/ML|AR/VR,Calculus|Programming,Slow,Visual
+21F-1153,1234,Zainab Ahmed,FAST NUCES,6,Blockchain|AI/ML,,Fast,Visual
+21F-3335,1234,Ahmed Raza,LUMS,6,Game Dev,Calculus|Programming,Fast,Reading
+23F-9176,1234,Ahmed Butt,FAST NUCES,2,IoT|Cloud,Calculus|Programming,Moderate,Visual
+21F-9935,1234,Ayesha Hussain,COMSATS,7,Data Science|Game Dev|Security,,Moderate,Visual
+21F-1077,1234,Ali Shah,FAST NUCES,6,Web,,Slow,Reading
+24F-1538,1234,Hina Sheikh,COMSATS,1,IoT|Web|Mobile,,Fast,Visual
+21F-6777,1234,Usman Hussain,PU,7,AR/VR|Mobile|Game Dev,Calculus|Programming,Slow,Practice
+23F-8589,1234,Saad Mirza,COMSATS,3,Blockchain|AR/VR|IoT,,Moderate,Practice
+22F-4217,1234,Ahmed Mirza,COMSATS,4,AI/ML,Calculus|Programming,Fast,Visual
+22F-9916,1234,Ali Khan,LUMS,5,AR/VR,,Moderate,Practice
+21F-8332,1234,Ali Mirza,FAST NUCES,7,Blockchain|AI/ML|AR/VR,,Moderate,Visual
+22F-9911,1234,Saad Malik,UET,5,AR/VR|Web,,Fast,Practice
+22F-2650,1234,Usman Khan,NUST,4,Blockchain|Mobile,,Fast,Practice
+22F-6172,1234,Ahmed Raza,IBA,4,AI/ML|Data Science,Calculus|Programming,Slow,Practice
+23F-3081,1234,Zainab Raza,LUMS,3,Cloud|Security|Mobile,,Fast,Reading
+23F-2194,1234,Fatima Raza,PU,2,Mobile|Blockchain|Data Science,,Fast,Practice
+21F-4642,1234,Ali Khan,PU,6,AI/ML,,Moderate,Practice
+22F-2146,1234,Zainab Ahmed,PU,5,Game Dev,,Moderate,Visual
+23F-9023,1234,Ayesha Raza,UET,3,IoT,,Moderate,Practice
+22F-3826,1234,Zainab Malik,COMSATS,4,Data Science,,Fast,Practice
+24F-8930,1234,Sara Mirza,PU,1,IoT|Security,,Fast,Reading
+21F-6930,1234,Maria Mirza,NUST,6,AR/VR,Calculus|Programming,Moderate,Reading
+20F-4103,1234,Sara Malik,FAST NUCES,8,Data Science,,Fast,Visual
+21F-9820,1234,Saad Sheikh,NUST,7,Blockchain|Cloud|Data Science,,Slow,Practice
+23F-7008,1234,Fatima Mirza,UET,2,Data Science,Calculus|Programming,Slow,Visual
+24F-7630,1234,Omar Raza,PU,1,AI/ML,,Slow,Reading
+20F-3374,1234,Omar Iqbal,PU,8,Web|Cloud,,Slow,Reading
+24F-5586,1234,Bilal Butt,LUMS,1,Data Science|IoT|AR/VR,Calculus|Programming,Fast,Practice
+21F-4500,1234,Omar Raza,NUST,7,Web|IoT|Data Science,,Slow,Reading
+20F-3243,1234,Maria Malik,LUMS,8,Security|Data Science|Game Dev,Calculus|Programming,Fast,Reading
+24F-9533,1234,Bilal Khan,LUMS,1,Security,Calculus|Programming,Slow,Reading
+22F-3657,1234,Zainab Khan,FAST NUCES,4,IoT|Web|Blockchain,Calculus|Programming,Fast,Visual
+21F-1453,1234,Usman Hussain,UET,6,Game Dev|Security|AR/VR,,Moderate,Reading
+21F-7236,1234,Hina Sheikh,COMSATS,7,Data Science|Mobile|Blockchain,Calculus|Programming,Fast,Reading
+21F-4298,1234,Bilal Mirza,UET,7,Security|AR/VR|Cloud,,Fast,Reading
+24F-7762,1234,Ali Sheikh,UET,1,Web|AI/ML|Data Science,,Slow,Reading
+21F-9115,1234,Usman Khan,PU,7,Mobile|Cloud|Web,Calculus|Programming,Moderate,Visual
+23F-8105,1234,Ali Mirza,IBA,3,AI/ML|Mobile|Security,Calculus|Programming,Slow,Reading
+23F-7623,1234,Zainab Hussain,IBA,2,AR/VR|AI/ML,Calculus|Programming,Moderate,Visual
+24F-4381,1234,Omar Raza,COMSATS,1,Web,Calculus|Programming,Slow,Reading
+24F-4005,1234,Ayesha Ahmed,PU,1,Blockchain|Security,,Moderate,Reading
+24F-1165,1234,Omar Ahmed,COMSATS,1,IoT,,Fast,Reading
+22F-3122,1234,Zainab Mirza,PU,5,AI/ML|Cloud,,Moderate,Reading
+22F-3287,1234,Sara Ahmed,LUMS,5,AI/ML|Mobile,,Fast,Visual
+21F-2020,1234,Fatima Sheikh,FAST NUCES,7,IoT,,Fast,Reading
+23F-6962,1234,Ayesha Shah,FAST NUCES,2,AI/ML|Mobile|Game Dev,,Fast,Visual
+21F-5445,1234,Bilal Butt,COMSATS,6,Security|AI/ML,Calculus|Programming,Slow,Visual
+23F-8122,1234,Bilal Iqbal,IBA,2,AR/VR,Calculus|Programming,Moderate,Visual
+23F-3305,1234,Usman Khan,FAST NUCES,2,IoT|Game Dev|AR/VR,Calculus|Programming,Fast,Visual
+24F-7726,1234,Usman Sheikh,LUMS,1,Web|Cloud,,Fast,Practice
+23F-6774,1234,Omar Shah,IBA,2,Blockchain|Cloud,,Fast,Reading
+24F-1860,1234,Zainab Sheikh,LUMS,1,AR/VR|Blockchain|IoT,,Slow,Practice
+21F-8122,1234,Zainab Sheikh,IBA,7,Mobile,,Slow,Reading
+22F-1897,1234,Ayesha Malik,COMSATS,4,Blockchain|Cloud|Data Science,,Moderate,Visual
+22F-3686,1234,Ahmed Butt,NUST,4,AR/VR|AI/ML|Mobile,,Moderate,Reading
+20F-9138,1234,Omar Ahmed,NUST,8,Game Dev,,Fast,Practice
+22F-1411,1234,Ahmed Shah,COMSATS,4,Mobile|IoT|AR/VR,,Fast,Visual
+23F-3675,1234,Maria Mirza,COMSATS,2,AR/VR,,Moderate,Practice
+22F-1108,1234,Hina Iqbal,UET,5,Data Science|AR/VR|Cloud,Calculus|Programming,Moderate,Practice
+22F-2725,1234,Ayesha Butt,UET,5,Blockchain,,Moderate,Visual
+23F-2347,1234,Saad Shah,LUMS,3,Blockchain|Mobile,,Slow,Visual
+23F-6206,1234,Ali Mirza,IBA,3,Security|Data Science|Blockchain,,Fast,Practice
+24F-7586,1234,Bilal Ahmed,FAST NUCES,1,Data Science|Mobile,,Moderate,Practice
+24F-8518,1234,Sara Khan,LUMS,1,Data Science|Cloud,,Fast,Reading
+20F-2561,1234,Usman Ahmed,FAST NUCES,8,Mobile|IoT|Security,,Fast,Visual
+20F-6462,1234,Ali Malik,IBA,8,Data Science|Security,Calculus|Programming,Slow,Visual
+21F-7420,1234,Ayesha Raza,LUMS,7,Cloud|AR/VR|Security,,Moderate,Visual
+23F-6578,1234,Hina Khan,IBA,3,Cloud,,Moderate,Practice
+22F-3119,1234,Hina Malik,NUST,4,Mobile|Game Dev,,Slow,Visual
+23F-3168,1234,Bilal Butt,COMSATS,2,AR/VR,,Slow,Practice
+21F-5757,1234,Ali Mirza,IBA,6,Cloud|Game Dev,,Fast,Visual
+22F-9039,1234,Hina Hussain,LUMS,5,Game Dev|Cloud|AI/ML,,Fast,Practice
+21F-8716,1234,Ali Ahmed,FAST NUCES,6,Game Dev|AR/VR,,Fast,Reading
+23F-3860,1234,Ahmed Butt,COMSATS,3,Cloud|Security,Calculus|Programming,Moderate,Reading
+24F-6332,1234,Ahmed Shah,UET,1,Web|Security|Mobile,,Fast,Visual
+22F-3779,1234,Ahmed Khan,NUST,5,Blockchain|Cloud,,Fast,Visual
+22F-5039,1234,Ali Mirza,UET,5,Blockchain,Calculus|Programming,Fast,Reading
+21F-6807,1234,Sara Iqbal,FAST NUCES,6,Cloud|Web,,Moderate,Reading
+23F-1862,1234,Saad Iqbal,FAST NUCES,3,AI/ML|Blockchain,,Fast,Practice
+21F-7602,1234,Saad Shah,FAST NUCES,6,IoT,,Fast,Reading
+23F-7739,1234,Ahmed Hussain,LUMS,3,Web|Security|Data Science,,Moderate,Practice
+23F-1443,1234,Fatima Ahmed,FAST NUCES,3,Cloud|Game Dev|Mobile,,Fast,Reading
+23F-5783,1234,Ali Malik,LUMS,2,Data Science|Game Dev,,Fast,Practice
+23F-6809,1234,Ahmed Hussain,COMSATS,3,Web|Mobile|AR/VR,,Fast,Reading
+21F-1410,1234,Saad Ahmed,LUMS,7,Security,,Fast,Reading
+24F-2863,1234,Bilal Hussain,UET,1,AI/ML|Blockchain,,Moderate,Visual
+22F-5466,1234,Fatima Shah,UET,4,Security,Calculus|Programming,Fast,Visual
+24F-7842,1234,Usman Malik,UET,1,AI/ML|Web,,Moderate,Visual
+21F-2540,1234,Fatima Ahmed,UET,6,Security|Mobile,Calculus|Programming,Fast,Visual
+22F-8337,1234,Maria Iqbal,IBA,5,Web|Game Dev|Blockchain,Calculus|Programming,Fast,Visual
+22F-5550,1234,Ayesha Sheikh,IBA,5,Web,,Moderate,Visual
+22F-8326,1234,Saad Malik,LUMS,5,Mobile|Cloud|Data Science,,Moderate,Reading
+21F-6483,1234,Ahmed Mirza,IBA,7,Web,,Moderate,Reading
+22F-2524,1234,Ali Malik,UET,4,Security|Cloud,,Slow,Reading
+22F-7305,1234,Sara Raza,PU,4,Web|Data Science|IoT,,Fast,Practice
+24F-2207,1234,Sara Sheikh,UET,1,AR/VR|Cloud|Web,Calculus|Programming,Slow,Visual
+22F-2068,1234,Omar Ahmed,UET,4,AR/VR|IoT|Game Dev,,Slow,Practice
+22F-4183,1234,Hina Iqbal,LUMS,4,AR/VR|Blockchain|AI/ML,,Fast,Reading
+24F-1005,1234,Zainab Shah,NUST,1,Web|AI/ML,,Moderate,Reading
+21F-2670,1234,Ahmed Khan,FAST NUCES,6,AR/VR,,Fast,Reading
+24F-7382,1234,Ayesha Malik,NUST,1,AI/ML|AR/VR,,Fast,Visual
+23F-1309,1234,Zainab Malik,PU,2,Blockchain,,Slow,Reading
+22F-3767,1234,Fatima Khan,PU,4,Game Dev|Mobile|Cloud,Calculus|Programming,Fast,Practice
+23F-6730,1234,Fatima Iqbal,COMSATS,3,Data Science|Game Dev|Blockchain,Calculus|Programming,Moderate,Reading
+22F-2623,1234,Maria Khan,COMSATS,4,Blockchain|Web,,Slow,Visual
+21F-6319,1234,Bilal Sheikh,FAST NUCES,6,Blockchain|Data Science|Cloud,Calculus|Programming,Slow,Visual
+21F-6854,1234,Saad Raza,FAST NUCES,6,Web,Calculus|Programming,Moderate,Practice
+23F-3749,1234,Ahmed Khan,COMSATS,2,IoT|AR/VR|Web,,Moderate,Reading
+22F-6480,1234,Omar Hussain,PU,4,Security|Game Dev,Calculus|Programming,Slow,Reading
+20F-2255,1234,Usman Sheikh,FAST NUCES,8,AI/ML|Security,Calculus|Programming,Moderate,Reading
+21F-3222,1234,Sara Malik,COMSATS,7,Cloud,,Fast,Practice
+22F-3703,1234,Ahmed Hussain,NUST,5,Cloud,,Slow,Reading
+21F-9518,1234,Ali Sheikh,IBA,7,Cloud,,Fast,Reading
+22F-9064,1234,Saad Khan,UET,4,IoT|Blockchain,,Slow,Practice
+23F-5418,1234,Sara Khan,NUST,2,Data Science|Web,,Fast,Practice
+22F-7112,1234,Bilal Butt,IBA,4,Game Dev|IoT|Mobile,,Fast,Visual
+23F-8268,1234,Ayesha Butt,PU,2,Mobile|Data Science,,Fast,Practice
+23F-8102,1234,Ahmed Shah,UET,2,AI/ML,Calculus|Programming,Fast,Practice
+24F-7443,1234,Ahmed Mirza,PU,1,Data Science,,Slow,Visual
+22F-3165,1234,Omar Raza,FAST NUCES,4,Data Science,,Moderate,Reading
+20F-7341,1234,Omar Butt,FAST NUCES,8,Mobile|Web,Calculus|Programming,Fast,Visual
+20F-8736,1234,Usman Hussain,NUST,8,IoT|AR/VR|Blockchain,,Slow,Visual
+23F-3131,1234,Ayesha Malik,FAST NUCES,3,Blockchain|AR/VR|IoT,,Moderate,Visual
+21F-5896,1234,Sara Butt,IBA,7,AI/ML,Calculus|Programming,Moderate,Practice
+21F-2104,1234,Ali Ahmed,IBA,6,Web|IoT,,Slow,Visual
+21F-7048,1234,Omar Raza,PU,6,Mobile|Web|IoT,Calculus|Programming,Slow,Practice
+20F-2924,1234,Ahmed Butt,PU,8,Blockchain|Mobile|AR/VR,,Moderate,Practice
+20F-9225,1234,Zainab Raza,IBA,8,AR/VR|Security|Cloud,Calculus|Programming,Moderate,Reading
+22F-4165,1234,Zainab Ahmed,PU,5,Game Dev|Cloud,,Moderate,Reading
+23F-2410,1234,Ayesha Hussain,LUMS,2,Data Science|Web,Calculus|Programming,Slow,Reading
+22F-4708,1234,Hina Hussain,LUMS,5,Security,,Slow,Reading
+23F-7675,1234,Hina Raza,COMSATS,3,AR/VR,Calculus|Programming,Slow,Visual
+22F-3073,1234,Hina Khan,COMSATS,4,Blockchain|AI/ML,Calculus|Programming,Fast,Visual
+24F-7411,1234,Omar Butt,PU,1,AI/ML|Blockchain,,Fast,Practice
+20F-6778,1234,Maria Sheikh,LUMS,8,AR/VR|Mobile|AI/ML,,Moderate,Reading
+22F-8353,1234,Omar Butt,UET,5,Data Science|AI/ML,,Slow,Visual
+21F-8654,1234,Bilal Raza,UET,7,Security,,Fast,Visual
+21F-6999,1234,Ali Butt,LUMS,7,Security,,Slow,Visual
+23F-4762,1234,Zainab Hussain,IBA,3,AI/ML|AR/VR|Data Science,,Slow,Reading
+24F-3101,1234,Hina Hussain,UET,1,Game Dev|AI/ML,Calculus|Programming,Slow,Visual
+23F-2534,1234,Bilal Khan,LUMS,2,AR/VR|Data Science,Calculus|Programming,Moderate,Practice
+22F-7234,1234,Ahmed Raza,PU,5,Game Dev|Blockchain,,Fast,Practice
+23F-8978,1234,Omar Malik,UET,2,AR/VR|Web,,Moderate,Reading
+21F-1196,1234,Usman Raza,UET,6,AI/ML|IoT,,Slow,Practice
+22F-5607,1234,Fatima Sheikh,IBA,5,Cloud|IoT|Mobile,Calculus|Programming,Moderate,Reading
+20F-7981,1234,Ali Butt,LUMS,8,Security,Calculus|Programming,Moderate,Reading
+23F-1470,1234,Usman Ahmed,NUST,3,Cloud,,Slow,Reading
+21F-3106,1234,Hina Ahmed,LUMS,6,Security,,Fast,Practice
+21F-4022,1234,Usman Malik,IBA,6,AI/ML|Cloud|Security,Calculus|Programming,Slow,Practice
+24F-8496,1234,Ahmed Raza,LUMS,1,Security|Cloud|Mobile,,Moderate,Visual
+22F-6193,1234,Ahmed Raza,COMSATS,5,AI/ML,,Fast,Practice
+23F-1998,1234,Zainab Butt,COMSATS,3,AI/ML,Calculus|Programming,Fast,Reading
+24F-7652,1234,Saad Shah,NUST,1,Data Science|Mobile,,Slow,Practice
+23F-9390,1234,Ahmed Shah,PU,2,Cloud|Security,,Moderate,Practice
+23F-6983,1234,Saad Sheikh,COMSATS,3,AI/ML|Mobile|Data Science,,Moderate,Reading
+24F-6315,1234,Maria Raza,LUMS,1,Cloud|Data Science|Blockchain,,Moderate,Visual
+22F-7771,1234,Maria Mirza,PU,5,Cloud,,Moderate,Practice
+24F-7702,1234,Zainab Malik,NUST,1,Blockchain,,Moderate,Reading
+21F-6479,1234,Ayesha Malik,LUMS,7,Security,,Fast,Practice
+22F-7037,1234,Zainab Sheikh,UET,4,Cloud|IoT,,Slow,Visual
+20F-8062,1234,Usman Sheikh,IBA,8,AI/ML,,Moderate,Reading
+23F-9224,1234,Omar Khan,PU,3,Blockchain|Web,Calculus|Programming,Moderate,Practice
+22F-5455,1234,Zainab Khan,FAST NUCES,5,Game Dev|AR/VR|Data Science,,Moderate,Visual
+20F-2357,1234,Bilal Raza,UET,8,IoT|Mobile|AI/ML,,Slow,Reading
+20F-8349,1234,Usman Iqbal,NUST,8,Security,Calculus|Programming,Moderate,Visual
+20F-1465,1234,Usman Malik,NUST,8,Game Dev|Security,Calculus|Programming,Slow,Visual
+21F-3820,1234,Saad Khan,PU,7,Cloud|AI/ML|Web,,Fast,Practice
+21F-1043,1234,Ahmed Hussain,LUMS,7,Game Dev,,Slow,Practice
+22F-4826,1234,Hina Iqbal,PU,5,AR/VR|Mobile|Blockchain,,Moderate,Reading
+22F-2248,1234,Usman Raza,COMSATS,4,Data Science|Blockchain|Game Dev,,Fast,Reading
+21F-7842,1234,Ahmed Ahmed,LUMS,6,Data Science|Web|Game Dev,Calculus|Programming,Fast,Visual
+22F-3343,1234,Ali Malik,COMSATS,4,Blockchain,Calculus|Programming,Moderate,Visual
+20F-3609,1234,Ahmed Mirza,PU,8,Blockchain|Web|Game Dev,,Slow,Practice
+22F-6149,1234,Bilal Sheikh,COMSATS,4,AR/VR,,Moderate,Reading
+21F-6092,1234,Maria Sheikh,UET,6,Mobile|Data Science|AI/ML,,Fast,Practice
+22F-2857,1234,Zainab Shah,NUST,4,Cloud,,Moderate,Practice
+21F-5231,1234,Usman Iqbal,LUMS,7,IoT|AI/ML|Security,Calculus|Programming,Slow,Practice
+21F-7153,1234,Ayesha Ahmed,UET,6,Web|Game Dev,,Slow,Practice
+23F-4246,1234,Bilal Malik,COMSATS,3,Cloud|Security,Calculus|Programming,Moderate,Reading
+21F-7769,1234,Sara Mirza,FAST NUCES,6,AR/VR,,Moderate,Reading
+21F-2783,1234,Sara Ahmed,COMSATS,6,Security|Cloud,Calculus|Programming,Slow,Practice
+22F-6905,1234,Usman Shah,IBA,5,AI/ML|Data Science,Calculus|Programming,Fast,Reading
+21F-6203,1234,Omar Hussain,COMSATS,6,Security|AR/VR|AI/ML,Calculus|Programming,Fast,Reading
+23F-8500,1234,Saad Raza,UET,3,Game Dev|Security|AI/ML,,Fast,Visual
+20F-6956,1234,Sara Malik,PU,8,Mobile,,Fast,Practice
+22F-6954,1234,Hina Ahmed,FAST NUCES,5,Blockchain|Mobile|Security,,Moderate,Practice
+21F-5450,1234,Hina Butt,NUST,7,Security|Cloud|AR/VR,Calculus|Programming,Fast,Reading
+20F-8478,1234,Zainab Shah,NUST,8,Game Dev|AR/VR,,Fast,Visual
+21F-2029,1234,Usman Ahmed,UET,7,Game Dev|Blockchain|Web,,Fast,Visual
+22F-9853,1234,Usman Raza,COMSATS,5,Blockchain,,Slow,Visual
+20F-5573,1234,Omar Butt,IBA,8,IoT|Mobile,,Slow,Visual
+23F-8899,1234,Ahmed Malik,LUMS,2,Blockchain|IoT|AR/VR,,Slow,Practice
+24F-3799,1234,Fatima Ahmed,UET,1,Security,,Slow,Reading
+21F-4089,1234,Zainab Ahmed,UET,6,IoT|AR/VR,,Moderate,Visual
+21F-4990,1234,Ayesha Ahmed,FAST NUCES,6,Cloud,,Moderate,Practice
+22F-7869,1234,Fatima Shah,LUMS,4,Mobile,Calculus|Programming,Slow,Reading
+22F-6424,1234,Omar Malik,NUST,4,IoT,Calculus|Programming,Moderate,Practice
+22F-4796,1234,Ali Sheikh,FAST NUCES,5,IoT|AI/ML|Mobile,Calculus|Programming,Fast,Visual
+24F-7915,1234,Maria Iqbal,COMSATS,1,Web|Mobile|IoT,,Fast,Visual
+22F-2105,1234,Saad Raza,IBA,4,Blockchain|AI/ML,,Fast,Visual
+21F-4316,1234,Ayesha Butt,LUMS,7,AI/ML|Data Science|AR/VR,,Fast,Visual
+22F-8877,1234,Hina Sheikh,FAST NUCES,4,Data Science|Blockchain,,Moderate,Visual
+23F-2735,1234,Bilal Butt,IBA,2,Mobile,,Moderate,Practice
+22F-7886,1234,Omar Iqbal,LUMS,4,Cloud|Data Science,Calculus|Programming,Moderate,Practice
+23F-6522,1234,Saad Raza,NUST,2,Web|Blockchain,,Fast,Reading
+21F-8793,1234,Sara Mirza,UET,7,AI/ML|Mobile,,Slow,Reading
+23F-8699,1234,Omar Shah,IBA,2,AR/VR|Data Science,,Fast,Visual
+20F-4435,1234,Ali Butt,FAST NUCES,8,Security|Game Dev|Cloud,,Fast,Reading
+21F-9416,1234,Fatima Hussain,PU,6,Security|Web|IoT,Calculus|Programming,Slow,Practice
+22F-9033,1234,Ayesha Malik,PU,5,Cloud|Data Science,Calculus|Programming,Fast,Practice
+20F-2936,1234,Saad Iqbal,COMSATS,8,Data Science|AI/ML,Calculus|Programming,Moderate,Practice
+23F-5659,1234,Maria Shah,COMSATS,3,AR/VR|Security,,Moderate,Practice
+22F-6935,1234,Hina Shah,IBA,4,Security|Data Science|Mobile,Calculus|Programming,Slow,Practice
+22F-5896,1234,Sara Raza,FAST NUCES,4,Blockchain|IoT|AR/VR,,Fast,Reading
+20F-9101,1234,Fatima Ahmed,UET,8,IoT,Calculus|Programming,Moderate,Reading
+23F-3427,1234,Usman Hussain,FAST NUCES,3,AR/VR|Mobile|AI/ML,,Slow,Reading
+22F-4111,1234,Bilal Ahmed,UET,5,Blockchain,,Slow,Practice
+24F-2657,1234,Bilal Hussain,LUMS,1,Game Dev|Blockchain,,Moderate,Reading
+20F-4758,1234,Ali Shah,COMSATS,8,Cloud|Mobile,,Fast,Practice
+24F-9499,1234,Usman Iqbal,PU,1,Blockchain|AR/VR|Security,,Slow,Reading
+21F-3873,1234,Ahmed Shah,IBA,6,AI/ML|Web|Mobile,,Fast,Visual
+20F-8949,1234,Sara Ahmed,IBA,8,Web|Blockchain,,Moderate,Reading
+23F-3025,1234,Usman Hussain,LUMS,2,Game Dev|Mobile|Data Science,,Moderate,Reading
+22F-1183,1234,Sara Butt,LUMS,4,Game Dev,,Fast,Visual
+24F-3625,1234,Sara Sheikh,LUMS,1,Data Science|IoT,,Moderate,Practice
+24F-9248,1234,Zainab Khan,IBA,1,Data Science,,Moderate,Visual
+21F-9508,1234,Ahmed Raza,LUMS,6,IoT|Web,,Moderate,Reading
+23F-1733,1234,Fatima Malik,NUST,2,IoT,,Slow,Visual
+21F-3873,1234,Ahmed Raza,FAST NUCES,6,Blockchain,,Fast,Visual
+21F-5259,1234,Ayesha Khan,UET,7,Game Dev,,Fast,Visual
+21F-3262,1234,Bilal Sheikh,PU,7,Security|Data Science|Blockchain,,Slow,Reading
+21F-5062,1234,Ali Ahmed,LUMS,7,Web|AI/ML|Security,,Fast,Visual
+21F-6558,1234,Maria Raza,IBA,6,IoT|Data Science|AR/VR,,Moderate,Reading
+24F-2941,1234,Maria Hussain,IBA,1,Mobile|AI/ML|Cloud,Calculus|Programming,Slow,Visual
+22F-2069,1234,Ahmed Ahmed,COMSATS,4,IoT|Data Science,,Slow,Practice
+24F-5814,1234,Maria Ahmed,FAST NUCES,1,Security|IoT,,Slow,Practice
+23F-1755,1234,Omar Sheikh,PU,2,Data Science,,Slow,Reading
+20F-2212,1234,Fatima Mirza,UET,8,IoT|Web,Calculus|Programming,Moderate,Reading
+21F-9323,1234,Ali Butt,UET,6,Web|Game Dev|Security,,Slow,Practice
+21F-7412,1234,Usman Mirza,PU,7,Game Dev,Calculus|Programming,Fast,Visual
+23F-2932,1234,Bilal Shah,PU,3,Data Science,,Slow,Practice
+22F-6717,1234,Sara Khan,NUST,4,AR/VR,Calculus|Programming,Slow,Visual
+23F-1187,1234,Hina Ahmed,LUMS,2,Web|Data Science,Calculus|Programming,Slow,Practice
+23F-7825,1234,Usman Butt,FAST NUCES,2,AR/VR,,Slow,Reading
+20F-9428,1234,Zainab Ahmed,PU,8,AI/ML,,Moderate,Practice
+21F-9969,1234,Bilal Khan,LUMS,7,Security,Calculus|Programming,Moderate,Practice
+24F-4103,1234,Usman Sheikh,UET,1,Security|Mobile|AR/VR,,Slow,Visual
+22F-4270,1234,Omar Shah,COMSATS,5,Data Science,,Fast,Reading
+20F-8474,1234,Saad Khan,FAST NUCES,8,IoT,,Fast,Practice
+23F-7991,1234,Hina Khan,UET,2,Game Dev|AI/ML,,Slow,Practice
+20F-8674,1234,Ayesha Sheikh,FAST NUCES,8,Security|Web,Calculus|Programming,Fast,Practice
+24F-9592,1234,Omar Shah,NUST,1,Mobile,,Moderate,Practice
+20F-9003,1234,Saad Khan,COMSATS,8,Web|Mobile|Data Science,,Moderate,Reading
+22F-1724,1234,Maria Butt,PU,4,Game Dev,,Slow,Reading
+24F-8507,1234,Ali Khan,PU,1,Mobile|Cloud,,Slow,Visual
+20F-1830,1234,Ahmed Ahmed,NUST,8,IoT,,Fast,Visual
+22F-7103,1234,Saad Sheikh,FAST NUCES,4,AR/VR|Blockchain,,Fast,Visual
+21F-1951,1234,Fatima Ahmed,UET,6,Game Dev|Cloud,,Fast,Practice
+22F-9553,1234,Hina Hussain,COMSATS,4,Game Dev,Calculus|Programming,Fast,Visual
+21F-9639,1234,Fatima Khan,UET,6,Data Science,,Slow,Visual
+20F-2013,1234,Ali Shah,LUMS,8,AI/ML,,Moderate,Reading
+24F-1437,1234,Bilal Malik,NUST,1,Mobile,,Slow,Reading
+23F-9467,1234,Maria Iqbal,FAST NUCES,3,Web|AI/ML,Calculus|Programming,Fast,Visual
+20F-9854,1234,Ali Hussain,PU,8,AI/ML|Blockchain|Game Dev,,Moderate,Visual
+22F-4300,1234,Bilal Ahmed,NUST,5,Security|Web,,Fast,Visual
+22F-8751,1234,Maria Mirza,FAST NUCES,5,Cloud,,Slow,Reading
+21F-7444,1234,Bilal Sheikh,FAST NUCES,7,IoT|Web,,Moderate,Reading
+23F-4135,1234,Omar Shah,COMSATS,3,Mobile|Cloud|Game Dev,,Moderate,Reading
+20F-9607,1234,Sara Sheikh,PU,8,Mobile|Game Dev|AI/ML,,Fast,Visual
+20F-6776,1234,Fatima Malik,LUMS,8,Web|Cloud|Game Dev,,Slow,Visual
+20F-4212,1234,Zainab Iqbal,IBA,8,Data Science|Cloud,Calculus|Programming,Moderate,Visual
+24F-3631,1234,Omar Raza,COMSATS,1,Cloud,Calculus|Programming,Moderate,Practice
+20F-8540,1234,Hina Ahmed,NUST,8,Mobile|Data Science,Calculus|Programming,Fast,Practice
+24F-9423,1234,Omar Khan,COMSATS,1,Data Science|Web,,Slow,Practice
+20F-3564,1234,Usman Iqbal,NUST,8,Data Science|Web,,Slow,Practice
+22F-5018,1234,Ali Shah,UET,4,Security,,Slow,Visual
+22F-9934,1234,Sara Sheikh,LUMS,5,Game Dev|Mobile|AR/VR,,Fast,Practice
+21F-3101,1234,Fatima Butt,COMSATS,6,Mobile,Calculus|Programming,Slow,Practice
+20F-1861,1234,Ayesha Shah,FAST NUCES,8,Data Science|Security|Cloud,,Moderate,Practice
+23F-8955,1234,Ali Raza,IBA,3,AR/VR|IoT,,Slow,Reading
+23F-3765,1234,Ayesha Khan,LUMS,3,AR/VR|Cloud,,Fast,Visual
+20F-8897,1234,Bilal Khan,IBA,8,Cloud,,Slow,Reading
+22F-3227,1234,Ahmed Shah,UET,5,AI/ML,,Moderate,Reading
+22F-1513,1234,Hina Raza,UET,5,IoT|Game Dev|AI/ML,,Slow,Visual
+22F-8649,1234,Maria Shah,NUST,4,IoT|Web,,Fast,Reading
+24F-6347,1234,Hina Butt,NUST,1,AR/VR|Blockchain,,Slow,Reading
+22F-3616,1234,Ayesha Ahmed,PU,4,Mobile|Web|Blockchain,,Moderate,Practice
+23F-5496,1234,Maria Butt,IBA,2,Security,,Fast,Visual
+20F-9570,1234,Hina Malik,NUST,8,Data Science|AI/ML,,Moderate,Reading
+22F-5427,1234,Hina Sheikh,FAST NUCES,4,Game Dev|IoT|Cloud,,Slow,Visual
+23F-4280,1234,Ahmed Ahmed,FAST NUCES,2,AI/ML|IoT|Mobile,,Fast,Reading
+24F-7506,1234,Fatima Iqbal,NUST,1,AR/VR|Security,,Fast,Reading
+23F-2899,1234,Zainab Raza,COMSATS,3,Data Science|AR/VR,,Fast,Visual
+22F-6842,1234,Fatima Shah,COMSATS,4,Security|IoT|Game Dev,,Fast,Reading
+24F-5305,1234,Zainab Shah,PU,1,Data Science,,Moderate,Visual
+23F-8177,1234,Ahmed Mirza,IBA,2,AR/VR|Blockchain,Calculus|Programming,Slow,Practice
+23F-2921,1234,Zainab Mirza,IBA,2,Cloud|Data Science,Calculus|Programming,Fast,Reading
+20F-6512,1234,Omar Raza,COMSATS,8,IoT,Calculus|Programming,Fast,Visual
+21F-1648,1234,Maria Iqbal,UET,6,Security|Game Dev|AI/ML,Calculus|Programming,Moderate,Visual
+23F-4190,1234,Ayesha Malik,LUMS,2,Security|Data Science|Blockchain,Calculus|Programming,Fast,Reading
+22F-3714,1234,Zainab Shah,UET,4,Data Science,,Moderate,Reading
+22F-1422,1234,Fatima Iqbal,COMSATS,4,Blockchain|AI/ML|Web,,Moderate,Visual
+23F-6679,1234,Hina Shah,UET,3,Security|AR/VR|Blockchain,Calculus|Programming,Slow,Visual
+20F-5462,1234,Fatima Ahmed,IBA,8,Mobile,Calculus|Programming,Fast,Practice
+20F-7173,1234,Bilal Shah,UET,8,AR/VR,,Slow,Visual
+20F-5904,1234,Zainab Mirza,COMSATS,8,AI/ML|Web|Security,,Slow,Reading
+23F-3777,1234,Ahmed Hussain,COMSATS,2,AR/VR|Cloud|Blockchain,,Fast,Visual
+23F-9920,1234,Fatima Ahmed,COMSATS,3,Game Dev|AI/ML|IoT,Calculus|Programming,Slow,Visual
+21F-6797,1234,Fatima Butt,PU,6,Mobile|AI/ML|IoT,Calculus|Programming,Moderate,Practice
+22F-2309,1234,Ayesha Shah,FAST NUCES,5,Game Dev|Blockchain,,Slow,Practice
+22F-1301,1234,Zainab Hussain,IBA,4,Mobile,,Fast,Reading
+22F-6535,1234,Maria Ahmed,FAST NUCES,5,AR/VR|Blockchain,Calculus|Programming,Slow,Practice
+23F-4248,1234,Ali Iqbal,IBA,3,AI/ML|IoT|Cloud,,Fast,Reading
+23F-7188,1234,Omar Shah,UET,3,Cloud|Security|Web,,Slow,Visual
+20F-3242,1234,Sara Iqbal,COMSATS,8,AR/VR|Web,,Slow,Reading
+22F-8870,1234,Ayesha Raza,FAST NUCES,4,Cloud|Game Dev|Blockchain,,Slow,Visual
+23F-2316,1234,Fatima Iqbal,COMSATS,2,Mobile|Blockchain,,Moderate,Reading
+24F-4276,1234,Zainab Mirza,PU,1,Security,,Moderate,Practice
+22F-8572,1234,Sara Sheikh,LUMS,5,Security|Blockchain,,Fast,Practice
+23F-1689,1234,Hina Mirza,NUST,3,Mobile|AR/VR|Cloud,,Fast,Visual
+23F-2016,1234,Fatima Hussain,COMSATS,3,Security,Calculus|Programming,Fast,Visual
+22F-2992,1234,Bilal Hussain,UET,4,AI/ML|Security,Calculus|Programming,Slow,Practice
+22F-5379,1234,Zainab Ahmed,NUST,5,AI/ML,,Fast,Practice
+23F-2415,1234,Bilal Butt,IBA,2,Blockchain,,Fast,Practice
+22F-9956,1234,Saad Ahmed,FAST NUCES,4,AR/VR|Blockchain,Calculus|Programming,Moderate,Visual
+24F-8157,1234,Fatima Iqbal,NUST,1,Data Science|Security,Calculus|Programming,Moderate,Practice
+22F-1184,1234,Usman Iqbal,COMSATS,4,AR/VR,,Moderate,Visual
+24F-5337,1234,Ahmed Khan,IBA,1,IoT,Calculus|Programming,Moderate,Practice
+23F-6987,1234,Maria Shah,NUST,2,Mobile|IoT|Security,Calculus|Programming,Moderate,Visual
+23F-3426,1234,Ali Hussain,PU,3,Security,Calculus|Programming,Moderate,Visual
+24F-4700,1234,Usman Shah,LUMS,1,Game Dev|Security,Calculus|Programming,Slow,Practice
+21F-6126,1234,Maria Sheikh,FAST NUCES,7,Cloud|AR/VR|Data Science,,Slow,Practice
+24F-9440,1234,Omar Shah,FAST NUCES,1,Blockchain,,Moderate,Practice
+21F-6890,1234,Ali Butt,LUMS,7,Game Dev,,Fast,Reading
+21F-1064,1234,Zainab Malik,COMSATS,6,Security,Calculus|Programming,Moderate,Practice
+21F-8550,1234,Bilal Malik,NUST,7,AI/ML|Blockchain|Security,Calculus|Programming,Moderate,Practice
+22F-1770,1234,Fatima Hussain,IBA,5,Web|IoT|AR/VR,,Fast,Visual
+22F-5457,1234,Ayesha Ahmed,NUST,5,Web,,Slow,Practice
+21F-8508,1234,Hina Sheikh,COMSATS,7,AR/VR|IoT|Game Dev,,Slow,Reading
+24F-8853,1234,Sara Hussain,FAST NUCES,1,Game Dev,Calculus|Programming,Fast,Practice
+21F-6301,1234,Hina Shah,UET,6,AR/VR|Security|Web,Calculus|Programming,Fast,Practice
+20F-5762,1234,Ali Khan,NUST,8,Web,,Slow,Practice
+21F-3809,1234,Ahmed Malik,LUMS,7,AI/ML|Data Science,Calculus|Programming,Fast,Visual
+21F-5196,1234,Ayesha Hussain,LUMS,6,Security|Blockchain|Data Science,,Moderate,Reading
+23F-1849,1234,Bilal Iqbal,FAST NUCES,3,Mobile,,Moderate,Reading
+21F-2478,1234,Hina Ahmed,FAST NUCES,6,IoT,,Fast,Reading
+21F-7750,1234,Bilal Butt,COMSATS,6,Game Dev|Cloud,,Moderate,Reading
+21F-2187,1234,Ahmed Shah,UET,6,Game Dev|Cloud|AI/ML,,Slow,Reading
+21F-9756,1234,Omar Sheikh,LUMS,6,Mobile,,Moderate,Visual
+21F-2227,1234,Fatima Raza,FAST NUCES,6,Web|Security|AR/VR,,Fast,Reading
+22F-5922,1234,Zainab Hussain,NUST,5,Data Science,Calculus|Programming,Fast,Visual
+21F-4706,1234,Saad Butt,PU,7,Security,,Slow,Reading
+21F-8287,1234,Hina Hussain,PU,7,AR/VR,,Fast,Visual
+20F-6590,1234,Omar Iqbal,PU,8,AR/VR|AI/ML,,Fast,Reading
+23F-7213,1234,Usman Mirza,PU,3,Data Science|Mobile,,Moderate,Visual
+24F-2802,1234,Maria Khan,PU,1,IoT,Calculus|Programming,Moderate,Practice
+21F-6105,1234,Sara Butt,IBA,7,Security|Mobile|Data Science,,Moderate,Reading
+21F-4270,1234,Fatima Mirza,UET,7,Data Science|IoT|Web,Calculus|Programming,Moderate,Practice
+23F-3503,1234,Omar Iqbal,IBA,3,IoT|Web,,Fast,Practice
+22F-2536,1234,Ahmed Khan,UET,5,AI/ML,Calculus|Programming,Fast,Reading
+21F-7923,1234,Maria Ahmed,UET,6,IoT|Blockchain|AR/VR,,Fast,Visual
+22F-6837,1234,Ayesha Sheikh,IBA,4,AR/VR,,Moderate,Visual
+21F-1557,1234,Bilal Mirza,NUST,6,Web,,Moderate,Visual
+20F-4272,1234,Zainab Raza,IBA,8,Mobile,,Slow,Reading
+22F-7392,1234,Fatima Shah,IBA,5,Data Science|IoT|Cloud,,Moderate,Reading
+24F-2206,1234,Hina Khan,FAST NUCES,1,Data Science|Security|Blockchain,,Moderate,Visual
+22F-5860,1234,Ahmed Khan,COMSATS,4,AR/VR,,Fast,Practice
+22F-2843,1234,Saad Hussain,COMSATS,4,Security|Web|Cloud,,Fast,Practice
+24F-2779,1234,Zainab Iqbal,NUST,1,Blockchain,,Fast,Reading
+21F-5325,1234,Usman Sheikh,UET,7,Cloud,,Fast,Practice
+20F-1368,1234,Usman Shah,FAST NUCES,8,IoT|Data Science,Calculus|Programming,Moderate,Visual
+22F-4317,1234,Zainab Raza,NUST,5,IoT|Game Dev,Calculus|Programming,Moderate,Reading
+22F-3843,1234,Usman Malik,IBA,5,Security|Blockchain|Cloud,,Slow,Visual
+22F-8947,1234,Omar Iqbal,LUMS,5,Web|Blockchain|Game Dev,Calculus|Programming,Moderate,Visual
+23F-8752,1234,Usman Malik,PU,3,Mobile,Calculus|Programming,Fast,Reading
+22F-4166,1234,Ayesha Butt,IBA,4,Security,,Fast,Visual
+20F-6499,1234,Bilal Shah,FAST NUCES,8,Blockchain,,Moderate,Reading
+21F-2304,1234,Usman Butt,NUST,6,IoT,,Slow,Practice
+24F-3106,1234,Hina Ahmed,COMSATS,1,Data Science,,Slow,Visual
+24F-5839,1234,Zainab Hussain,COMSATS,1,Game Dev,,Slow,Reading
+23F-3536,1234,Ayesha Hussain,COMSATS,3,Data Science|Blockchain|AR/VR,,Slow,Practice
+21F-8208,1234,Omar Khan,PU,7,AR/VR|Blockchain,,Moderate,Practice
+21F-4129,1234,Fatima Iqbal,COMSATS,6,Game Dev|AR/VR|IoT,,Slow,Visual
+23F-2137,1234,Hina Sheikh,COMSATS,2,Mobile,,Slow,Reading
+22F-4999,1234,Ayesha Khan,NUST,5,Game Dev|Data Science|Blockchain,Calculus|Programming,Fast,Visual
+23F-2165,1234,Maria Hussain,UET,3,Security|Game Dev,Calculus|Programming,Fast,Practice
+23F-4634,1234,Hina Malik,FAST NUCES,2,IoT,Calculus|Programming,Moderate,Practice
+21F-2572,1234,Hina Shah,NUST,6,Mobile|Game Dev|Cloud,Calculus|Programming,Slow,Reading
+22F-8235,1234,Bilal Hussain,IBA,4,Security|AI/ML|Cloud,,Moderate,Practice
+22F-4605,1234,Saad Malik,IBA,5,Data Science|Cloud,,Slow,Visual
+20F-2277,1234,Maria Iqbal,PU,8,Blockchain|IoT,,Fast,Visual
+23F-4221,1234,Hina Raza,LUMS,2,AI/ML|Mobile,,Fast,Visual
+21F-8310,1234,Fatima Hussain,COMSATS,7,Web|AR/VR|Security,Calculus|Programming,Fast,Practice
+21F-8062,1234,Ali Raza,NUST,7,Data Science,Calculus|Programming,Fast,Practice
+23F-5819,1234,Ali Khan,NUST,3,Data Science|IoT|Blockchain,,Slow,Practice
+20F-2529,1234,Omar Sheikh,IBA,8,AI/ML,,Fast,Practice
+22F-9805,1234,Ahmed Malik,UET,4,IoT,Calculus|Programming,Moderate,Practice
+23F-2530,1234,Maria Malik,UET,2,Mobile,Calculus|Programming,Slow,Practice
+21F-6109,1234,Omar Malik,NUST,6,AR/VR,Calculus|Programming,Moderate,Reading
+24F-1347,1234,Zainab Butt,PU,1,Game Dev,Calculus|Programming,Slow,Reading
+23F-9660,1234,Ali Malik,COMSATS,2,Web|AI/ML|AR/VR,,Fast,Reading
+21F-9847,1234,Saad Ahmed,FAST NUCES,6,Cloud,,Moderate,Visual
+22F-1722,1234,Usman Butt,COMSATS,4,Security|AR/VR|Blockchain,,Moderate,Reading
+23F-1363,1234,Omar Hussain,UET,3,Blockchain|Mobile,,Moderate,Visual
+23F-9608,1234,Usman Iqbal,FAST NUCES,2,Security|AR/VR|Mobile,Calculus|Programming,Moderate,Reading
+23F-7015,1234,Ali Sheikh,LUMS,3,AI/ML|IoT|Cloud,Calculus|Programming,Slow,Reading
+21F-3279,1234,Ali Ahmed,COMSATS,6,AR/VR|Data Science|AI/ML,,Moderate,Reading
+24F-5477,1234,Ali Butt,PU,1,Data Science|Mobile|Security,,Moderate,Visual
+22F-5989,1234,Usman Sheikh,COMSATS,5,AI/ML,,Moderate,Practice
+24F-4187,1234,Hina Hussain,COMSATS,1,Cloud|AI/ML|Game Dev,,Moderate,Reading
+23F-9739,1234,Ali Hussain,IBA,3,Game Dev|Security|AR/VR,Calculus|Programming,Moderate,Reading
+21F-5166,1234,Usman Hussain,LUMS,7,Web|Security|Data Science,,Moderate,Reading
+23F-8554,1234,Saad Butt,LUMS,2,Web,,Slow,Practice
+24F-7644,1234,Sara Sheikh,UET,1,AR/VR,,Moderate,Practice
+21F-8635,1234,Ahmed Malik,PU,6,Data Science|Web,Calculus|Programming,Moderate,Reading
+21F-1851,1234,Zainab Iqbal,NUST,7,Cloud,Calculus|Programming,Slow,Visual
+21F-4914,1234,Ahmed Butt,PU,6,AI/ML,Calculus|Programming,Moderate,Visual
+23F-4466,1234,Sara Iqbal,UET,3,AI/ML|Security|Cloud,Calculus|Programming,Moderate,Visual
+23F-5835,1234,Sara Sheikh,PU,2,Mobile|Game Dev|Data Science,Calculus|Programming,Slow,Reading
+23F-8366,1234,Omar Shah,COMSATS,2,Blockchain|Mobile|IoT,,Slow,Reading
+24F-2713,1234,Hina Ahmed,COMSATS,1,IoT,,Fast,Practice
+23F-9529,1234,Fatima Iqbal,IBA,2,Blockchain,,Moderate,Reading
+21F-8382,1234,Maria Raza,UET,6,Mobile|Web|Cloud,,Moderate,Visual
+23F-7676,1234,Bilal Raza,COMSATS,3,Mobile,,Moderate,Reading
+22F-8425,1234,Omar Khan,COMSATS,5,Data Science,,Slow,Reading
+23F-5127,1234,Ayesha Butt,NUST,3,Security,,Slow,Reading
+23F-6421,1234,Ali Malik,UET,2,Game Dev|AI/ML|AR/VR,Calculus|Programming,Fast,Visual
+20F-5716,1234,Hina Malik,PU,8,IoT|Cloud,,Slow,Visual
+22F-1732,1234,Usman Iqbal,PU,5,IoT,Calculus|Programming,Fast,Practice
+22F-8149,1234,Saad Ahmed,LUMS,5,AR/VR|AI/ML|Web,Calculus|Programming,Fast,Reading
+22F-5813,1234,Omar Mirza,FAST NUCES,5,IoT|Web,,Moderate,Visual
+23F-1832,1234,Ali Hussain,PU,2,Web|Security|Blockchain,Calculus|Programming,Slow,Reading
+20F-9327,1234,Ali Iqbal,PU,8,Game Dev,Calculus|Programming,Fast,Reading
+22F-4064,1234,Maria Raza,IBA,5,Cloud|Blockchain,,Moderate,Practice
+20F-7057,1234,Ali Raza,UET,8,Data Science,Calculus|Programming,Moderate,Reading
+23F-2692,1234,Usman Shah,NUST,2,Security|AR/VR,Calculus|Programming,Slow,Practice
+21F-1556,1234,Bilal Khan,UET,6,AR/VR|Cloud,,Fast,Practice
+22F-2968,1234,Maria Raza,COMSATS,5,IoT|Data Science|Web,,Slow,Reading
+22F-3223,1234,Maria Raza,FAST NUCES,4,Mobile|Web|Data Science,,Moderate,Practice
+24F-5218,1234,Maria Iqbal,FAST NUCES,1,Blockchain|Mobile,,Fast,Visual
+23F-9492,1234,Fatima Ahmed,LUMS,2,AI/ML|Security|Blockchain,,Moderate,Reading
+22F-4219,1234,Zainab Khan,FAST NUCES,5,Web,,Slow,Practice
+22F-5949,1234,Hina Khan,LUMS,5,Blockchain|Mobile|Data Science,,Moderate,Visual
+22F-1326,1234,Saad Raza,NUST,4,Web,Calculus|Programming,Moderate,Visual
+21F-5661,1234,Saad Butt,PU,7,Mobile|Data Science,,Slow,Reading
+23F-4523,1234,Sara Khan,IBA,3,Cloud|AI/ML|Blockchain,,Fast,Practice
+21F-9044,1234,Hina Mirza,FAST NUCES,7,Mobile|Game Dev|AI/ML,,Fast,Visual
+24F-6581,1234,Omar Malik,UET,1,Data Science|IoT|Game Dev,Calculus|Programming,Slow,Reading
+23F-8053,1234,Usman Malik,FAST NUCES,3,Security|Game Dev|Cloud,,Moderate,Visual
+20F-6399,1234,Omar Shah,PU,8,Data Science|Web|Game Dev,Calculus|Programming,Fast,Practice
+24F-3673,1234,Bilal Raza,PU,1,Game Dev,,Slow,Reading
+23F-2361,1234,Ali Ahmed,NUST,2,Mobile|Security|Blockchain,Calculus|Programming,Slow,Practice
+22F-1438,1234,Zainab Ahmed,IBA,4,Data Science,,Moderate,Reading
+22F-9340,1234,Omar Malik,FAST NUCES,4,AI/ML,Calculus|Programming,Slow,Visual
+21F-9949,1234,Zainab Khan,PU,7,Security|AI/ML|Cloud,,Fast,Visual
+20F-8996,1234,Saad Iqbal,UET,8,Mobile|Game Dev,,Fast,Reading
+20F-2031,1234,Saad Hussain,COMSATS,8,AI/ML,,Slow,Visual
+22F-4111,1234,Ayesha Shah,LUMS,5,Mobile,,Slow,Visual
+22F-1840,1234,Omar Iqbal,UET,5,Mobile|AR/VR,Calculus|Programming,Slow,Practice
+20F-5018,1234,Sara Malik,IBA,8,Web|AI/ML|IoT,,Fast,Reading
+23F-6527,1234,Omar Mirza,PU,3,Blockchain,,Fast,Visual
+23F-7732,1234,Fatima Ahmed,COMSATS,3,Data Science|AR/VR,Calculus|Programming,Slow,Practice
+23F-6463,1234,Fatima Butt,LUMS,3,IoT,Calculus|Programming,Moderate,Reading
+22F-6259,1234,Zainab Butt,IBA,4,Web|IoT|Blockchain,,Moderate,Reading
+21F-4434,1234,Ahmed Mirza,LUMS,6,AR/VR|Game Dev|Security,,Slow,Visual
+23F-5521,1234,Bilal Ahmed,COMSATS,3,IoT,,Fast,Reading
+24F-6628,1234,Bilal Raza,PU,1,Cloud,Calculus|Programming,Slow,Visual
+21F-3512,1234,Maria Mirza,COMSATS,6,Mobile|Web,,Slow,Practice
+22F-9502,1234,Ayesha Khan,UET,4,Cloud|Blockchain|AR/VR,,Fast,Reading
+22F-7634,1234,Fatima Ahmed,LUMS,5,AR/VR,,Slow,Practice
+21F-1719,1234,Saad Butt,NUST,7,Mobile,Calculus|Programming,Moderate,Reading
+20F-7185,1234,Maria Shah,UET,8,Web|Data Science|AI/ML,,Fast,Practice
+20F-6347,1234,Maria Ahmed,IBA,8,Game Dev|IoT|Security,,Slow,Visual
+21F-1953,1234,Ahmed Mirza,UET,6,AI/ML|Security,,Moderate,Reading
+24F-9210,1234,Bilal Khan,LUMS,1,Web,Calculus|Programming,Slow,Reading
+23F-2123,1234,Zainab Sheikh,UET,2,Web,,Slow,Practice
+21F-5650,1234,Bilal Khan,NUST,6,Security|Game Dev|Mobile,,Fast,Reading
+22F-5703,1234,Ayesha Sheikh,UET,4,AI/ML|Web,,Moderate,Practice
+22F-4617,1234,Maria Hussain,LUMS,5,Data Science,,Fast,Visual
+22F-5160,1234,Maria Butt,LUMS,4,IoT,Calculus|Programming,Slow,Visual
+22F-1661,1234,Ali Mirza,IBA,4,Web|Security,,Fast,Reading
+20F-9293,1234,Ahmed Butt,PU,8,AR/VR|Data Science|Web,,Fast,Reading
+20F-9022,1234,Zainab Malik,UET,8,Data Science|Blockchain|Web,,Fast,Visual
+23F-9792,1234,Ayesha Ahmed,IBA,3,Security,,Slow,Visual
+21F-5747,1234,Zainab Butt,NUST,7,Security|Blockchain|Data Science,Calculus|Programming,Slow,Practice
+21F-4381,1234,Sara Sheikh,COMSATS,6,AR/VR|Cloud|Blockchain,,Moderate,Reading
+21F-9658,1234,Usman Mirza,LUMS,7,AI/ML|AR/VR,,Moderate,Practice
+23F-5684,1234,Usman Butt,UET,3,Data Science,,Fast,Reading
+23F-6809,1234,Omar Raza,PU,3,Cloud,,Moderate,Reading
+22F-7001,1234,Zainab Sheikh,PU,4,Game Dev,,Slow,Visual
+21F-6732,1234,Omar Butt,COMSATS,6,IoT|Security|Cloud,,Slow,Visual
+24F-3585,1234,Omar Khan,FAST NUCES,1,Data Science|Security,,Slow,Practice
+21F-7064,1234,Ali Sheikh,FAST NUCES,7,AR/VR|Security,,Moderate,Reading
+21F-1085,1234,Saad Hussain,LUMS,6,Blockchain|Game Dev|Web,,Moderate,Visual
+22F-5072,1234,Sara Butt,FAST NUCES,5,Blockchain|AI/ML|Security,Calculus|Programming,Fast,Visual
+23F-8232,1234,Fatima Malik,LUMS,3,Data Science|Web,Calculus|Programming,Slow,Visual
+21F-6698,1234,Usman Shah,NUST,6,Web|Game Dev|IoT,Calculus|Programming,Slow,Reading
+21F-4934,1234,Ali Sheikh,LUMS,6,Data Science|Game Dev,Calculus|Programming,Slow,Practice
+22F-7909,1234,Ayesha Shah,IBA,5,Blockchain|Cloud,,Slow,Visual
+22F-9889,1234,Ali Khan,UET,4,Security|Game Dev|IoT,,Moderate,Reading
+23F-8543,1234,Ahmed Hussain,PU,2,Blockchain|Mobile|AR/VR,,Slow,Reading
+22F-7379,1234,Saad Ahmed,NUST,4,Data Science|Game Dev,,Slow,Reading
+24F-1011,1234,Zainab Mirza,FAST NUCES,1,IoT|Web,Calculus|Programming,Moderate,Practice
+22F-3805,1234,Zainab Hussain,FAST NUCES,4,Game Dev|IoT,Calculus|Programming,Fast,Practice
+22F-5149,1234,Ali Hussain,COMSATS,4,Cloud|IoT,Calculus|Programming,Moderate,Visual
+21F-1020,1234,Hina Khan,NUST,7,Blockchain,,Slow,Reading
+20F-4062,1234,Ahmed Mirza,UET,8,Security|Cloud|Mobile,,Moderate,Practice
+22F-9217,1234,Usman Malik,NUST,4,Security|Game Dev,,Slow,Practice
+21F-3884,1234,Ahmed Malik,LUMS,7,Security|IoT|Web,,Fast,Practice
+22F-6879,1234,Ahmed Iqbal,IBA,5,AI/ML|Game Dev|Web,,Moderate,Visual
+24F-1324,1234,Usman Ahmed,NUST,1,Web|Data Science|Blockchain,,Moderate,Reading
+22F-2578,1234,Saad Sheikh,LUMS,5,Game Dev,Calculus|Programming,Slow,Reading
+20F-5158,1234,Zainab Iqbal,FAST NUCES,8,Data Science|Mobile,,Moderate,Practice
+20F-1451,1234,Zainab Malik,UET,8,IoT|Web|Data Science,,Slow,Visual
+21F-7399,1234,Saad Iqbal,NUST,6,Mobile,Calculus|Programming,Slow,Visual
+22F-2258,1234,Maria Sheikh,NUST,5,Blockchain|Web,,Slow,Reading
+20F-3210,1234,Ayesha Shah,UET,8,Game Dev|IoT,,Fast,Practice
+21F-1708,1234,Usman Butt,LUMS,7,Data Science|Mobile|Web,,Slow,Reading
+22F-8419,1234,Hina Khan,FAST NUCES,5,Blockchain,Calculus|Programming,Slow,Visual
+23F-8661,1234,Fatima Butt,LUMS,3,IoT|Blockchain,,Fast,Visual
+21F-8118,1234,Zainab Butt,FAST NUCES,7,IoT|AI/ML,Calculus|Programming,Moderate,Practice
+23F-9906,1234,Zainab Sheikh,COMSATS,3,AI/ML|Security|Cloud,Calculus|Programming,Fast,Practice
+20F-3073,1234,Ayesha Raza,NUST,8,Game Dev,Calculus|Programming,Slow,Reading
+22F-2183,1234,Sara Shah,IBA,5,Mobile|Cloud|Game Dev,Calculus|Programming,Fast,Practice
+20F-5213,1234,Zainab Ahmed,IBA,8,Web,,Slow,Visual
+22F-8598,1234,Sara Raza,UET,5,Mobile|AR/VR,Calculus|Programming,Slow,Practice
+21F-6209,1234,Saad Sheikh,IBA,7,Web|Blockchain|Game Dev,,Fast,Visual
+22F-8217,1234,Maria Butt,LUMS,4,Web|Blockchain,,Moderate,Visual
+23F-8877,1234,Omar Raza,NUST,2,Game Dev|Mobile|AR/VR,Calculus|Programming,Fast,Practice
+24F-5405,1234,Bilal Malik,UET,1,Cloud|AI/ML|AR/VR,Calculus|Programming,Slow,Practice
+22F-2869,1234,Saad Butt,NUST,5,Blockchain|Game Dev|Web,,Moderate,Practice
+21F-1121,1234,Maria Butt,LUMS,6,Web,,Slow,Visual
+22F-4147,1234,Sara Sheikh,FAST NUCES,5,Security,,Moderate,Practice
+20F-3603,1234,Ahmed Shah,COMSATS,8,AR/VR,Calculus|Programming,Slow,Visual
+23F-6126,1234,Usman Shah,FAST NUCES,2,Web|Cloud|Data Science,Calculus|Programming,Moderate,Practice
+20F-1196,1234,Hina Khan,FAST NUCES,8,Data Science,,Moderate,Reading
+20F-7304,1234,Fatima Malik,LUMS,8,Cloud|IoT|Data Science,,Moderate,Visual
+22F-9482,1234,Usman Butt,LUMS,5,Blockchain|Security|AR/VR,,Slow,Visual
+23F-5232,1234,Ahmed Ahmed,UET,2,AR/VR,,Fast,Reading
+24F-6009,1234,Omar Sheikh,IBA,1,Data Science|Game Dev|IoT,,Slow,Practice
+23F-7281,1234,Omar Butt,UET,2,Data Science|Game Dev|Blockchain,,Slow,Practice
+21F-5704,1234,Zainab Iqbal,NUST,6,Security|IoT,,Slow,Practice
+22F-1611,1234,Ali Mirza,FAST NUCES,5,Mobile|AI/ML,Calculus|Programming,Moderate,Visual
+24F-8568,1234,Zainab Sheikh,IBA,1,IoT,Calculus|Programming,Fast,Visual
+23F-2511,1234,Omar Shah,COMSATS,2,Security|Web|AI/ML,Calculus|Programming,Slow,Reading
+22F-5640,1234,Maria Ahmed,COMSATS,4,AI/ML|AR/VR|Data Science,,Moderate,Visual
+24F-2662,1234,Saad Iqbal,FAST NUCES,1,Blockchain|IoT|Web,,Slow,Reading
+23F-9500,1234,Ali Raza,LUMS,2,Mobile|Security|Data Science,,Slow,Practice
+21F-9450,1234,Fatima Mirza,IBA,7,Security,Calculus|Programming,Fast,Visual
+23F-6225,1234,Ayesha Sheikh,LUMS,2,AR/VR,,Slow,Visual
+20F-8253,1234,Ahmed Khan,FAST NUCES,8,Security|Web,,Moderate,Visual
+24F-3908,1234,Zainab Iqbal,FAST NUCES,1,Cloud|Web|Data Science,,Fast,Visual
+23F-4338,1234,Ahmed Sheikh,COMSATS,3,Web|Cloud|Blockchain,Calculus|Programming,Moderate,Reading
+21F-3438,1234,Ayesha Sheikh,LUMS,7,Data Science,,Fast,Practice
+23F-6688,1234,Ayesha Sheikh,IBA,3,Mobile|Web,,Slow,Practice
+23F-3797,1234,Ayesha Iqbal,LUMS,2,AI/ML|Blockchain,Calculus|Programming,Moderate,Visual
+20F-3640,1234,Ahmed Iqbal,PU,8,Web|Game Dev,,Fast,Practice
+22F-8857,1234,Usman Malik,UET,5,Data Science|Cloud|Web,,Fast,Visual
+22F-2609,1234,Sara Iqbal,PU,4,AR/VR|Blockchain,,Slow,Practice
+23F-3300,1234,Ahmed Iqbal,NUST,2,Data Science|Cloud|AR/VR,,Fast,Practice
+21F-7416,1234,Fatima Raza,PU,7,Cloud|Web|Blockchain,Calculus|Programming,Moderate,Reading
+23F-8163,1234,Saad Butt,FAST NUCES,2,Cloud|Security,,Slow,Practice
+23F-8735,1234,Ahmed Ahmed,COMSATS,3,IoT|AI/ML,,Moderate,Reading
+22F-5450,1234,Fatima Sheikh,UET,4,AR/VR|IoT,,Slow,Reading
+21F-1660,1234,Bilal Malik,IBA,7,Data Science,,Moderate,Reading
+23F-1478,1234,Ahmed Ahmed,PU,3,Cloud|Blockchain,,Slow,Visual
+24F-7548,1234,Saad Shah,NUST,1,Game Dev,,Slow,Reading
+20F-9569,1234,Ahmed Iqbal,LUMS,8,Mobile,,Fast,Practice
+23F-4481,1234,Sara Butt,PU,2,Data Science|IoT,,Slow,Visual
+20F-8670,1234,Ali Khan,LUMS,8,AI/ML|Security,,Moderate,Practice
+21F-3773,1234,Zainab Iqbal,UET,6,AR/VR|Game Dev|Security,,Moderate,Reading
+22F-8919,1234,Zainab Khan,UET,5,Mobile|AR/VR,,Moderate,Visual
+24F-1648,1234,Maria Butt,PU,1,Blockchain|Cloud|Web,,Fast,Practice
+21F-5481,1234,Sara Hussain,COMSATS,7,Data Science|Cloud|Security,,Fast,Practice
+24F-4578,1234,Omar Khan,COMSATS,1,Data Science|Security,,Fast,Practice
+23F-5206,1234,Zainab Iqbal,LUMS,2,Web,,Slow,Reading
+20F-9056,1234,Zainab Butt,IBA,8,AR/VR|Data Science,Calculus|Programming,Slow,Visual
+21F-7150,1234,Hina Mirza,COMSATS,6,Web|IoT,,Slow,Visual
+21F-6715,1234,Usman Ahmed,COMSATS,7,Cloud,,Moderate,Practice
+22F-2274,1234,Ahmed Hussain,PU,5,IoT|Game Dev|Data Science,,Moderate,Visual
+22F-7160,1234,Saad Mirza,IBA,4,Blockchain|Security|Web,,Slow,Practice
+24F-3901,1234,Zainab Butt,COMSATS,1,Blockchain|Cloud|Data Science,,Moderate,Reading
+22F-5760,1234,Ali Khan,FAST NUCES,5,AR/VR|Web|Security,Calculus|Programming,Slow,Practice
+23F-2608,1234,Saad Raza,NUST,3,Game Dev|AI/ML|Mobile,,Slow,Practice
+20F-2703,1234,Saad Mirza,IBA,8,Mobile,,Moderate,Visual
+24F-2916,1234,Zainab Malik,NUST,1,AI/ML|AR/VR,,Slow,Practice
+22F-4531,1234,Fatima Sheikh,COMSATS,4,Web|Game Dev|Blockchain,,Slow,Practice
+22F-7895,1234,Ahmed Butt,FAST NUCES,4,IoT|AI/ML,,Moderate,Reading
+23F-6754,1234,Usman Ahmed,PU,2,Mobile|Web,Calculus|Programming,Moderate,Reading
+23F-1053,1234,Bilal Sheikh,IBA,3,Mobile,,Slow,Visual
+24F-2996,1234,Hina Hussain,IBA,1,Web|Game Dev,,Fast,Practice
+21F-6375,1234,Ahmed Khan,COMSATS,6,Web|Game Dev,Calculus|Programming,Moderate,Practice
+22F-9790,1234,Ali Iqbal,COMSATS,5,IoT|Cloud|Game Dev,,Slow,Visual
+22F-3576,1234,Bilal Khan,NUST,4,AI/ML,,Slow,Reading
+21F-5789,1234,Usman Raza,COMSATS,6,AR/VR|Security,,Moderate,Practice
+20F-7418,1234,Zainab Mirza,LUMS,8,Web,Calculus|Programming,Slow,Practice
+22F-5411,1234,Bilal Hussain,UET,5,Web|Game Dev|AR/VR,Calculus|Programming,Slow,Reading
+23F-8974,1234,Hina Sheikh,IBA,2,Data Science|Cloud,,Fast,Reading
+22F-9365,1234,Hina Malik,IBA,4,AR/VR,,Slow,Practice
+20F-6445,1234,Ahmed Mirza,COMSATS,8,AI/ML,,Fast,Practice
+24F-3749,1234,Bilal Khan,NUST,1,Web|Game Dev,,Moderate,Reading
+21F-6581,1234,Saad Shah,FAST NUCES,6,Web|IoT,,Moderate,Reading
+24F-1225,1234,Ahmed Raza,LUMS,1,Data Science|Mobile|AR/VR,,Fast,Visual
+20F-4196,1234,Sara Shah,PU,8,Blockchain|Security,,Slow,Reading
+23F-8260,1234,Fatima Hussain,FAST NUCES,3,Game Dev,,Fast,Practice
+23F-8057,1234,Ahmed Raza,COMSATS,3,Cloud|AI/ML,,Slow,Visual
+23F-8657,1234,Omar Raza,IBA,3,Web,,Fast,Reading
+23F-6413,1234,Hina Butt,UET,2,Security,Calculus|Programming,Moderate,Reading
+21F-4366,1234,Ahmed Butt,NUST,7,Security,,Fast,Practice
+22F-9915,1234,Fatima Raza,COMSATS,5,Web|Mobile|Game Dev,Calculus|Programming,Slow,Visual
+21F-7460,1234,Fatima Hussain,UET,6,Data Science|Web,,Fast,Reading

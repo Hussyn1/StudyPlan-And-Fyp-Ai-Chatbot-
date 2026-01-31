@@ -1,0 +1,29 @@
+id,code,name,semester,credits,topics
+1,CS101,Programming Fundamentals,1,3,Variables|Loops|Functions
+2,CS102,Digital Logic Design,1,3,Boolean Algebra|Logic Gates|K-Maps
+3,MATH101,Calculus I,1,3,Limits|Derivatives|Integrals
+4,ENG101,English Composition,1,3,Grammar|Essay Writing|Comprehension
+5,CS201,Object Oriented Programming,2,3,Classes|Inheritance|Polymorphism
+6,CS202,Discrete Mathematics,2,3,Sets|Relations|Graphs
+7,MATH201,Linear Algebra,2,3,Vectors|Matrices|Eigenvalues
+8,PHY101,Physics,2,3,Mechanics|Thermodynamics|Waves
+9,CS301,Data Structures,3,4,Lists|Stacks|Queues|Trees|Graphs
+10,CS302,Computer Organization,3,3,CPU|Memory|I/O
+11,CS303,Database Systems,3,3,SQL|Normalization|Indexing
+12,MATH301,Probability & Statistics,3,3,ProbabilityDistributions|HypothesisTesting|Regression
+13,CS401,Algorithms,4,4,Sorting|Searching|DynamicProgramming
+14,CS402,Operating Systems,4,3,Processes|Threads|Deadlocks
+15,CS403,Computer Networks,4,3,OSI Model|TCP/IP|Routing
+16,CS404,Software Engineering,4,3,SDLC|Agile|Testing
+17,CS501,Artificial Intelligence,5,3,Search|Logic|KnowledgeRepresentation
+18,CS502,Web Technologies,5,3,HTML/CSS|JavaScript|Backend
+19,CS503,Computer Graphics,5,3,Rendering|Shading|Animation
+20,CS504,Theory of Computation,5,3,Automata|TuringMachines|ComplexityCategories
+21,CS601,Machine Learning,6,3,SupervisedLearning|UnsupervisedLearning|NeuralNetworks
+22,CS602,Information Security,6,3,Cryptography|NetworkSecurity|RiskManagement
+23,CS603,Mobile Application Development,6,3,Android|iOS|Flutter
+24,CS604,Compiler Construction,6,3,LexicalAnalysis|Parsing|CodeGeneration
+25,CS701,Deep Learning,7,3,CNN|RNN|Transformers
+26,CS702,Cloud Computing,7,3,AWS|Azure|Docker
+27,CS703,Natural Language Processing,7,3,TextProcessing|SentimentAnalysis|Chatbots
+28,CS801,FYP-I,8,6,Research|Proposal|Development

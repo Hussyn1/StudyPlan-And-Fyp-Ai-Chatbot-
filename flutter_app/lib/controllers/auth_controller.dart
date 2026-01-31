@@ -53,6 +53,8 @@ class AuthController extends GetxController {
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('student_id', response['student_id']);
         
+        await getStudentProfile(); // Fetch full profile data after login
+        
         isLoading.value = false;
         return true;
       } else {
@@ -90,6 +92,8 @@ class AuthController extends GetxController {
         
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('student_id', studentId.value!);
+        
+        await getStudentProfile(); // Fetch full profile data after registration
         
         isLoading.value = false;
         return true;
@@ -129,6 +133,7 @@ class AuthController extends GetxController {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('student_id');
     studentId.value = null;
+    currentStudent.value = null; // Clear student profile data
     isAuthenticated.value = false;
   }
 

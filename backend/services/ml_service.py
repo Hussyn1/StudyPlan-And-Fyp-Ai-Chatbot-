@@ -62,15 +62,16 @@ class MLService:
         # Get skill matrix
         skill_matrix = await MLService.calculate_skill_matrix(student_id)
         
-        # Get all projects
-        all_fyps = await FYPProject.find_all().to_list()
+        # Get all projects from CSV
+        from utils.csv_manager import csv_manager
+        all_fyps = csv_manager.get_fyp_projects()
         
         recommendations = []
         for fyp in all_fyps:
             match_score = 0
             
             # 1. Skill Match (20 points per skill)
-            for req_skill in fyp.required_skills:
+            for req_skill in fyp['required_skills']:
                 # Fuzzy match skill with completed courses
                 for course_name, data in skill_matrix.items():
                     if req_skill.lower() in course_name.lower() and data['stars'] >= 3:
@@ -78,24 +79,24 @@ class MLService:
                         
             # 2. Interest Match (30 points)
             for interest in student.interests:
-                if interest.lower() in fyp.category.lower():
+                if interest.lower() in fyp['category'].lower():
                     match_score += 30
                     break
             
             # 3. Trending Bonus (10 points)
-            if fyp.trending:
+            if fyp['trending']:
                 match_score += 10
                 
             if match_score > 0:
                 recommendations.append({
-                    "id": str(fyp.id),
-                    "title": fyp.title,
-                    "description": fyp.description,
+                    "id": str(fyp['id']),
+                    "title": fyp['title'],
+                    "description": fyp['description'],
                     "score": min(match_score, 100),
                     "match_score": min(match_score, 100) / 100,
-                    "category": fyp.category,
-                    "matching_skills": fyp.required_skills,
-                    "rationale": f"Matches your skills in {[s for s in fyp.required_skills]} and interests."
+                    "category": fyp['category'],
+                    "matching_skills": fyp['required_skills'],
+                    "rationale": f"Matches your skills in {[s for s in fyp['required_skills']]} and interests."
                 })
         
         # Sort by score

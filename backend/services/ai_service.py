@@ -355,4 +355,48 @@ class AIService:
             "type": "theory"
         })
 
+    async def generate_interest_roadmap(self, student_profile: dict, interest: str) -> Dict:
+        """Generates a personalized roadmap for a specific interest."""
+        prompt = f"""
+        Act as an expert career counselor and technical mentor. 
+        Create a personalized roadmap for a student who wants to master "{interest}".
+        
+        Student Profile:
+        - Name: {student_profile.get('name')}
+        - Current Semester: {student_profile.get('current_semester')}
+        - Learning Style: {student_profile.get('learning_style')}
+        - Study Pace: {student_profile.get('study_pace')}
+        
+        Task:
+        1. Break down the path to mastering "{interest}" into 4 phases (Beginner, Intermediate, Advanced, Mastery).
+        2. For each phase, suggest:
+           - 3 Key Topics
+           - 1 Project Idea
+           - Estimated Time to Complete (based on study pace)
+        3. Provide 3 specific resources (Books, Courses, or Websites) tailored to their learning style.
+        
+        Return ONLY valid JSON structure:
+        {{
+            "interest": "{interest}",
+            "phases": [
+                {{
+                    "title": "Beginner",
+                    "topics": ["...", ...],
+                    "project": "...",
+                    "duration": "..."
+                }},
+                ...
+            ],
+            "resources": ["...", ...]
+        }}
+        """
+        
+        response_text = await self._call_ollama(prompt, system="You are a JSON assistant. Output only JSON.")
+        return self._clean_json(response_text, {
+            "interest": interest,
+            "phases": [], 
+            "resources": ["Official Documentation", "YouTube Tutorials"],
+            "message": "AI generation fallback."
+        })
+
 ai_service = AIService()

@@ -1,0 +1,651 @@
+id,title,description,category,complexity,required_skills,trending,preparation_months
+1,Secure Mobile System for Traffic,A comprehensive mobile project focusing on Kotlin and React Native to solve real-world problems.,Mobile,Beginner,Kotlin|React Native|Flutter,false,5
+2,Automated Blockchain Analyzer,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Advanced,Ethereum|Smart Contracts,true,4
+3,Advanced Security Analyzer for Education,A comprehensive security project focusing on Network Security and Python to solve real-world problems.,Security,Intermediate,Network Security|Python|Cryptography|Linux,true,6
+4,Advanced Security Analyzer,A comprehensive security project focusing on Python and Network Security to solve real-world problems.,Security,Advanced,Python|Network Security,true,3
+5,Next-Gen Blockchain Platform for Healthcare,A comprehensive blockchain project focusing on Solidity and Web3.js to solve real-world problems.,Blockchain,Advanced,Solidity|Web3.js|Ethereum|Smart Contracts,false,4
+6,Smart Cloud Tracker,A comprehensive cloud project focusing on Docker and Kubernetes to solve real-world problems.,Cloud,Advanced,Docker|Kubernetes|DevOps|AWS,true,5
+7,Next-Gen Game Dev Module for Healthcare,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Advanced,C#|Unity|Unreal Engine,true,3
+8,Decentralized Security Platform,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Intermediate,Network Security|Cryptography,false,2
+9,Smart Game Dev Tracker for Healthcare,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Advanced,C++|C#,true,6
+10,Automated Blockchain System for Agriculture,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Intermediate,Web3.js|Solidity|Smart Contracts,true,5
+11,Automated Web Assistant,A comprehensive web project focusing on PostgreSQL and React to solve real-world problems.,Web,Advanced,PostgreSQL|React|MongoDB,true,5
+12,Intelligent Blockchain Platform for Education,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Intermediate,Ethereum|Web3.js,true,4
+13,Advanced Cloud System for Security,A comprehensive cloud project focusing on DevOps and Azure to solve real-world problems.,Cloud,Advanced,DevOps|Azure,false,2
+14,Smart Web Module,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Intermediate,MongoDB|Node.js|React,false,3
+15,Secure Mobile Tool,A comprehensive mobile project focusing on Swift and Firebase to solve real-world problems.,Mobile,Intermediate,Swift|Firebase,true,6
+16,Next-Gen Game Dev Platform,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Intermediate,C++|Unity,true,6
+17,Smart Cloud Platform,A comprehensive cloud project focusing on Kubernetes and Azure to solve real-world problems.,Cloud,Advanced,Kubernetes|Azure,false,3
+18,Advanced IoT Assistant,A comprehensive iot project focusing on C++ and MQTT to solve real-world problems.,IoT,Intermediate,C++|MQTT|Sensors|Raspberry Pi,false,3
+19,Real-time Security Tracker,A comprehensive security project focusing on Ethical Hacking and Network Security to solve real-world problems.,Security,Beginner,Ethical Hacking|Network Security,false,3
+20,Intelligent Game Dev Tool,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Beginner,C++|C#|Unity,false,4
+21,Smart AI/ML System for Traffic,A comprehensive ai/ml project focusing on OpenCV and Python to solve real-world problems.,AI/ML,Advanced,OpenCV|Python|NLP,false,4
+22,Decentralized Blockchain System for Agriculture,A comprehensive blockchain project focusing on Solidity and Ethereum to solve real-world problems.,Blockchain,Advanced,Solidity|Ethereum|Smart Contracts,true,5
+23,Next-Gen Game Dev System for Finance,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Intermediate,C#|Unity|C++|Unreal Engine,true,6
+24,Intelligent Security Analyzer,A comprehensive security project focusing on Ethical Hacking and Python to solve real-world problems.,Security,Intermediate,Ethical Hacking|Python,false,6
+25,Smart Cloud Assistant,A comprehensive cloud project focusing on Kubernetes and DevOps to solve real-world problems.,Cloud,Advanced,Kubernetes|DevOps,false,4
+26,Intelligent Game Dev Analyzer,A comprehensive game dev project focusing on Unity and C# to solve real-world problems.,Game Dev,Intermediate,Unity|C#|C++|Unreal Engine,true,2
+27,Advanced Security System for Healthcare,A comprehensive security project focusing on Python and Linux to solve real-world problems.,Security,Advanced,Python|Linux|Cryptography|Network Security,true,6
+28,Decentralized Security Application for Security,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Intermediate,Network Security|Cryptography,false,5
+29,Automated Data Science System,A comprehensive data science project focusing on Matplotlib and SQL to solve real-world problems.,Data Science,Intermediate,Matplotlib|SQL|Pandas,false,4
+30,Advanced AI/ML Tracker for Traffic,A comprehensive ai/ml project focusing on Python and Scikit-learn to solve real-world problems.,AI/ML,Advanced,Python|Scikit-learn|OpenCV|NLP,false,3
+31,Next-Gen Cloud Tool,A comprehensive cloud project focusing on Docker and AWS to solve real-world problems.,Cloud,Intermediate,Docker|AWS|Azure|Kubernetes,true,3
+32,Secure Cloud Module for Agriculture,A comprehensive cloud project focusing on DevOps and Azure to solve real-world problems.,Cloud,Advanced,DevOps|Azure,false,2
+33,Next-Gen Data Science Assistant,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Beginner,Matplotlib|R,true,3
+34,Intelligent AR/VR Tool for Education,A comprehensive ar/vr project focusing on Blender and C# to solve real-world problems.,AR/VR,Beginner,Blender|C#,false,3
+35,Next-Gen Data Science Platform for Education,A comprehensive data science project focusing on R and Matplotlib to solve real-world problems.,Data Science,Beginner,R|Matplotlib|SQL|NumPy,false,3
+36,Automated Blockchain Assistant,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Beginner,Web3.js|Solidity|Smart Contracts|Ethereum,true,4
+37,Real-time Security Tool,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Beginner,Network Security|Cryptography|Python|Linux,false,2
+38,Decentralized IoT Module,A comprehensive iot project focusing on C++ and MQTT to solve real-world problems.,IoT,Intermediate,C++|MQTT|Sensors,true,6
+39,Secure Game Dev System for Traffic,A comprehensive game dev project focusing on Unity and Unreal Engine to solve real-world problems.,Game Dev,Beginner,Unity|Unreal Engine|C++|C#,false,5
+40,Advanced Web System for Finance,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Advanced,MongoDB|Node.js|React|Vue.js,false,2
+41,Real-time Blockchain Platform,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Intermediate,Ethereum|Web3.js,true,4
+42,Decentralized Security Module for Agriculture,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Intermediate,Cryptography|Network Security|Python,true,4
+43,Advanced Blockchain Tool,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Beginner,Ethereum|Web3.js,true,4
+44,Next-Gen Game Dev Application for Education,A comprehensive game dev project focusing on Unity and C# to solve real-world problems.,Game Dev,Advanced,Unity|C#|Unreal Engine|C++,true,6
+45,Decentralized Mobile Assistant for Traffic,A comprehensive mobile project focusing on React Native and Swift to solve real-world problems.,Mobile,Intermediate,React Native|Swift,true,5
+46,Next-Gen Cloud Module,A comprehensive cloud project focusing on AWS and DevOps to solve real-world problems.,Cloud,Intermediate,AWS|DevOps|Kubernetes,false,4
+47,Smart Security Tracker for Traffic,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Advanced,Network Security|Cryptography,false,6
+48,Smart Cloud Application,A comprehensive cloud project focusing on Azure and AWS to solve real-world problems.,Cloud,Intermediate,Azure|AWS|Docker,true,5
+49,Advanced Cloud Tool for Finance,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Beginner,Azure|DevOps|AWS,false,4
+50,Next-Gen Game Dev Tracker for Education,A comprehensive game dev project focusing on Unreal Engine and C# to solve real-world problems.,Game Dev,Advanced,Unreal Engine|C#|Unity,false,4
+51,Next-Gen Web Tracker,A comprehensive web project focusing on MongoDB and Vue.js to solve real-world problems.,Web,Beginner,MongoDB|Vue.js,false,5
+52,Next-Gen Mobile System for Security,A comprehensive mobile project focusing on Flutter and Swift to solve real-world problems.,Mobile,Advanced,Flutter|Swift,true,6
+53,Automated Web System for Healthcare,A comprehensive web project focusing on React and Vue.js to solve real-world problems.,Web,Advanced,React|Vue.js|MongoDB,false,2
+54,Real-time Data Science Assistant for Agriculture,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Beginner,NumPy|Matplotlib|SQL|Pandas,false,6
+55,Advanced AR/VR System,A comprehensive ar/vr project focusing on C# and ARKit to solve real-world problems.,AR/VR,Intermediate,C#|ARKit,true,2
+56,Smart AR/VR Assistant,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Advanced,ARKit|Unity|Blender,true,5
+57,Smart AI/ML System,A comprehensive ai/ml project focusing on Python and TensorFlow to solve real-world problems.,AI/ML,Advanced,Python|TensorFlow|OpenCV,true,3
+58,Advanced AR/VR Analyzer,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Intermediate,Unity|ARKit,false,4
+59,Smart Mobile Application for Healthcare,A comprehensive mobile project focusing on React Native and Swift to solve real-world problems.,Mobile,Beginner,React Native|Swift|Kotlin|Firebase,true,6
+60,Secure IoT Application for Education,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Sensors|Raspberry Pi,false,5
+61,Automated Data Science Platform,A comprehensive data science project focusing on Matplotlib and SQL to solve real-world problems.,Data Science,Intermediate,Matplotlib|SQL|R|NumPy,false,5
+62,Real-time Blockchain Tool for Finance,A comprehensive blockchain project focusing on Solidity and Web3.js to solve real-world problems.,Blockchain,Intermediate,Solidity|Web3.js,false,2
+63,Decentralized Game Dev Tracker,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Intermediate,C++|Unity|C#,false,3
+64,Advanced Web Assistant,A comprehensive web project focusing on Django and PostgreSQL to solve real-world problems.,Web,Beginner,Django|PostgreSQL,true,2
+65,Real-time IoT Assistant,A comprehensive iot project focusing on Arduino and Sensors to solve real-world problems.,IoT,Beginner,Arduino|Sensors,false,2
+66,Intelligent IoT Application for Healthcare,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Sensors|Raspberry Pi|MQTT,false,6
+67,Intelligent Security Tracker for Security,A comprehensive security project focusing on Linux and Python to solve real-world problems.,Security,Beginner,Linux|Python|Network Security|Ethical Hacking,false,4
+68,Real-time Web Application for Education,A comprehensive web project focusing on PostgreSQL and Node.js to solve real-world problems.,Web,Intermediate,PostgreSQL|Node.js,true,4
+69,Intelligent Mobile Tracker for Education,A comprehensive mobile project focusing on Flutter and Kotlin to solve real-world problems.,Mobile,Advanced,Flutter|Kotlin|React Native,true,4
+70,Decentralized Cloud Tool,A comprehensive cloud project focusing on AWS and Docker to solve real-world problems.,Cloud,Beginner,AWS|Docker,true,2
+71,Decentralized Security Analyzer,A comprehensive security project focusing on Python and Linux to solve real-world problems.,Security,Intermediate,Python|Linux|Cryptography,false,4
+72,Intelligent Blockchain Application,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Beginner,Ethereum|Smart Contracts|Web3.js,true,2
+73,Intelligent Mobile Module for Healthcare,A comprehensive mobile project focusing on Kotlin and Firebase to solve real-world problems.,Mobile,Intermediate,Kotlin|Firebase|React Native,true,4
+74,Intelligent Game Dev Analyzer,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Beginner,C++|Unity|C#,false,4
+75,Automated AR/VR Tool,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Intermediate,Blender|Unity,true,2
+76,Next-Gen Data Science Tool for Agriculture,A comprehensive data science project focusing on R and Matplotlib to solve real-world problems.,Data Science,Beginner,R|Matplotlib|Pandas|SQL,true,4
+77,Decentralized Blockchain Analyzer for Finance,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Advanced,Ethereum|Smart Contracts,true,2
+78,Automated AR/VR Tracker,A comprehensive ar/vr project focusing on ARKit and C# to solve real-world problems.,AR/VR,Advanced,ARKit|C#|Blender|Unity,false,5
+79,Intelligent Web Platform for Security,A comprehensive web project focusing on Django and MongoDB to solve real-world problems.,Web,Intermediate,Django|MongoDB,false,5
+80,Advanced Game Dev Platform,A comprehensive game dev project focusing on C++ and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,C++|Unreal Engine|Unity|C#,false,3
+81,Secure AI/ML System for Security,A comprehensive ai/ml project focusing on Scikit-learn and TensorFlow to solve real-world problems.,AI/ML,Beginner,Scikit-learn|TensorFlow,true,5
+82,Next-Gen Game Dev Platform for Finance,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Advanced,Unreal Engine|Unity|C++|C#,false,2
+83,Secure Data Science Platform,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Intermediate,Matplotlib|R|Pandas,false,3
+84,Real-time Security Platform,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Intermediate,Network Security|Cryptography,true,4
+85,Smart Security System for Education,A comprehensive security project focusing on Network Security and Ethical Hacking to solve real-world problems.,Security,Beginner,Network Security|Ethical Hacking|Python,true,3
+86,Next-Gen Security Analyzer,A comprehensive security project focusing on Ethical Hacking and Python to solve real-world problems.,Security,Intermediate,Ethical Hacking|Python,true,3
+87,Smart IoT Analyzer for Security,A comprehensive iot project focusing on MQTT and Arduino to solve real-world problems.,IoT,Intermediate,MQTT|Arduino|Raspberry Pi|Sensors,false,6
+88,Secure Cloud Analyzer,A comprehensive cloud project focusing on DevOps and AWS to solve real-world problems.,Cloud,Beginner,DevOps|AWS|Azure,true,4
+89,Secure AI/ML Platform for Security,A comprehensive ai/ml project focusing on NLP and PyTorch to solve real-world problems.,AI/ML,Intermediate,NLP|PyTorch|TensorFlow|OpenCV,true,6
+90,Secure Web Platform for Education,A comprehensive web project focusing on Vue.js and PostgreSQL to solve real-world problems.,Web,Advanced,Vue.js|PostgreSQL|MongoDB,true,3
+91,Advanced Cloud Tool for Finance,A comprehensive cloud project focusing on Docker and Azure to solve real-world problems.,Cloud,Advanced,Docker|Azure|Kubernetes,false,2
+92,Secure IoT Module,A comprehensive iot project focusing on Raspberry Pi and MQTT to solve real-world problems.,IoT,Beginner,Raspberry Pi|MQTT,true,4
+93,Next-Gen Data Science System,A comprehensive data science project focusing on R and NumPy to solve real-world problems.,Data Science,Beginner,R|NumPy,false,5
+94,Intelligent Data Science Assistant for Traffic,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Advanced,Matplotlib|R|NumPy,false,3
+95,Intelligent AR/VR Module for Security,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Beginner,Unity|ARKit,true,5
+96,Decentralized AI/ML Module,A comprehensive ai/ml project focusing on TensorFlow and PyTorch to solve real-world problems.,AI/ML,Intermediate,TensorFlow|PyTorch|OpenCV|Python,true,6
+97,Advanced Cloud Assistant,A comprehensive cloud project focusing on AWS and Kubernetes to solve real-world problems.,Cloud,Advanced,AWS|Kubernetes,true,4
+98,Smart Blockchain Platform for Healthcare,A comprehensive blockchain project focusing on Smart Contracts and Solidity to solve real-world problems.,Blockchain,Advanced,Smart Contracts|Solidity,true,5
+99,Automated Web Assistant,A comprehensive web project focusing on React and PostgreSQL to solve real-world problems.,Web,Advanced,React|PostgreSQL|Django,true,3
+100,Advanced Blockchain Application,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Advanced,Ethereum|Web3.js,true,6
+101,Smart Security Analyzer,A comprehensive security project focusing on Network Security and Python to solve real-world problems.,Security,Advanced,Network Security|Python,false,2
+102,Decentralized AR/VR Tracker for Education,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Beginner,Blender|Unity,true,2
+103,Automated Data Science Tracker,A comprehensive data science project focusing on Matplotlib and SQL to solve real-world problems.,Data Science,Beginner,Matplotlib|SQL|R|NumPy,false,5
+104,Next-Gen Data Science Module for Agriculture,A comprehensive data science project focusing on NumPy and R to solve real-world problems.,Data Science,Beginner,NumPy|R,true,2
+105,Intelligent IoT Application for Agriculture,A comprehensive iot project focusing on Raspberry Pi and Arduino to solve real-world problems.,IoT,Intermediate,Raspberry Pi|Arduino,false,4
+106,Smart Cloud Assistant,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Intermediate,AWS|Azure|Kubernetes,false,3
+107,Automated AI/ML Application for Security,A comprehensive ai/ml project focusing on TensorFlow and Scikit-learn to solve real-world problems.,AI/ML,Advanced,TensorFlow|Scikit-learn|PyTorch,true,5
+108,Decentralized IoT Application,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi|Sensors|Arduino,false,2
+109,Intelligent Cloud Application,A comprehensive cloud project focusing on Azure and Docker to solve real-world problems.,Cloud,Intermediate,Azure|Docker|AWS,false,5
+110,Decentralized Web Module for Security,A comprehensive web project focusing on React and PostgreSQL to solve real-world problems.,Web,Beginner,React|PostgreSQL|MongoDB|Vue.js,true,3
+111,Automated AI/ML Platform,A comprehensive ai/ml project focusing on Scikit-learn and OpenCV to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|OpenCV|NLP|PyTorch,true,5
+112,Intelligent Mobile Application,A comprehensive mobile project focusing on React Native and Swift to solve real-world problems.,Mobile,Advanced,React Native|Swift|Firebase,false,4
+113,Next-Gen AR/VR System for Traffic,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Beginner,ARKit|Unity,false,6
+114,Automated Cloud Module for Security,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Advanced,Azure|DevOps|Kubernetes,true,2
+115,Secure Mobile Tool for Security,A comprehensive mobile project focusing on Kotlin and Firebase to solve real-world problems.,Mobile,Intermediate,Kotlin|Firebase|React Native|Swift,true,2
+116,Intelligent Data Science Analyzer,A comprehensive data science project focusing on Pandas and Matplotlib to solve real-world problems.,Data Science,Advanced,Pandas|Matplotlib|SQL|NumPy,false,6
+117,Advanced Cloud Application,A comprehensive cloud project focusing on Kubernetes and AWS to solve real-world problems.,Cloud,Beginner,Kubernetes|AWS|Azure,true,4
+118,Smart Game Dev Application,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Beginner,Unity|C++,true,3
+119,Automated AR/VR Platform for Finance,A comprehensive ar/vr project focusing on ARKit and C# to solve real-world problems.,AR/VR,Advanced,ARKit|C#,false,6
+120,Secure IoT Tracker,A comprehensive iot project focusing on C++ and Arduino to solve real-world problems.,IoT,Beginner,C++|Arduino|Raspberry Pi|Sensors,false,4
+121,Real-time AI/ML Application,A comprehensive ai/ml project focusing on Python and NLP to solve real-world problems.,AI/ML,Beginner,Python|NLP|PyTorch|TensorFlow,true,2
+122,Advanced IoT System for Agriculture,A comprehensive iot project focusing on MQTT and Raspberry Pi to solve real-world problems.,IoT,Advanced,MQTT|Raspberry Pi|Arduino,false,4
+123,Next-Gen Cloud Analyzer for Traffic,A comprehensive cloud project focusing on Kubernetes and Azure to solve real-world problems.,Cloud,Beginner,Kubernetes|Azure|AWS,true,6
+124,Smart IoT Analyzer,A comprehensive iot project focusing on Raspberry Pi and Arduino to solve real-world problems.,IoT,Advanced,Raspberry Pi|Arduino,true,4
+125,Automated Security Tracker for Agriculture,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Beginner,Cryptography|Network Security|Linux|Ethical Hacking,true,5
+126,Intelligent Blockchain Tracker,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Beginner,Smart Contracts|Ethereum|Solidity|Web3.js,false,6
+127,Automated Blockchain Tool for Finance,A comprehensive blockchain project focusing on Smart Contracts and Web3.js to solve real-world problems.,Blockchain,Beginner,Smart Contracts|Web3.js|Solidity,false,4
+128,Real-time Security Platform for Healthcare,A comprehensive security project focusing on Ethical Hacking and Cryptography to solve real-world problems.,Security,Intermediate,Ethical Hacking|Cryptography|Network Security,false,4
+129,Intelligent Cloud Assistant,A comprehensive cloud project focusing on Docker and AWS to solve real-world problems.,Cloud,Advanced,Docker|AWS|Kubernetes|Azure,false,2
+130,Advanced IoT Application for Traffic,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Intermediate,Sensors|MQTT|Raspberry Pi|Arduino,true,6
+131,Automated Game Dev Tool,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Advanced,Unity|C++|C#|Unreal Engine,true,2
+132,Smart Game Dev System for Finance,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Intermediate,C#|Unity|Unreal Engine,false,3
+133,Decentralized Cloud Analyzer for Healthcare,A comprehensive cloud project focusing on AWS and DevOps to solve real-world problems.,Cloud,Advanced,AWS|DevOps,true,2
+134,Intelligent Game Dev Application for Agriculture,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Intermediate,C++|Unity,false,6
+135,Intelligent Cloud Analyzer for Agriculture,A comprehensive cloud project focusing on Kubernetes and AWS to solve real-world problems.,Cloud,Beginner,Kubernetes|AWS,false,6
+136,Next-Gen Mobile System,A comprehensive mobile project focusing on Kotlin and Firebase to solve real-world problems.,Mobile,Intermediate,Kotlin|Firebase,true,6
+137,Decentralized Web Application,A comprehensive web project focusing on Node.js and React to solve real-world problems.,Web,Intermediate,Node.js|React,false,3
+138,Decentralized Mobile Tracker,A comprehensive mobile project focusing on Kotlin and Flutter to solve real-world problems.,Mobile,Advanced,Kotlin|Flutter|Swift,false,2
+139,Real-time Mobile Tracker,A comprehensive mobile project focusing on Firebase and Flutter to solve real-world problems.,Mobile,Advanced,Firebase|Flutter|React Native,true,2
+140,Next-Gen Web Analyzer for Security,A comprehensive web project focusing on Django and Node.js to solve real-world problems.,Web,Beginner,Django|Node.js|Vue.js,false,6
+141,Advanced Data Science Application for Traffic,A comprehensive data science project focusing on SQL and Pandas to solve real-world problems.,Data Science,Advanced,SQL|Pandas|R|Matplotlib,false,6
+142,Secure Web System for Finance,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Intermediate,MongoDB|Node.js|Django|Vue.js,false,3
+143,Secure AR/VR Tracker for Security,A comprehensive ar/vr project focusing on Blender and ARKit to solve real-world problems.,AR/VR,Beginner,Blender|ARKit,true,6
+144,Smart Data Science Application,A comprehensive data science project focusing on R and Matplotlib to solve real-world problems.,Data Science,Intermediate,R|Matplotlib|Pandas|NumPy,false,5
+145,Next-Gen AI/ML Tool for Traffic,A comprehensive ai/ml project focusing on TensorFlow and OpenCV to solve real-world problems.,AI/ML,Advanced,TensorFlow|OpenCV|PyTorch,false,3
+146,Automated Cloud Application for Healthcare,A comprehensive cloud project focusing on Kubernetes and Docker to solve real-world problems.,Cloud,Advanced,Kubernetes|Docker|Azure,true,2
+147,Next-Gen Blockchain Platform,A comprehensive blockchain project focusing on Smart Contracts and Web3.js to solve real-world problems.,Blockchain,Intermediate,Smart Contracts|Web3.js|Solidity|Ethereum,true,5
+148,Real-time Data Science Tracker for Agriculture,A comprehensive data science project focusing on Pandas and R to solve real-world problems.,Data Science,Intermediate,Pandas|R|SQL,false,6
+149,Smart AI/ML System,A comprehensive ai/ml project focusing on TensorFlow and PyTorch to solve real-world problems.,AI/ML,Advanced,TensorFlow|PyTorch|NLP,true,5
+150,Intelligent Game Dev Analyzer for Education,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Intermediate,Unity|C++|C#|Unreal Engine,false,2
+151,Smart IoT Application for Finance,A comprehensive iot project focusing on C++ and MQTT to solve real-world problems.,IoT,Intermediate,C++|MQTT|Sensors|Raspberry Pi,true,6
+152,Intelligent Cloud Platform,A comprehensive cloud project focusing on Azure and AWS to solve real-world problems.,Cloud,Beginner,Azure|AWS,false,5
+153,Next-Gen Web Module,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Intermediate,MongoDB|Node.js,true,5
+154,Smart Game Dev Platform,A comprehensive game dev project focusing on Unity and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,Unity|Unreal Engine|C++|C#,false,6
+155,Real-time Web Assistant for Traffic,A comprehensive web project focusing on MongoDB and React to solve real-world problems.,Web,Advanced,MongoDB|React,true,3
+156,Advanced Game Dev Analyzer for Healthcare,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Advanced,C++|Unity|C#,false,2
+157,Intelligent Security Platform for Finance,A comprehensive security project focusing on Python and Cryptography to solve real-world problems.,Security,Intermediate,Python|Cryptography|Linux|Ethical Hacking,false,3
+158,Smart IoT Tracker for Traffic,A comprehensive iot project focusing on MQTT and Sensors to solve real-world problems.,IoT,Beginner,MQTT|Sensors|Raspberry Pi,true,4
+159,Advanced AI/ML Application for Education,A comprehensive ai/ml project focusing on Python and PyTorch to solve real-world problems.,AI/ML,Beginner,Python|PyTorch,true,2
+160,Decentralized Game Dev Platform for Traffic,A comprehensive game dev project focusing on Unreal Engine and C++ to solve real-world problems.,Game Dev,Advanced,Unreal Engine|C++,false,3
+161,Advanced Cloud Tracker,A comprehensive cloud project focusing on AWS and Kubernetes to solve real-world problems.,Cloud,Intermediate,AWS|Kubernetes|Docker|DevOps,false,6
+162,Intelligent Security Tracker for Agriculture,A comprehensive security project focusing on Ethical Hacking and Python to solve real-world problems.,Security,Advanced,Ethical Hacking|Python|Cryptography|Linux,false,2
+163,Smart Data Science Platform for Agriculture,A comprehensive data science project focusing on SQL and Pandas to solve real-world problems.,Data Science,Advanced,SQL|Pandas|R,false,6
+164,Next-Gen Web Analyzer,A comprehensive web project focusing on React and MongoDB to solve real-world problems.,Web,Beginner,React|MongoDB|PostgreSQL|Node.js,true,6
+165,Secure AI/ML Assistant,A comprehensive ai/ml project focusing on NLP and TensorFlow to solve real-world problems.,AI/ML,Intermediate,NLP|TensorFlow,true,3
+166,Next-Gen IoT Assistant,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Beginner,Sensors|MQTT|Arduino|C++,false,4
+167,Smart Game Dev Platform,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Advanced,C++|C#|Unreal Engine,true,2
+168,Decentralized AI/ML Tracker,A comprehensive ai/ml project focusing on OpenCV and Scikit-learn to solve real-world problems.,AI/ML,Advanced,OpenCV|Scikit-learn|Python|NLP,false,6
+169,Intelligent IoT Tracker for Education,A comprehensive iot project focusing on Arduino and Sensors to solve real-world problems.,IoT,Advanced,Arduino|Sensors,false,2
+170,Smart AI/ML Tracker,A comprehensive ai/ml project focusing on PyTorch and Python to solve real-world problems.,AI/ML,Intermediate,PyTorch|Python,false,3
+171,Real-time Data Science Tool for Traffic,A comprehensive data science project focusing on R and NumPy to solve real-world problems.,Data Science,Beginner,R|NumPy,false,5
+172,Real-time Web Module for Traffic,A comprehensive web project focusing on React and Django to solve real-world problems.,Web,Beginner,React|Django,true,6
+173,Advanced Web Module,A comprehensive web project focusing on PostgreSQL and Node.js to solve real-world problems.,Web,Advanced,PostgreSQL|Node.js|Django,false,3
+174,Smart AI/ML System for Finance,A comprehensive ai/ml project focusing on Python and OpenCV to solve real-world problems.,AI/ML,Advanced,Python|OpenCV|PyTorch,false,3
+175,Secure Web Platform for Traffic,A comprehensive web project focusing on MongoDB and PostgreSQL to solve real-world problems.,Web,Beginner,MongoDB|PostgreSQL|React|Django,true,5
+176,Automated Data Science System,A comprehensive data science project focusing on SQL and R to solve real-world problems.,Data Science,Beginner,SQL|R|Matplotlib,false,6
+177,Next-Gen AR/VR Analyzer,A comprehensive ar/vr project focusing on Blender and C# to solve real-world problems.,AR/VR,Advanced,Blender|C#|ARKit|Unity,false,2
+178,Next-Gen AR/VR Platform,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Beginner,C#|Blender|ARKit|Unity,true,4
+179,Advanced Game Dev System,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Beginner,C++|Unity|C#|Unreal Engine,true,2
+180,Secure AR/VR Tool,A comprehensive ar/vr project focusing on C# and ARKit to solve real-world problems.,AR/VR,Advanced,C#|ARKit|Blender|Unity,false,6
+181,Secure Game Dev Module for Finance,A comprehensive game dev project focusing on C# and C++ to solve real-world problems.,Game Dev,Advanced,C#|C++|Unity|Unreal Engine,false,2
+182,Decentralized AR/VR Tracker,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Advanced,ARKit|Unity|Blender|C#,true,5
+183,Real-time AR/VR Tool,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Intermediate,Blender|Unity|C#,false,2
+184,Automated Cloud System for Healthcare,A comprehensive cloud project focusing on Docker and AWS to solve real-world problems.,Cloud,Intermediate,Docker|AWS|Azure|Kubernetes,true,5
+185,Next-Gen AI/ML Assistant,A comprehensive ai/ml project focusing on Python and PyTorch to solve real-world problems.,AI/ML,Advanced,Python|PyTorch|NLP,false,6
+186,Real-time Blockchain Tracker for Finance,A comprehensive blockchain project focusing on Web3.js and Smart Contracts to solve real-world problems.,Blockchain,Advanced,Web3.js|Smart Contracts,false,6
+187,Decentralized Mobile Module,A comprehensive mobile project focusing on Firebase and React Native to solve real-world problems.,Mobile,Intermediate,Firebase|React Native,true,4
+188,Decentralized AR/VR System,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Intermediate,ARKit|Unity|Blender|C#,true,4
+189,Smart Game Dev System for Agriculture,A comprehensive game dev project focusing on C# and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,C#|Unreal Engine|C++|Unity,false,6
+190,Decentralized AR/VR Assistant for Traffic,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Advanced,C#|Unity|Blender|ARKit,false,2
+191,Next-Gen Web Assistant,A comprehensive web project focusing on MongoDB and React to solve real-world problems.,Web,Advanced,MongoDB|React|Vue.js|Django,false,3
+192,Automated Cloud Platform,A comprehensive cloud project focusing on Kubernetes and DevOps to solve real-world problems.,Cloud,Advanced,Kubernetes|DevOps,true,3
+193,Decentralized Data Science Tool,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Intermediate,NumPy|Matplotlib|Pandas|SQL,true,2
+194,Real-time Web System,A comprehensive web project focusing on React and Node.js to solve real-world problems.,Web,Advanced,React|Node.js,false,3
+195,Next-Gen Mobile Application,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Beginner,Flutter|React Native|Firebase|Kotlin,true,2
+196,Advanced Cloud Platform,A comprehensive cloud project focusing on AWS and Kubernetes to solve real-world problems.,Cloud,Intermediate,AWS|Kubernetes|Docker,false,2
+197,Automated Web Module for Healthcare,A comprehensive web project focusing on Django and Node.js to solve real-world problems.,Web,Intermediate,Django|Node.js|MongoDB,false,4
+198,Automated IoT Tool,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi,true,5
+199,Next-Gen IoT System,A comprehensive iot project focusing on Raspberry Pi and Arduino to solve real-world problems.,IoT,Intermediate,Raspberry Pi|Arduino|C++,true,3
+200,Smart Data Science Assistant for Traffic,A comprehensive data science project focusing on Matplotlib and Pandas to solve real-world problems.,Data Science,Advanced,Matplotlib|Pandas|R|NumPy,true,5
+201,Secure Security Tool,A comprehensive security project focusing on Linux and Python to solve real-world problems.,Security,Advanced,Linux|Python,true,5
+202,Next-Gen AR/VR Module for Agriculture,A comprehensive ar/vr project focusing on Unity and C# to solve real-world problems.,AR/VR,Advanced,Unity|C#|ARKit,true,5
+203,Advanced Game Dev Application for Agriculture,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Intermediate,C++|C#|Unreal Engine,true,3
+204,Intelligent Web Module,A comprehensive web project focusing on React and PostgreSQL to solve real-world problems.,Web,Beginner,React|PostgreSQL|MongoDB|Vue.js,false,5
+205,Intelligent Mobile Analyzer,A comprehensive mobile project focusing on Firebase and Flutter to solve real-world problems.,Mobile,Beginner,Firebase|Flutter|React Native|Kotlin,true,3
+206,Secure Web Platform for Finance,A comprehensive web project focusing on React and PostgreSQL to solve real-world problems.,Web,Advanced,React|PostgreSQL|MongoDB,true,6
+207,Real-time Cloud Application,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Beginner,Azure|DevOps,false,5
+208,Secure Data Science Platform,A comprehensive data science project focusing on Pandas and NumPy to solve real-world problems.,Data Science,Beginner,Pandas|NumPy,false,3
+209,Real-time Security Assistant for Agriculture,A comprehensive security project focusing on Python and Network Security to solve real-world problems.,Security,Intermediate,Python|Network Security|Ethical Hacking,false,6
+210,Intelligent IoT Module for Education,A comprehensive iot project focusing on Arduino and MQTT to solve real-world problems.,IoT,Beginner,Arduino|MQTT,true,4
+211,Automated Security Platform,A comprehensive security project focusing on Python and Network Security to solve real-world problems.,Security,Beginner,Python|Network Security,false,3
+212,Automated AR/VR Platform,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Beginner,Blender|Unity|C#,false,5
+213,Decentralized Security Assistant,A comprehensive security project focusing on Network Security and Ethical Hacking to solve real-world problems.,Security,Beginner,Network Security|Ethical Hacking|Linux|Cryptography,true,3
+214,Decentralized AR/VR Tool,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Beginner,ARKit|Blender|C#|Unity,false,6
+215,Decentralized Game Dev Tool,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Beginner,C#|Unity|Unreal Engine|C++,true,5
+216,Smart Game Dev Analyzer,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Advanced,C++|Unity|Unreal Engine|C#,true,2
+217,Smart Mobile Assistant,A comprehensive mobile project focusing on React Native and Firebase to solve real-world problems.,Mobile,Advanced,React Native|Firebase|Swift,false,6
+218,Decentralized Blockchain Tracker for Finance,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Advanced,Smart Contracts|Ethereum|Web3.js|Solidity,true,3
+219,Advanced Web Tracker for Finance,A comprehensive web project focusing on PostgreSQL and MongoDB to solve real-world problems.,Web,Advanced,PostgreSQL|MongoDB,false,5
+220,Secure AI/ML Assistant,A comprehensive ai/ml project focusing on PyTorch and Scikit-learn to solve real-world problems.,AI/ML,Intermediate,PyTorch|Scikit-learn,true,4
+221,Intelligent Game Dev Tracker,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Advanced,Unreal Engine|Unity|C#,false,5
+222,Real-time Web Tool,A comprehensive web project focusing on PostgreSQL and React to solve real-world problems.,Web,Advanced,PostgreSQL|React|MongoDB|Vue.js,true,3
+223,Intelligent AR/VR Module,A comprehensive ar/vr project focusing on ARKit and C# to solve real-world problems.,AR/VR,Intermediate,ARKit|C#|Blender,false,3
+224,Advanced Blockchain Assistant for Education,A comprehensive blockchain project focusing on Smart Contracts and Solidity to solve real-world problems.,Blockchain,Intermediate,Smart Contracts|Solidity|Web3.js,false,5
+225,Intelligent AI/ML Analyzer for Education,A comprehensive ai/ml project focusing on OpenCV and NLP to solve real-world problems.,AI/ML,Intermediate,OpenCV|NLP|Scikit-learn|PyTorch,false,5
+226,Automated Game Dev System,A comprehensive game dev project focusing on C# and C++ to solve real-world problems.,Game Dev,Advanced,C#|C++,false,3
+227,Intelligent Security System,A comprehensive security project focusing on Network Security and Python to solve real-world problems.,Security,Advanced,Network Security|Python|Ethical Hacking|Cryptography,true,4
+228,Decentralized Mobile Platform for Security,A comprehensive mobile project focusing on React Native and Kotlin to solve real-world problems.,Mobile,Intermediate,React Native|Kotlin|Swift|Firebase,true,3
+229,Smart Web Tracker,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Advanced,MongoDB|Node.js,false,4
+230,Intelligent IoT Platform,A comprehensive iot project focusing on Raspberry Pi and C++ to solve real-world problems.,IoT,Advanced,Raspberry Pi|C++|MQTT,true,6
+231,Decentralized Mobile Tool,A comprehensive mobile project focusing on Kotlin and Firebase to solve real-world problems.,Mobile,Beginner,Kotlin|Firebase|Flutter|React Native,true,3
+232,Real-time Blockchain Assistant,A comprehensive blockchain project focusing on Solidity and Smart Contracts to solve real-world problems.,Blockchain,Beginner,Solidity|Smart Contracts|Ethereum,true,6
+233,Smart Game Dev Platform,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Beginner,Unity|C++,false,5
+234,Secure Data Science Module,A comprehensive data science project focusing on NumPy and SQL to solve real-world problems.,Data Science,Intermediate,NumPy|SQL|Pandas|R,true,2
+235,Automated IoT System,A comprehensive iot project focusing on Arduino and Raspberry Pi to solve real-world problems.,IoT,Advanced,Arduino|Raspberry Pi|Sensors,true,2
+236,Decentralized Cloud Application,A comprehensive cloud project focusing on Kubernetes and Azure to solve real-world problems.,Cloud,Beginner,Kubernetes|Azure,true,4
+237,Decentralized AI/ML Platform,A comprehensive ai/ml project focusing on Scikit-learn and TensorFlow to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|TensorFlow|OpenCV,true,6
+238,Intelligent Cloud Module,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Beginner,Azure|DevOps|AWS|Docker,false,5
+239,Decentralized AR/VR Tool,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Intermediate,Blender|Unity|C#|ARKit,false,3
+240,Real-time AI/ML System for Security,A comprehensive ai/ml project focusing on Python and TensorFlow to solve real-world problems.,AI/ML,Intermediate,Python|TensorFlow|NLP|PyTorch,false,2
+241,Intelligent AI/ML Analyzer,A comprehensive ai/ml project focusing on TensorFlow and PyTorch to solve real-world problems.,AI/ML,Intermediate,TensorFlow|PyTorch,false,4
+242,Advanced AI/ML Assistant,A comprehensive ai/ml project focusing on PyTorch and Scikit-learn to solve real-world problems.,AI/ML,Advanced,PyTorch|Scikit-learn|NLP,true,2
+243,Decentralized AR/VR Tracker for Finance,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Intermediate,ARKit|Blender,true,4
+244,Smart Cloud Application,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Intermediate,AWS|Azure|DevOps|Kubernetes,false,3
+245,Next-Gen Security Analyzer,A comprehensive security project focusing on Network Security and Linux to solve real-world problems.,Security,Intermediate,Network Security|Linux|Cryptography,true,3
+246,Smart Blockchain Platform for Healthcare,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Advanced,Web3.js|Solidity|Smart Contracts|Ethereum,true,3
+247,Smart Cloud Tracker for Agriculture,A comprehensive cloud project focusing on Kubernetes and DevOps to solve real-world problems.,Cloud,Intermediate,Kubernetes|DevOps|Azure,true,4
+248,Decentralized Game Dev Platform,A comprehensive game dev project focusing on C# and C++ to solve real-world problems.,Game Dev,Intermediate,C#|C++,true,6
+249,Intelligent Data Science Analyzer for Traffic,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Advanced,NumPy|Matplotlib|Pandas,false,4
+250,Decentralized Mobile Tool,A comprehensive mobile project focusing on React Native and Kotlin to solve real-world problems.,Mobile,Intermediate,React Native|Kotlin,false,2
+251,Decentralized IoT Tracker,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Beginner,C++|Raspberry Pi|MQTT|Sensors,false,5
+252,Secure AI/ML Module for Traffic,A comprehensive ai/ml project focusing on PyTorch and Python to solve real-world problems.,AI/ML,Intermediate,PyTorch|Python|OpenCV,false,4
+253,Decentralized AI/ML Application,A comprehensive ai/ml project focusing on Python and NLP to solve real-world problems.,AI/ML,Intermediate,Python|NLP|OpenCV,true,3
+254,Real-time Mobile Assistant for Agriculture,A comprehensive mobile project focusing on Flutter and Swift to solve real-world problems.,Mobile,Intermediate,Flutter|Swift,false,3
+255,Advanced Web Platform for Agriculture,A comprehensive web project focusing on PostgreSQL and Vue.js to solve real-world problems.,Web,Beginner,PostgreSQL|Vue.js,false,5
+256,Automated Security Module,A comprehensive security project focusing on Ethical Hacking and Network Security to solve real-world problems.,Security,Intermediate,Ethical Hacking|Network Security|Linux,false,2
+257,Intelligent Cloud Module,A comprehensive cloud project focusing on DevOps and Kubernetes to solve real-world problems.,Cloud,Beginner,DevOps|Kubernetes|Docker,true,3
+258,Smart IoT Platform,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Advanced,Sensors|MQTT|C++|Raspberry Pi,true,4
+259,Smart Web Tool for Finance,A comprehensive web project focusing on Node.js and Django to solve real-world problems.,Web,Advanced,Node.js|Django|React|MongoDB,true,4
+260,Advanced AR/VR Platform for Education,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Beginner,ARKit|Blender|C#,false,3
+261,Decentralized IoT Module,A comprehensive iot project focusing on Arduino and Sensors to solve real-world problems.,IoT,Beginner,Arduino|Sensors|MQTT|C++,true,3
+262,Intelligent Web Tool for Agriculture,A comprehensive web project focusing on Node.js and Vue.js to solve real-world problems.,Web,Beginner,Node.js|Vue.js|MongoDB,true,5
+263,Decentralized Mobile Platform for Security,A comprehensive mobile project focusing on React Native and Flutter to solve real-world problems.,Mobile,Intermediate,React Native|Flutter|Firebase|Kotlin,false,4
+264,Advanced IoT System for Education,A comprehensive iot project focusing on MQTT and C++ to solve real-world problems.,IoT,Beginner,MQTT|C++|Sensors,false,4
+265,Smart Data Science Analyzer for Finance,A comprehensive data science project focusing on SQL and R to solve real-world problems.,Data Science,Advanced,SQL|R,false,4
+266,Automated Game Dev Module,A comprehensive game dev project focusing on C# and C++ to solve real-world problems.,Game Dev,Intermediate,C#|C++|Unity,true,3
+267,Smart Blockchain Module for Security,A comprehensive blockchain project focusing on Solidity and Web3.js to solve real-world problems.,Blockchain,Beginner,Solidity|Web3.js,true,4
+268,Advanced Web Module for Traffic,A comprehensive web project focusing on Vue.js and PostgreSQL to solve real-world problems.,Web,Beginner,Vue.js|PostgreSQL|React,false,4
+269,Intelligent AR/VR System,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Advanced,C#|Blender|ARKit|Unity,true,4
+270,Advanced Security Application,A comprehensive security project focusing on Linux and Cryptography to solve real-world problems.,Security,Intermediate,Linux|Cryptography|Network Security,true,3
+271,Real-time AR/VR Analyzer for Healthcare,A comprehensive ar/vr project focusing on Blender and C# to solve real-world problems.,AR/VR,Advanced,Blender|C#,false,4
+272,Intelligent AR/VR Analyzer,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Beginner,C#|Unity,false,3
+273,Real-time Data Science Assistant for Finance,A comprehensive data science project focusing on Matplotlib and NumPy to solve real-world problems.,Data Science,Advanced,Matplotlib|NumPy|SQL|Pandas,false,2
+274,Automated Cloud Analyzer,A comprehensive cloud project focusing on DevOps and Docker to solve real-world problems.,Cloud,Intermediate,DevOps|Docker|Azure|Kubernetes,true,6
+275,Next-Gen AI/ML Application,A comprehensive ai/ml project focusing on NLP and Scikit-learn to solve real-world problems.,AI/ML,Advanced,NLP|Scikit-learn|PyTorch,false,6
+276,Next-Gen Mobile Tracker for Healthcare,A comprehensive mobile project focusing on Flutter and Kotlin to solve real-world problems.,Mobile,Advanced,Flutter|Kotlin|Swift,false,4
+277,Advanced Blockchain Tool,A comprehensive blockchain project focusing on Web3.js and Smart Contracts to solve real-world problems.,Blockchain,Beginner,Web3.js|Smart Contracts,true,4
+278,Secure Security Analyzer,A comprehensive security project focusing on Python and Ethical Hacking to solve real-world problems.,Security,Intermediate,Python|Ethical Hacking|Linux,false,3
+279,Real-time AR/VR Tool for Agriculture,A comprehensive ar/vr project focusing on Unity and Blender to solve real-world problems.,AR/VR,Beginner,Unity|Blender,false,6
+280,Smart Data Science Platform,A comprehensive data science project focusing on NumPy and SQL to solve real-world problems.,Data Science,Beginner,NumPy|SQL|Matplotlib|Pandas,true,3
+281,Real-time Security Module,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Beginner,Cryptography|Network Security,true,2
+282,Smart AI/ML System,A comprehensive ai/ml project focusing on Python and NLP to solve real-world problems.,AI/ML,Advanced,Python|NLP|PyTorch,false,5
+283,Advanced Web Tracker,A comprehensive web project focusing on Node.js and Vue.js to solve real-world problems.,Web,Advanced,Node.js|Vue.js|PostgreSQL,false,3
+284,Automated Data Science Platform,A comprehensive data science project focusing on R and NumPy to solve real-world problems.,Data Science,Intermediate,R|NumPy|SQL,false,5
+285,Real-time Cloud Platform for Education,A comprehensive cloud project focusing on Kubernetes and Docker to solve real-world problems.,Cloud,Intermediate,Kubernetes|Docker,false,2
+286,Intelligent Web Analyzer for Education,A comprehensive web project focusing on Vue.js and Node.js to solve real-world problems.,Web,Advanced,Vue.js|Node.js,false,3
+287,Next-Gen Web Tool for Healthcare,A comprehensive web project focusing on PostgreSQL and React to solve real-world problems.,Web,Beginner,PostgreSQL|React|Django|Vue.js,true,5
+288,Intelligent AI/ML System,A comprehensive ai/ml project focusing on Python and NLP to solve real-world problems.,AI/ML,Advanced,Python|NLP,false,3
+289,Advanced Blockchain Assistant for Healthcare,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Advanced,Ethereum|Smart Contracts,false,5
+290,Real-time Cloud Tool,A comprehensive cloud project focusing on Azure and Kubernetes to solve real-world problems.,Cloud,Intermediate,Azure|Kubernetes|DevOps,false,5
+291,Intelligent AI/ML Tool,A comprehensive ai/ml project focusing on Python and TensorFlow to solve real-world problems.,AI/ML,Beginner,Python|TensorFlow|NLP,true,4
+292,Next-Gen Game Dev Tool,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Advanced,C++|Unity,false,4
+293,Next-Gen Mobile Analyzer for Education,A comprehensive mobile project focusing on Flutter and Firebase to solve real-world problems.,Mobile,Intermediate,Flutter|Firebase|Swift,true,3
+294,Decentralized Blockchain Tracker for Finance,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Intermediate,Ethereum|Solidity,false,2
+295,Advanced Game Dev Module,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Advanced,Unreal Engine|Unity|C#,false,2
+296,Advanced AR/VR Tracker,A comprehensive ar/vr project focusing on ARKit and C# to solve real-world problems.,AR/VR,Beginner,ARKit|C#,true,3
+297,Secure Security Module,A comprehensive security project focusing on Linux and Network Security to solve real-world problems.,Security,Beginner,Linux|Network Security|Ethical Hacking,true,4
+298,Advanced AR/VR System,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Intermediate,C#|Blender|Unity,false,6
+299,Automated Web System for Education,A comprehensive web project focusing on PostgreSQL and Node.js to solve real-world problems.,Web,Intermediate,PostgreSQL|Node.js,false,4
+300,Next-Gen Cloud Platform for Education,A comprehensive cloud project focusing on Docker and Azure to solve real-world problems.,Cloud,Intermediate,Docker|Azure|DevOps|Kubernetes,true,2
+301,Next-Gen AI/ML Platform for Education,A comprehensive ai/ml project focusing on OpenCV and Python to solve real-world problems.,AI/ML,Intermediate,OpenCV|Python|Scikit-learn,false,6
+302,Intelligent Cloud Analyzer,A comprehensive cloud project focusing on Docker and Kubernetes to solve real-world problems.,Cloud,Intermediate,Docker|Kubernetes|DevOps,true,2
+303,Real-time Mobile Assistant for Education,A comprehensive mobile project focusing on Kotlin and Firebase to solve real-world problems.,Mobile,Advanced,Kotlin|Firebase|Flutter|Swift,false,2
+304,Decentralized Data Science Module for Healthcare,A comprehensive data science project focusing on R and SQL to solve real-world problems.,Data Science,Advanced,R|SQL|NumPy|Matplotlib,false,4
+305,Real-time IoT Analyzer,A comprehensive iot project focusing on MQTT and Sensors to solve real-world problems.,IoT,Beginner,MQTT|Sensors,false,4
+306,Real-time Security Tracker for Traffic,A comprehensive security project focusing on Network Security and Ethical Hacking to solve real-world problems.,Security,Advanced,Network Security|Ethical Hacking|Cryptography|Linux,false,3
+307,Smart AR/VR Analyzer for Traffic,A comprehensive ar/vr project focusing on C# and ARKit to solve real-world problems.,AR/VR,Beginner,C#|ARKit|Blender,false,3
+308,Intelligent AR/VR Tracker for Traffic,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Advanced,C#|Blender|Unity|ARKit,true,2
+309,Decentralized Mobile Platform for Traffic,A comprehensive mobile project focusing on Swift and Flutter to solve real-world problems.,Mobile,Intermediate,Swift|Flutter|Firebase|React Native,false,6
+310,Decentralized Web Analyzer,A comprehensive web project focusing on Django and PostgreSQL to solve real-world problems.,Web,Advanced,Django|PostgreSQL|React|Node.js,false,6
+311,Intelligent Data Science System,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Beginner,NumPy|Matplotlib|R,true,4
+312,Automated Web System,A comprehensive web project focusing on Django and React to solve real-world problems.,Web,Advanced,Django|React|Vue.js|Node.js,false,4
+313,Decentralized Web Application for Healthcare,A comprehensive web project focusing on Django and Node.js to solve real-world problems.,Web,Advanced,Django|Node.js|PostgreSQL,true,5
+314,Next-Gen Web System,A comprehensive web project focusing on Django and MongoDB to solve real-world problems.,Web,Intermediate,Django|MongoDB|Vue.js|React,false,4
+315,Intelligent IoT Platform for Security,A comprehensive iot project focusing on MQTT and Arduino to solve real-world problems.,IoT,Intermediate,MQTT|Arduino|C++|Raspberry Pi,false,3
+316,Next-Gen Cloud Application,A comprehensive cloud project focusing on Azure and Kubernetes to solve real-world problems.,Cloud,Intermediate,Azure|Kubernetes,true,5
+317,Real-time Blockchain Platform for Education,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Intermediate,Ethereum|Web3.js|Smart Contracts|Solidity,true,5
+318,Next-Gen Cloud Assistant for Education,A comprehensive cloud project focusing on Kubernetes and Docker to solve real-world problems.,Cloud,Beginner,Kubernetes|Docker,false,2
+319,Smart Data Science Module,A comprehensive data science project focusing on Matplotlib and Pandas to solve real-world problems.,Data Science,Intermediate,Matplotlib|Pandas|NumPy,true,3
+320,Decentralized Security Tracker,A comprehensive security project focusing on Network Security and Cryptography to solve real-world problems.,Security,Beginner,Network Security|Cryptography|Linux|Ethical Hacking,false,5
+321,Decentralized IoT Platform for Education,A comprehensive iot project focusing on C++ and Arduino to solve real-world problems.,IoT,Advanced,C++|Arduino|Raspberry Pi|Sensors,false,5
+322,Secure Game Dev Assistant,A comprehensive game dev project focusing on C++ and Unreal Engine to solve real-world problems.,Game Dev,Beginner,C++|Unreal Engine,false,6
+323,Next-Gen Blockchain Assistant,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Advanced,Ethereum|Solidity,true,4
+324,Automated AR/VR Tracker for Traffic,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Intermediate,C#|Unity|Blender|ARKit,false,2
+325,Automated Mobile Assistant for Finance,A comprehensive mobile project focusing on Swift and React Native to solve real-world problems.,Mobile,Intermediate,Swift|React Native|Kotlin|Flutter,true,5
+326,Decentralized Blockchain Platform for Security,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Beginner,Ethereum|Smart Contracts|Web3.js,true,5
+327,Decentralized AR/VR Application,A comprehensive ar/vr project focusing on Blender and ARKit to solve real-world problems.,AR/VR,Advanced,Blender|ARKit|C#,true,6
+328,Real-time Cloud Application,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Intermediate,AWS|Azure,false,2
+329,Next-Gen Mobile Tracker for Traffic,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Beginner,Flutter|React Native|Kotlin,true,6
+330,Secure AI/ML Tool,A comprehensive ai/ml project focusing on OpenCV and Python to solve real-world problems.,AI/ML,Advanced,OpenCV|Python|TensorFlow,true,5
+331,Secure AI/ML Tool for Traffic,A comprehensive ai/ml project focusing on OpenCV and Python to solve real-world problems.,AI/ML,Intermediate,OpenCV|Python|Scikit-learn|PyTorch,true,2
+332,Real-time Mobile System,A comprehensive mobile project focusing on Flutter and Swift to solve real-world problems.,Mobile,Advanced,Flutter|Swift,true,2
+333,Smart AI/ML Assistant,A comprehensive ai/ml project focusing on Scikit-learn and PyTorch to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|PyTorch|OpenCV|Python,true,4
+334,Decentralized Game Dev Application for Healthcare,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Advanced,C++|C#|Unreal Engine|Unity,false,4
+335,Decentralized Security Platform for Finance,A comprehensive security project focusing on Cryptography and Python to solve real-world problems.,Security,Beginner,Cryptography|Python|Linux,true,3
+336,Smart Web Tracker for Healthcare,A comprehensive web project focusing on React and Vue.js to solve real-world problems.,Web,Intermediate,React|Vue.js,false,4
+337,Automated Web Assistant,A comprehensive web project focusing on MongoDB and Django to solve real-world problems.,Web,Advanced,MongoDB|Django|PostgreSQL,false,5
+338,Automated Data Science Application,A comprehensive data science project focusing on Matplotlib and Pandas to solve real-world problems.,Data Science,Beginner,Matplotlib|Pandas|NumPy|SQL,false,2
+339,Next-Gen AI/ML System for Traffic,A comprehensive ai/ml project focusing on PyTorch and NLP to solve real-world problems.,AI/ML,Intermediate,PyTorch|NLP|OpenCV|Python,false,4
+340,Next-Gen IoT Platform for Finance,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Beginner,Sensors|Raspberry Pi|C++,true,2
+341,Advanced AR/VR System,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Advanced,C#|Blender|Unity,true,5
+342,Next-Gen AI/ML Assistant for Traffic,A comprehensive ai/ml project focusing on TensorFlow and NLP to solve real-world problems.,AI/ML,Advanced,TensorFlow|NLP|OpenCV|Python,false,6
+343,Advanced AR/VR Tracker,A comprehensive ar/vr project focusing on Blender and C# to solve real-world problems.,AR/VR,Intermediate,Blender|C#|ARKit,true,6
+344,Real-time Security Platform for Education,A comprehensive security project focusing on Cryptography and Python to solve real-world problems.,Security,Intermediate,Cryptography|Python,true,4
+345,Decentralized AR/VR Platform,A comprehensive ar/vr project focusing on Unity and Blender to solve real-world problems.,AR/VR,Beginner,Unity|Blender,true,4
+346,Smart IoT Tool for Agriculture,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi|Sensors|MQTT,true,2
+347,Decentralized IoT Application for Security,A comprehensive iot project focusing on Sensors and C++ to solve real-world problems.,IoT,Intermediate,Sensors|C++|MQTT,false,3
+348,Smart Security Platform,A comprehensive security project focusing on Linux and Cryptography to solve real-world problems.,Security,Beginner,Linux|Cryptography|Python,false,5
+349,Advanced Cloud Platform,A comprehensive cloud project focusing on Azure and AWS to solve real-world problems.,Cloud,Advanced,Azure|AWS,false,2
+350,Real-time AR/VR System,A comprehensive ar/vr project focusing on Unity and Blender to solve real-world problems.,AR/VR,Beginner,Unity|Blender|ARKit,false,3
+351,Decentralized IoT Platform for Traffic,A comprehensive iot project focusing on C++ and Sensors to solve real-world problems.,IoT,Intermediate,C++|Sensors|Arduino|Raspberry Pi,true,5
+352,Secure Mobile Application,A comprehensive mobile project focusing on Swift and Firebase to solve real-world problems.,Mobile,Beginner,Swift|Firebase,false,3
+353,Advanced Web Platform for Education,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Intermediate,MongoDB|Node.js|Vue.js,true,4
+354,Automated Blockchain Assistant,A comprehensive blockchain project focusing on Solidity and Smart Contracts to solve real-world problems.,Blockchain,Beginner,Solidity|Smart Contracts|Web3.js,false,4
+355,Intelligent Web System,A comprehensive web project focusing on Node.js and React to solve real-world problems.,Web,Advanced,Node.js|React|Vue.js|PostgreSQL,false,6
+356,Advanced Mobile Platform for Healthcare,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Intermediate,Flutter|React Native|Firebase|Kotlin,false,2
+357,Intelligent AI/ML Module,A comprehensive ai/ml project focusing on PyTorch and Python to solve real-world problems.,AI/ML,Advanced,PyTorch|Python|NLP|TensorFlow,false,2
+358,Decentralized Game Dev Application,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Beginner,C#|Unity,true,5
+359,Advanced Data Science Tool,A comprehensive data science project focusing on SQL and R to solve real-world problems.,Data Science,Beginner,SQL|R|Pandas,true,6
+360,Real-time Data Science Module for Healthcare,A comprehensive data science project focusing on Matplotlib and NumPy to solve real-world problems.,Data Science,Beginner,Matplotlib|NumPy|SQL|R,true,6
+361,Automated Blockchain Application,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Advanced,Smart Contracts|Ethereum,false,4
+362,Automated IoT Module,A comprehensive iot project focusing on Sensors and C++ to solve real-world problems.,IoT,Advanced,Sensors|C++|Arduino,false,6
+363,Next-Gen Mobile Analyzer for Traffic,A comprehensive mobile project focusing on Flutter and Kotlin to solve real-world problems.,Mobile,Beginner,Flutter|Kotlin|React Native|Firebase,false,2
+364,Secure Blockchain Analyzer for Agriculture,A comprehensive blockchain project focusing on Smart Contracts and Web3.js to solve real-world problems.,Blockchain,Intermediate,Smart Contracts|Web3.js,false,4
+365,Decentralized Mobile Analyzer,A comprehensive mobile project focusing on Firebase and Swift to solve real-world problems.,Mobile,Beginner,Firebase|Swift|Kotlin|Flutter,true,4
+366,Intelligent Security System for Finance,A comprehensive security project focusing on Cryptography and Linux to solve real-world problems.,Security,Intermediate,Cryptography|Linux,true,6
+367,Advanced Game Dev Tracker for Traffic,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Beginner,C++|Unity|Unreal Engine,true,2
+368,Secure Blockchain Tool for Healthcare,A comprehensive blockchain project focusing on Web3.js and Ethereum to solve real-world problems.,Blockchain,Advanced,Web3.js|Ethereum|Solidity,false,4
+369,Automated IoT Assistant,A comprehensive iot project focusing on Arduino and MQTT to solve real-world problems.,IoT,Advanced,Arduino|MQTT|Raspberry Pi|Sensors,false,4
+370,Real-time IoT Analyzer,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi|Arduino,true,3
+371,Decentralized Web Analyzer,A comprehensive web project focusing on React and PostgreSQL to solve real-world problems.,Web,Advanced,React|PostgreSQL|Django,true,4
+372,Decentralized AR/VR Platform,A comprehensive ar/vr project focusing on C# and ARKit to solve real-world problems.,AR/VR,Intermediate,C#|ARKit|Unity|Blender,false,2
+373,Decentralized Web Tool,A comprehensive web project focusing on Django and Node.js to solve real-world problems.,Web,Intermediate,Django|Node.js|React|Vue.js,true,2
+374,Secure AR/VR Assistant,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Intermediate,Unity|ARKit,false,4
+375,Intelligent IoT System,A comprehensive iot project focusing on Arduino and MQTT to solve real-world problems.,IoT,Intermediate,Arduino|MQTT|Sensors,true,3
+376,Decentralized Blockchain System,A comprehensive blockchain project focusing on Smart Contracts and Solidity to solve real-world problems.,Blockchain,Advanced,Smart Contracts|Solidity|Ethereum|Web3.js,false,3
+377,Automated Cloud Analyzer,A comprehensive cloud project focusing on Docker and DevOps to solve real-world problems.,Cloud,Intermediate,Docker|DevOps|Azure|Kubernetes,false,3
+378,Intelligent Data Science Platform,A comprehensive data science project focusing on NumPy and SQL to solve real-world problems.,Data Science,Intermediate,NumPy|SQL|R,false,5
+379,Next-Gen Cloud Module,A comprehensive cloud project focusing on AWS and Kubernetes to solve real-world problems.,Cloud,Beginner,AWS|Kubernetes|DevOps,true,2
+380,Intelligent AI/ML Assistant,A comprehensive ai/ml project focusing on OpenCV and PyTorch to solve real-world problems.,AI/ML,Intermediate,OpenCV|PyTorch|Python|Scikit-learn,false,2
+381,Next-Gen Game Dev Assistant for Healthcare,A comprehensive game dev project focusing on Unity and C# to solve real-world problems.,Game Dev,Beginner,Unity|C#|C++|Unreal Engine,false,2
+382,Intelligent Blockchain Platform for Traffic,A comprehensive blockchain project focusing on Solidity and Web3.js to solve real-world problems.,Blockchain,Intermediate,Solidity|Web3.js|Ethereum,false,2
+383,Intelligent IoT Tracker,A comprehensive iot project focusing on Arduino and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Arduino|Raspberry Pi|Sensors,true,2
+384,Secure AI/ML Assistant for Healthcare,A comprehensive ai/ml project focusing on TensorFlow and Python to solve real-world problems.,AI/ML,Advanced,TensorFlow|Python|OpenCV|PyTorch,false,4
+385,Automated AI/ML Tracker,A comprehensive ai/ml project focusing on Scikit-learn and NLP to solve real-world problems.,AI/ML,Beginner,Scikit-learn|NLP,false,4
+386,Real-time Cloud System,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Advanced,AWS|Azure|Kubernetes|Docker,true,3
+387,Smart Blockchain Tool,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Intermediate,Web3.js|Solidity,false,4
+388,Intelligent IoT Platform for Finance,A comprehensive iot project focusing on Arduino and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Arduino|Raspberry Pi,true,4
+389,Automated AR/VR Application for Healthcare,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Beginner,Unity|ARKit|C#|Blender,true,5
+390,Intelligent Security Assistant for Agriculture,A comprehensive security project focusing on Python and Cryptography to solve real-world problems.,Security,Advanced,Python|Cryptography,true,6
+391,Real-time Game Dev Tool for Security,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Intermediate,C++|Unity|Unreal Engine,true,2
+392,Advanced Web Analyzer for Traffic,A comprehensive web project focusing on Node.js and React to solve real-world problems.,Web,Advanced,Node.js|React|PostgreSQL|MongoDB,true,2
+393,Smart Cloud Application,A comprehensive cloud project focusing on Docker and DevOps to solve real-world problems.,Cloud,Advanced,Docker|DevOps|AWS,true,5
+394,Intelligent Cloud Platform for Security,A comprehensive cloud project focusing on DevOps and AWS to solve real-world problems.,Cloud,Beginner,DevOps|AWS,true,4
+395,Secure Data Science Tracker for Security,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Advanced,NumPy|Matplotlib|R,true,2
+396,Advanced AI/ML System for Healthcare,A comprehensive ai/ml project focusing on PyTorch and TensorFlow to solve real-world problems.,AI/ML,Advanced,PyTorch|TensorFlow,true,3
+397,Secure Cloud Platform,A comprehensive cloud project focusing on DevOps and Kubernetes to solve real-world problems.,Cloud,Intermediate,DevOps|Kubernetes,false,5
+398,Smart Mobile Platform for Healthcare,A comprehensive mobile project focusing on Swift and Flutter to solve real-world problems.,Mobile,Beginner,Swift|Flutter|Firebase,false,5
+399,Next-Gen IoT Assistant,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi|Sensors|MQTT,true,2
+400,Smart Mobile Application,A comprehensive mobile project focusing on Firebase and Flutter to solve real-world problems.,Mobile,Advanced,Firebase|Flutter|React Native,false,4
+401,Advanced IoT Tracker,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Beginner,Sensors|MQTT|Raspberry Pi,false,4
+402,Decentralized AI/ML Assistant,A comprehensive ai/ml project focusing on TensorFlow and Python to solve real-world problems.,AI/ML,Advanced,TensorFlow|Python|PyTorch,true,6
+403,Automated Security Analyzer for Traffic,A comprehensive security project focusing on Network Security and Linux to solve real-world problems.,Security,Advanced,Network Security|Linux|Python|Cryptography,true,2
+404,Intelligent Security Analyzer,A comprehensive security project focusing on Network Security and Python to solve real-world problems.,Security,Advanced,Network Security|Python,true,2
+405,Secure Web System,A comprehensive web project focusing on React and Node.js to solve real-world problems.,Web,Intermediate,React|Node.js,false,6
+406,Secure Data Science Platform for Education,A comprehensive data science project focusing on Pandas and Matplotlib to solve real-world problems.,Data Science,Intermediate,Pandas|Matplotlib|NumPy|SQL,false,2
+407,Secure IoT Tracker for Security,A comprehensive iot project focusing on Arduino and Sensors to solve real-world problems.,IoT,Beginner,Arduino|Sensors|C++|MQTT,true,2
+408,Real-time Web Tool,A comprehensive web project focusing on Django and PostgreSQL to solve real-world problems.,Web,Intermediate,Django|PostgreSQL|MongoDB|Vue.js,false,4
+409,Real-time Blockchain Analyzer,A comprehensive blockchain project focusing on Solidity and Ethereum to solve real-world problems.,Blockchain,Advanced,Solidity|Ethereum,true,5
+410,Intelligent Web Platform for Security,A comprehensive web project focusing on Vue.js and MongoDB to solve real-world problems.,Web,Intermediate,Vue.js|MongoDB,false,2
+411,Intelligent Security Module for Healthcare,A comprehensive security project focusing on Cryptography and Linux to solve real-world problems.,Security,Advanced,Cryptography|Linux,true,5
+412,Decentralized AI/ML Tracker for Agriculture,A comprehensive ai/ml project focusing on Python and Scikit-learn to solve real-world problems.,AI/ML,Advanced,Python|Scikit-learn,false,3
+413,Real-time Security Tool,A comprehensive security project focusing on Python and Network Security to solve real-world problems.,Security,Intermediate,Python|Network Security,true,4
+414,Decentralized Cloud System for Finance,A comprehensive cloud project focusing on Docker and DevOps to solve real-world problems.,Cloud,Intermediate,Docker|DevOps|AWS|Kubernetes,false,3
+415,Advanced Web Analyzer for Healthcare,A comprehensive web project focusing on Django and PostgreSQL to solve real-world problems.,Web,Beginner,Django|PostgreSQL,true,4
+416,Decentralized AI/ML Application,A comprehensive ai/ml project focusing on Scikit-learn and PyTorch to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|PyTorch,true,5
+417,Next-Gen Game Dev Platform for Security,A comprehensive game dev project focusing on C++ and C# to solve real-world problems.,Game Dev,Advanced,C++|C#|Unity|Unreal Engine,false,2
+418,Intelligent Security Tool,A comprehensive security project focusing on Ethical Hacking and Network Security to solve real-world problems.,Security,Beginner,Ethical Hacking|Network Security,true,5
+419,Advanced Mobile Tracker,A comprehensive mobile project focusing on React Native and Kotlin to solve real-world problems.,Mobile,Intermediate,React Native|Kotlin|Swift|Firebase,false,6
+420,Real-time Game Dev System for Security,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Beginner,Unity|C++|C#,true,2
+421,Advanced Web System for Healthcare,A comprehensive web project focusing on Node.js and React to solve real-world problems.,Web,Advanced,Node.js|React|Django|PostgreSQL,false,4
+422,Secure Security Application for Education,A comprehensive security project focusing on Linux and Cryptography to solve real-world problems.,Security,Beginner,Linux|Cryptography,true,4
+423,Secure AI/ML Analyzer,A comprehensive ai/ml project focusing on TensorFlow and Python to solve real-world problems.,AI/ML,Beginner,TensorFlow|Python,true,2
+424,Intelligent Blockchain System for Traffic,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Advanced,Ethereum|Web3.js,true,5
+425,Real-time Data Science System,A comprehensive data science project focusing on Pandas and SQL to solve real-world problems.,Data Science,Beginner,Pandas|SQL|R,false,5
+426,Real-time AI/ML Application for Healthcare,A comprehensive ai/ml project focusing on TensorFlow and Scikit-learn to solve real-world problems.,AI/ML,Advanced,TensorFlow|Scikit-learn,true,5
+427,Intelligent Blockchain Tool,A comprehensive blockchain project focusing on Solidity and Ethereum to solve real-world problems.,Blockchain,Intermediate,Solidity|Ethereum,true,5
+428,Smart Data Science Tool,A comprehensive data science project focusing on Matplotlib and NumPy to solve real-world problems.,Data Science,Advanced,Matplotlib|NumPy,true,6
+429,Next-Gen Web Assistant,A comprehensive web project focusing on MongoDB and React to solve real-world problems.,Web,Advanced,MongoDB|React|Django,true,3
+430,Intelligent Mobile Analyzer for Healthcare,A comprehensive mobile project focusing on Firebase and React Native to solve real-world problems.,Mobile,Advanced,Firebase|React Native,false,5
+431,Intelligent IoT Analyzer for Healthcare,A comprehensive iot project focusing on MQTT and Raspberry Pi to solve real-world problems.,IoT,Intermediate,MQTT|Raspberry Pi,true,3
+432,Real-time Mobile Application for Security,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Advanced,Flutter|React Native|Kotlin,true,3
+433,Real-time IoT Module for Traffic,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Intermediate,Sensors|MQTT,true,6
+434,Secure Blockchain Platform,A comprehensive blockchain project focusing on Web3.js and Ethereum to solve real-world problems.,Blockchain,Intermediate,Web3.js|Ethereum|Smart Contracts|Solidity,false,3
+435,Advanced AI/ML Module,A comprehensive ai/ml project focusing on Scikit-learn and TensorFlow to solve real-world problems.,AI/ML,Beginner,Scikit-learn|TensorFlow|OpenCV|NLP,false,2
+436,Decentralized Security Platform for Agriculture,A comprehensive security project focusing on Ethical Hacking and Network Security to solve real-world problems.,Security,Beginner,Ethical Hacking|Network Security,true,4
+437,Decentralized Cloud System,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Advanced,AWS|Azure,false,3
+438,Next-Gen Web Application for Education,A comprehensive web project focusing on Node.js and MongoDB to solve real-world problems.,Web,Beginner,Node.js|MongoDB|PostgreSQL|Vue.js,false,6
+439,Real-time Blockchain System for Education,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Intermediate,Ethereum|Solidity|Smart Contracts,false,3
+440,Secure IoT Assistant for Agriculture,A comprehensive iot project focusing on Raspberry Pi and Sensors to solve real-world problems.,IoT,Beginner,Raspberry Pi|Sensors|C++|Arduino,true,6
+441,Advanced Game Dev Analyzer,A comprehensive game dev project focusing on C++ and Unity to solve real-world problems.,Game Dev,Beginner,C++|Unity,false,6
+442,Next-Gen Security Module,A comprehensive security project focusing on Ethical Hacking and Linux to solve real-world problems.,Security,Intermediate,Ethical Hacking|Linux,true,6
+443,Intelligent Blockchain Analyzer,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Intermediate,Web3.js|Solidity,true,5
+444,Secure IoT Application for Finance,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Sensors|Raspberry Pi,true,6
+445,Secure Game Dev Tool for Healthcare,A comprehensive game dev project focusing on C# and Unity to solve real-world problems.,Game Dev,Intermediate,C#|Unity|C++,false,4
+446,Intelligent Mobile Analyzer,A comprehensive mobile project focusing on Swift and Kotlin to solve real-world problems.,Mobile,Advanced,Swift|Kotlin,false,4
+447,Next-Gen Security Analyzer,A comprehensive security project focusing on Python and Ethical Hacking to solve real-world problems.,Security,Advanced,Python|Ethical Hacking|Linux|Network Security,false,2
+448,Intelligent AR/VR Analyzer for Traffic,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Intermediate,ARKit|Blender,true,4
+449,Next-Gen Data Science Assistant for Education,A comprehensive data science project focusing on NumPy and R to solve real-world problems.,Data Science,Beginner,NumPy|R,false,5
+450,Automated Mobile Tool for Traffic,A comprehensive mobile project focusing on Flutter and Firebase to solve real-world problems.,Mobile,Intermediate,Flutter|Firebase|Swift,true,4
+451,Smart Data Science Module,A comprehensive data science project focusing on R and SQL to solve real-world problems.,Data Science,Beginner,R|SQL,false,5
+452,Advanced Data Science Platform,A comprehensive data science project focusing on SQL and Matplotlib to solve real-world problems.,Data Science,Beginner,SQL|Matplotlib|R|NumPy,false,6
+453,Next-Gen AI/ML Module for Traffic,A comprehensive ai/ml project focusing on TensorFlow and Scikit-learn to solve real-world problems.,AI/ML,Beginner,TensorFlow|Scikit-learn|Python|PyTorch,false,6
+454,Intelligent AI/ML Platform,A comprehensive ai/ml project focusing on Python and PyTorch to solve real-world problems.,AI/ML,Beginner,Python|PyTorch|Scikit-learn,true,2
+455,Next-Gen IoT Platform,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Beginner,Sensors|Raspberry Pi|MQTT|Arduino,true,6
+456,Advanced Web Tool for Finance,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Beginner,MongoDB|Node.js|PostgreSQL,true,6
+457,Secure Web Tool,A comprehensive web project focusing on Node.js and Django to solve real-world problems.,Web,Beginner,Node.js|Django|MongoDB|Vue.js,true,5
+458,Automated IoT Assistant for Agriculture,A comprehensive iot project focusing on C++ and Arduino to solve real-world problems.,IoT,Advanced,C++|Arduino|Raspberry Pi,false,3
+459,Secure AI/ML Platform for Finance,A comprehensive ai/ml project focusing on TensorFlow and Scikit-learn to solve real-world problems.,AI/ML,Beginner,TensorFlow|Scikit-learn|PyTorch,false,6
+460,Secure IoT Application for Finance,A comprehensive iot project focusing on C++ and Sensors to solve real-world problems.,IoT,Intermediate,C++|Sensors|Arduino,false,3
+461,Intelligent Game Dev Platform,A comprehensive game dev project focusing on C# and Unreal Engine to solve real-world problems.,Game Dev,Advanced,C#|Unreal Engine|Unity|C++,true,3
+462,Next-Gen AI/ML Module,A comprehensive ai/ml project focusing on OpenCV and TensorFlow to solve real-world problems.,AI/ML,Advanced,OpenCV|TensorFlow,false,6
+463,Real-time AR/VR Module,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Advanced,Blender|Unity|ARKit,false,5
+464,Smart Web Application for Security,A comprehensive web project focusing on React and Django to solve real-world problems.,Web,Beginner,React|Django|PostgreSQL,false,4
+465,Decentralized Cloud Tool,A comprehensive cloud project focusing on Docker and Kubernetes to solve real-world problems.,Cloud,Advanced,Docker|Kubernetes|Azure,true,4
+466,Secure Web Module,A comprehensive web project focusing on Vue.js and Node.js to solve real-world problems.,Web,Advanced,Vue.js|Node.js|MongoDB,true,2
+467,Automated Game Dev Analyzer for Healthcare,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Advanced,Unreal Engine|Unity|C++,true,6
+468,Advanced Blockchain Application,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Intermediate,Ethereum|Solidity|Smart Contracts|Web3.js,false,3
+469,Real-time AI/ML System,A comprehensive ai/ml project focusing on Python and NLP to solve real-world problems.,AI/ML,Beginner,Python|NLP,true,2
+470,Automated IoT Platform,A comprehensive iot project focusing on MQTT and Arduino to solve real-world problems.,IoT,Beginner,MQTT|Arduino|Sensors,false,3
+471,Decentralized Data Science Module,A comprehensive data science project focusing on SQL and Pandas to solve real-world problems.,Data Science,Beginner,SQL|Pandas|Matplotlib|R,false,6
+472,Decentralized IoT Module,A comprehensive iot project focusing on C++ and MQTT to solve real-world problems.,IoT,Advanced,C++|MQTT|Arduino,true,2
+473,Automated Game Dev Module for Traffic,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Beginner,Unreal Engine|Unity|C#,false,5
+474,Next-Gen AI/ML Tool for Education,A comprehensive ai/ml project focusing on OpenCV and TensorFlow to solve real-world problems.,AI/ML,Advanced,OpenCV|TensorFlow|PyTorch,false,6
+475,Smart AI/ML Assistant for Finance,A comprehensive ai/ml project focusing on TensorFlow and Python to solve real-world problems.,AI/ML,Advanced,TensorFlow|Python,false,3
+476,Secure Security Platform for Healthcare,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Beginner,Cryptography|Network Security|Python,true,5
+477,Advanced Data Science Tool,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Intermediate,Matplotlib|R,false,4
+478,Decentralized Blockchain Platform,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Beginner,Web3.js|Solidity|Ethereum,true,4
+479,Secure Blockchain Assistant,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Beginner,Smart Contracts|Ethereum,true,6
+480,Smart Mobile Platform for Traffic,A comprehensive mobile project focusing on Flutter and Firebase to solve real-world problems.,Mobile,Beginner,Flutter|Firebase|Kotlin|React Native,false,4
+481,Advanced Game Dev System for Finance,A comprehensive game dev project focusing on Unreal Engine and C# to solve real-world problems.,Game Dev,Intermediate,Unreal Engine|C#|Unity|C++,true,2
+482,Real-time Data Science System,A comprehensive data science project focusing on SQL and R to solve real-world problems.,Data Science,Advanced,SQL|R|Pandas|Matplotlib,false,2
+483,Real-time AR/VR Assistant,A comprehensive ar/vr project focusing on Blender and ARKit to solve real-world problems.,AR/VR,Intermediate,Blender|ARKit|Unity|C#,false,4
+484,Real-time Data Science Tracker for Education,A comprehensive data science project focusing on SQL and NumPy to solve real-world problems.,Data Science,Advanced,SQL|NumPy,true,2
+485,Smart Cloud Module,A comprehensive cloud project focusing on Docker and DevOps to solve real-world problems.,Cloud,Intermediate,Docker|DevOps|Azure,false,4
+486,Intelligent AI/ML Tracker,A comprehensive ai/ml project focusing on TensorFlow and OpenCV to solve real-world problems.,AI/ML,Intermediate,TensorFlow|OpenCV,true,6
+487,Smart AI/ML Tracker for Education,A comprehensive ai/ml project focusing on TensorFlow and PyTorch to solve real-world problems.,AI/ML,Beginner,TensorFlow|PyTorch|Scikit-learn|Python,false,4
+488,Real-time Cloud Tracker for Traffic,A comprehensive cloud project focusing on Kubernetes and AWS to solve real-world problems.,Cloud,Beginner,Kubernetes|AWS|Docker,true,4
+489,Next-Gen AR/VR Analyzer for Healthcare,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Beginner,C#|Blender,false,2
+490,Real-time Data Science System for Security,A comprehensive data science project focusing on R and NumPy to solve real-world problems.,Data Science,Intermediate,R|NumPy,false,2
+491,Decentralized Mobile Tracker for Traffic,A comprehensive mobile project focusing on Firebase and Flutter to solve real-world problems.,Mobile,Beginner,Firebase|Flutter,false,4
+492,Real-time Blockchain System for Security,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Advanced,Ethereum|Web3.js,false,6
+493,Advanced Web System,A comprehensive web project focusing on MongoDB and React to solve real-world problems.,Web,Intermediate,MongoDB|React|Vue.js|PostgreSQL,false,5
+494,Intelligent Game Dev Platform for Healthcare,A comprehensive game dev project focusing on Unreal Engine and C++ to solve real-world problems.,Game Dev,Intermediate,Unreal Engine|C++,true,4
+495,Secure Web Assistant for Security,A comprehensive web project focusing on Node.js and MongoDB to solve real-world problems.,Web,Intermediate,Node.js|MongoDB|Vue.js|PostgreSQL,true,2
+496,Decentralized AR/VR Assistant,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Advanced,Unity|ARKit|Blender,false,2
+497,Automated Mobile Analyzer for Healthcare,A comprehensive mobile project focusing on React Native and Flutter to solve real-world problems.,Mobile,Advanced,React Native|Flutter|Kotlin|Firebase,true,6
+498,Advanced Web System for Security,A comprehensive web project focusing on React and Node.js to solve real-world problems.,Web,Intermediate,React|Node.js|Django|Vue.js,false,4
+499,Real-time Data Science Application for Security,A comprehensive data science project focusing on NumPy and SQL to solve real-world problems.,Data Science,Intermediate,NumPy|SQL,false,4
+500,Advanced Web Tracker for Traffic,A comprehensive web project focusing on Vue.js and PostgreSQL to solve real-world problems.,Web,Beginner,Vue.js|PostgreSQL|Node.js,false,4
+501,Advanced Blockchain Tracker for Education,A comprehensive blockchain project focusing on Solidity and Ethereum to solve real-world problems.,Blockchain,Advanced,Solidity|Ethereum|Web3.js,false,6
+502,Advanced Data Science Platform,A comprehensive data science project focusing on R and SQL to solve real-world problems.,Data Science,Beginner,R|SQL|Matplotlib|NumPy,true,4
+503,Decentralized AI/ML Module,A comprehensive ai/ml project focusing on Scikit-learn and TensorFlow to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|TensorFlow,false,3
+504,Smart AI/ML System for Healthcare,A comprehensive ai/ml project focusing on NLP and Scikit-learn to solve real-world problems.,AI/ML,Intermediate,NLP|Scikit-learn,false,6
+505,Advanced Blockchain Analyzer for Education,A comprehensive blockchain project focusing on Web3.js and Ethereum to solve real-world problems.,Blockchain,Intermediate,Web3.js|Ethereum|Solidity|Smart Contracts,false,6
+506,Automated Game Dev Module for Healthcare,A comprehensive game dev project focusing on C# and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,C#|Unreal Engine|C++|Unity,true,6
+507,Next-Gen Security System for Traffic,A comprehensive security project focusing on Python and Cryptography to solve real-world problems.,Security,Advanced,Python|Cryptography|Linux,true,4
+508,Next-Gen Game Dev Assistant for Security,A comprehensive game dev project focusing on Unreal Engine and C++ to solve real-world problems.,Game Dev,Advanced,Unreal Engine|C++|Unity|C#,true,2
+509,Advanced Cloud Module for Finance,A comprehensive cloud project focusing on Docker and Azure to solve real-world problems.,Cloud,Beginner,Docker|Azure|DevOps|AWS,false,5
+510,Real-time Cloud Platform for Traffic,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Beginner,AWS|Azure|DevOps,false,6
+511,Advanced IoT Application,A comprehensive iot project focusing on Sensors and MQTT to solve real-world problems.,IoT,Advanced,Sensors|MQTT|Raspberry Pi|C++,false,6
+512,Automated IoT Application,A comprehensive iot project focusing on Arduino and Sensors to solve real-world problems.,IoT,Intermediate,Arduino|Sensors|C++,true,6
+513,Next-Gen Mobile Analyzer,A comprehensive mobile project focusing on Kotlin and React Native to solve real-world problems.,Mobile,Intermediate,Kotlin|React Native,false,3
+514,Smart Web Analyzer,A comprehensive web project focusing on Vue.js and Node.js to solve real-world problems.,Web,Advanced,Vue.js|Node.js|Django,true,2
+515,Intelligent Game Dev Analyzer for Finance,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Intermediate,Unreal Engine|Unity|C++,false,2
+516,Intelligent AI/ML Analyzer for Security,A comprehensive ai/ml project focusing on PyTorch and OpenCV to solve real-world problems.,AI/ML,Beginner,PyTorch|OpenCV|NLP|Python,false,4
+517,Intelligent Security Platform,A comprehensive security project focusing on Cryptography and Ethical Hacking to solve real-world problems.,Security,Intermediate,Cryptography|Ethical Hacking|Python,true,4
+518,Real-time Cloud Application for Healthcare,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Intermediate,AWS|Azure,false,3
+519,Next-Gen IoT Module for Traffic,A comprehensive iot project focusing on Sensors and Arduino to solve real-world problems.,IoT,Intermediate,Sensors|Arduino|C++|Raspberry Pi,false,4
+520,Real-time Game Dev Module,A comprehensive game dev project focusing on Unity and C++ to solve real-world problems.,Game Dev,Intermediate,Unity|C++,true,4
+521,Real-time IoT System,A comprehensive iot project focusing on Raspberry Pi and Arduino to solve real-world problems.,IoT,Advanced,Raspberry Pi|Arduino|MQTT|Sensors,true,4
+522,Automated Blockchain Platform for Education,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Intermediate,Ethereum|Web3.js|Solidity|Smart Contracts,true,6
+523,Real-time Data Science System for Education,A comprehensive data science project focusing on Pandas and SQL to solve real-world problems.,Data Science,Beginner,Pandas|SQL|R|Matplotlib,true,5
+524,Decentralized AR/VR System,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Beginner,C#|Unity|ARKit|Blender,true,3
+525,Secure AR/VR Tracker for Security,A comprehensive ar/vr project focusing on Blender and ARKit to solve real-world problems.,AR/VR,Advanced,Blender|ARKit,false,3
+526,Next-Gen Mobile Tool,A comprehensive mobile project focusing on Flutter and Swift to solve real-world problems.,Mobile,Beginner,Flutter|Swift,false,6
+527,Decentralized Blockchain Tracker for Agriculture,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Advanced,Ethereum|Solidity|Web3.js,true,4
+528,Decentralized Blockchain Module for Security,A comprehensive blockchain project focusing on Solidity and Web3.js to solve real-world problems.,Blockchain,Intermediate,Solidity|Web3.js|Smart Contracts|Ethereum,false,6
+529,Advanced Blockchain Tool,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Beginner,Smart Contracts|Ethereum|Solidity|Web3.js,false,4
+530,Secure Mobile Application for Finance,A comprehensive mobile project focusing on Swift and Kotlin to solve real-world problems.,Mobile,Beginner,Swift|Kotlin|Firebase|React Native,true,6
+531,Next-Gen Security Analyzer for Finance,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Intermediate,Cryptography|Network Security|Ethical Hacking|Linux,true,6
+532,Real-time Cloud Module,A comprehensive cloud project focusing on Docker and DevOps to solve real-world problems.,Cloud,Beginner,Docker|DevOps|Kubernetes|Azure,false,2
+533,Advanced AI/ML Application,A comprehensive ai/ml project focusing on PyTorch and Python to solve real-world problems.,AI/ML,Advanced,PyTorch|Python|OpenCV,false,5
+534,Automated Cloud Assistant,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Intermediate,Azure|DevOps|Docker|Kubernetes,false,2
+535,Smart Cloud Tracker,A comprehensive cloud project focusing on Kubernetes and Docker to solve real-world problems.,Cloud,Intermediate,Kubernetes|Docker,false,4
+536,Intelligent Blockchain Assistant for Security,A comprehensive blockchain project focusing on Ethereum and Web3.js to solve real-world problems.,Blockchain,Advanced,Ethereum|Web3.js|Smart Contracts,false,2
+537,Decentralized Game Dev Module for Traffic,A comprehensive game dev project focusing on Unreal Engine and Unity to solve real-world problems.,Game Dev,Advanced,Unreal Engine|Unity,false,5
+538,Smart Cloud Analyzer for Security,A comprehensive cloud project focusing on AWS and Kubernetes to solve real-world problems.,Cloud,Intermediate,AWS|Kubernetes,false,4
+539,Real-time Web Module for Agriculture,A comprehensive web project focusing on React and Node.js to solve real-world problems.,Web,Advanced,React|Node.js|PostgreSQL|MongoDB,true,3
+540,Real-time IoT Platform,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Advanced,Sensors|Raspberry Pi,true,3
+541,Advanced Security Platform,A comprehensive security project focusing on Python and Linux to solve real-world problems.,Security,Intermediate,Python|Linux,true,5
+542,Intelligent Blockchain Analyzer for Security,A comprehensive blockchain project focusing on Smart Contracts and Web3.js to solve real-world problems.,Blockchain,Intermediate,Smart Contracts|Web3.js|Ethereum|Solidity,false,2
+543,Decentralized AR/VR Analyzer for Agriculture,A comprehensive ar/vr project focusing on C# and Blender to solve real-world problems.,AR/VR,Beginner,C#|Blender,false,5
+544,Real-time Mobile Platform for Agriculture,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Intermediate,Flutter|React Native|Swift,false,2
+545,Smart Security Module for Education,A comprehensive security project focusing on Ethical Hacking and Network Security to solve real-world problems.,Security,Beginner,Ethical Hacking|Network Security|Cryptography,false,6
+546,Secure Web Assistant,A comprehensive web project focusing on Node.js and Django to solve real-world problems.,Web,Advanced,Node.js|Django|React,false,5
+547,Secure Web Platform,A comprehensive web project focusing on PostgreSQL and MongoDB to solve real-world problems.,Web,Intermediate,PostgreSQL|MongoDB|Django|Vue.js,true,3
+548,Smart AI/ML Module for Traffic,A comprehensive ai/ml project focusing on PyTorch and OpenCV to solve real-world problems.,AI/ML,Intermediate,PyTorch|OpenCV|TensorFlow,false,4
+549,Real-time Data Science Tracker for Traffic,A comprehensive data science project focusing on SQL and R to solve real-world problems.,Data Science,Advanced,SQL|R|Matplotlib|NumPy,true,4
+550,Real-time Data Science Tracker for Agriculture,A comprehensive data science project focusing on R and NumPy to solve real-world problems.,Data Science,Intermediate,R|NumPy|SQL,false,2
+551,Intelligent Data Science System for Agriculture,A comprehensive data science project focusing on Matplotlib and NumPy to solve real-world problems.,Data Science,Advanced,Matplotlib|NumPy|Pandas,true,4
+552,Intelligent Game Dev Tool for Healthcare,A comprehensive game dev project focusing on Unreal Engine and C++ to solve real-world problems.,Game Dev,Beginner,Unreal Engine|C++|C#,true,3
+553,Automated AI/ML Tracker for Security,A comprehensive ai/ml project focusing on TensorFlow and OpenCV to solve real-world problems.,AI/ML,Beginner,TensorFlow|OpenCV,true,6
+554,Intelligent Cloud Module,A comprehensive cloud project focusing on Docker and AWS to solve real-world problems.,Cloud,Advanced,Docker|AWS|Kubernetes|Azure,true,6
+555,Decentralized Mobile Tool,A comprehensive mobile project focusing on React Native and Kotlin to solve real-world problems.,Mobile,Beginner,React Native|Kotlin,false,2
+556,Next-Gen AI/ML Module,A comprehensive ai/ml project focusing on NLP and PyTorch to solve real-world problems.,AI/ML,Advanced,NLP|PyTorch|Scikit-learn|Python,false,2
+557,Secure Game Dev Module,A comprehensive game dev project focusing on Unreal Engine and C++ to solve real-world problems.,Game Dev,Advanced,Unreal Engine|C++|Unity,true,5
+558,Decentralized Game Dev Module,A comprehensive game dev project focusing on Unity and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,Unity|Unreal Engine,true,2
+559,Decentralized AR/VR Platform,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Beginner,C#|Unity|Blender|ARKit,false,2
+560,Next-Gen Security Platform for Security,A comprehensive security project focusing on Cryptography and Network Security to solve real-world problems.,Security,Intermediate,Cryptography|Network Security|Linux,true,2
+561,Real-time Blockchain Assistant,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Intermediate,Web3.js|Solidity,true,4
+562,Next-Gen Web System,A comprehensive web project focusing on Django and Node.js to solve real-world problems.,Web,Intermediate,Django|Node.js|React,false,5
+563,Next-Gen Security Module,A comprehensive security project focusing on Python and Linux to solve real-world problems.,Security,Advanced,Python|Linux|Cryptography|Network Security,true,2
+564,Smart Data Science Module,A comprehensive data science project focusing on Pandas and Matplotlib to solve real-world problems.,Data Science,Intermediate,Pandas|Matplotlib|NumPy|R,true,5
+565,Smart AR/VR System,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Advanced,ARKit|Unity,true,2
+566,Real-time IoT System,A comprehensive iot project focusing on Arduino and MQTT to solve real-world problems.,IoT,Beginner,Arduino|MQTT|Raspberry Pi,false,4
+567,Decentralized AR/VR Assistant,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Beginner,ARKit|Unity|Blender|C#,true,2
+568,Advanced AI/ML Platform,A comprehensive ai/ml project focusing on PyTorch and NLP to solve real-world problems.,AI/ML,Advanced,PyTorch|NLP|Scikit-learn,false,3
+569,Automated Game Dev Application,A comprehensive game dev project focusing on C# and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,C#|Unreal Engine|Unity|C++,true,6
+570,Automated Game Dev Analyzer,A comprehensive game dev project focusing on C# and Unreal Engine to solve real-world problems.,Game Dev,Intermediate,C#|Unreal Engine,true,4
+571,Next-Gen Web Module for Finance,A comprehensive web project focusing on MongoDB and Node.js to solve real-world problems.,Web,Intermediate,MongoDB|Node.js|PostgreSQL|React,true,5
+572,Smart Web Tracker,A comprehensive web project focusing on Vue.js and React to solve real-world problems.,Web,Intermediate,Vue.js|React,false,3
+573,Secure Blockchain System,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Advanced,Web3.js|Solidity,false,2
+574,Automated Mobile System for Security,A comprehensive mobile project focusing on React Native and Swift to solve real-world problems.,Mobile,Intermediate,React Native|Swift|Kotlin,false,4
+575,Smart Cloud Tracker for Agriculture,A comprehensive cloud project focusing on DevOps and Kubernetes to solve real-world problems.,Cloud,Intermediate,DevOps|Kubernetes|Docker|Azure,true,2
+576,Automated AI/ML Platform,A comprehensive ai/ml project focusing on PyTorch and OpenCV to solve real-world problems.,AI/ML,Intermediate,PyTorch|OpenCV,false,4
+577,Real-time AR/VR Tracker,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Advanced,ARKit|Blender,true,5
+578,Smart Game Dev Tool,A comprehensive game dev project focusing on C# and C++ to solve real-world problems.,Game Dev,Beginner,C#|C++,true,5
+579,Automated Mobile Tracker,A comprehensive mobile project focusing on Swift and Firebase to solve real-world problems.,Mobile,Advanced,Swift|Firebase|Kotlin|Flutter,true,2
+580,Advanced Cloud Tool for Education,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Advanced,AWS|Azure|Docker,false,4
+581,Decentralized Web Analyzer,A comprehensive web project focusing on Node.js and Django to solve real-world problems.,Web,Beginner,Node.js|Django|Vue.js|PostgreSQL,true,5
+582,Advanced IoT Platform for Finance,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Beginner,C++|Raspberry Pi|MQTT|Arduino,true,6
+583,Intelligent AI/ML Module for Security,A comprehensive ai/ml project focusing on Python and OpenCV to solve real-world problems.,AI/ML,Advanced,Python|OpenCV|Scikit-learn,true,4
+584,Intelligent Mobile Application,A comprehensive mobile project focusing on Firebase and React Native to solve real-world problems.,Mobile,Beginner,Firebase|React Native|Swift,false,6
+585,Secure AR/VR Tracker for Healthcare,A comprehensive ar/vr project focusing on Unity and Blender to solve real-world problems.,AR/VR,Advanced,Unity|Blender,false,5
+586,Decentralized IoT Platform,A comprehensive iot project focusing on C++ and Raspberry Pi to solve real-world problems.,IoT,Advanced,C++|Raspberry Pi|Arduino,true,5
+587,Next-Gen AR/VR Analyzer for Traffic,A comprehensive ar/vr project focusing on ARKit and Blender to solve real-world problems.,AR/VR,Intermediate,ARKit|Blender|Unity,true,2
+588,Secure Mobile Tracker,A comprehensive mobile project focusing on Flutter and Swift to solve real-world problems.,Mobile,Intermediate,Flutter|Swift|React Native|Kotlin,false,2
+589,Advanced Mobile Analyzer for Traffic,A comprehensive mobile project focusing on Kotlin and Swift to solve real-world problems.,Mobile,Intermediate,Kotlin|Swift,false,6
+590,Secure Blockchain Tool for Healthcare,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Beginner,Smart Contracts|Ethereum|Solidity,true,2
+591,Advanced Mobile Application for Education,A comprehensive mobile project focusing on Swift and Flutter to solve real-world problems.,Mobile,Beginner,Swift|Flutter,true,4
+592,Decentralized AR/VR Assistant for Education,A comprehensive ar/vr project focusing on Blender and ARKit to solve real-world problems.,AR/VR,Advanced,Blender|ARKit|C#|Unity,false,6
+593,Decentralized Security Module for Education,A comprehensive security project focusing on Cryptography and Ethical Hacking to solve real-world problems.,Security,Intermediate,Cryptography|Ethical Hacking|Python|Linux,false,6
+594,Real-time AI/ML Platform,A comprehensive ai/ml project focusing on NLP and TensorFlow to solve real-world problems.,AI/ML,Beginner,NLP|TensorFlow,false,5
+595,Automated AR/VR Assistant,A comprehensive ar/vr project focusing on Blender and Unity to solve real-world problems.,AR/VR,Intermediate,Blender|Unity|ARKit,false,5
+596,Decentralized Blockchain Tracker,A comprehensive blockchain project focusing on Smart Contracts and Ethereum to solve real-world problems.,Blockchain,Intermediate,Smart Contracts|Ethereum,false,2
+597,Real-time IoT Analyzer,A comprehensive iot project focusing on C++ and Arduino to solve real-world problems.,IoT,Advanced,C++|Arduino|Sensors|Raspberry Pi,false,2
+598,Decentralized Security Assistant for Agriculture,A comprehensive security project focusing on Python and Cryptography to solve real-world problems.,Security,Intermediate,Python|Cryptography|Network Security|Ethical Hacking,false,4
+599,Smart Web System,A comprehensive web project focusing on PostgreSQL and Vue.js to solve real-world problems.,Web,Advanced,PostgreSQL|Vue.js|Django,false,5
+600,Next-Gen AR/VR Assistant,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Beginner,C#|Unity,true,2
+601,Smart Security Analyzer,A comprehensive security project focusing on Linux and Ethical Hacking to solve real-world problems.,Security,Advanced,Linux|Ethical Hacking,false,3
+602,Next-Gen Game Dev Application,A comprehensive game dev project focusing on Unity and C# to solve real-world problems.,Game Dev,Beginner,Unity|C#|C++|Unreal Engine,false,5
+603,Intelligent Data Science Assistant for Agriculture,A comprehensive data science project focusing on R and Pandas to solve real-world problems.,Data Science,Beginner,R|Pandas|Matplotlib,false,5
+604,Decentralized AI/ML Tracker,A comprehensive ai/ml project focusing on Python and Scikit-learn to solve real-world problems.,AI/ML,Intermediate,Python|Scikit-learn|NLP,false,3
+605,Next-Gen Cloud Application,A comprehensive cloud project focusing on Azure and DevOps to solve real-world problems.,Cloud,Beginner,Azure|DevOps,true,2
+606,Decentralized Cloud Module,A comprehensive cloud project focusing on DevOps and AWS to solve real-world problems.,Cloud,Advanced,DevOps|AWS|Azure,true,4
+607,Secure AR/VR Tool,A comprehensive ar/vr project focusing on ARKit and Unity to solve real-world problems.,AR/VR,Intermediate,ARKit|Unity,false,3
+608,Smart Mobile Analyzer for Security,A comprehensive mobile project focusing on Firebase and Swift to solve real-world problems.,Mobile,Intermediate,Firebase|Swift|React Native|Flutter,false,6
+609,Smart Data Science System for Healthcare,A comprehensive data science project focusing on NumPy and Matplotlib to solve real-world problems.,Data Science,Intermediate,NumPy|Matplotlib|SQL,false,6
+610,Real-time Game Dev Tool,A comprehensive game dev project focusing on Unreal Engine and C# to solve real-world problems.,Game Dev,Intermediate,Unreal Engine|C#|Unity|C++,true,3
+611,Automated AI/ML Analyzer for Agriculture,A comprehensive ai/ml project focusing on PyTorch and TensorFlow to solve real-world problems.,AI/ML,Beginner,PyTorch|TensorFlow|OpenCV|Python,false,5
+612,Intelligent IoT Module for Traffic,A comprehensive iot project focusing on Arduino and MQTT to solve real-world problems.,IoT,Advanced,Arduino|MQTT|C++|Raspberry Pi,true,6
+613,Real-time AR/VR Assistant,A comprehensive ar/vr project focusing on Unity and C# to solve real-world problems.,AR/VR,Beginner,Unity|C#,true,4
+614,Real-time Web Application,A comprehensive web project focusing on Django and React to solve real-world problems.,Web,Advanced,Django|React|MongoDB|Node.js,false,6
+615,Next-Gen Data Science Tracker,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Advanced,Matplotlib|R|Pandas,true,2
+616,Next-Gen IoT Tracker for Education,A comprehensive iot project focusing on Sensors and Raspberry Pi to solve real-world problems.,IoT,Intermediate,Sensors|Raspberry Pi,true,4
+617,Advanced Web Tracker,A comprehensive web project focusing on Vue.js and MongoDB to solve real-world problems.,Web,Intermediate,Vue.js|MongoDB,true,4
+618,Smart Web Platform,A comprehensive web project focusing on MongoDB and Vue.js to solve real-world problems.,Web,Beginner,MongoDB|Vue.js,true,6
+619,Automated Cloud System,A comprehensive cloud project focusing on AWS and Azure to solve real-world problems.,Cloud,Intermediate,AWS|Azure|Kubernetes|Docker,false,6
+620,Next-Gen Mobile Tool for Agriculture,A comprehensive mobile project focusing on Firebase and Kotlin to solve real-world problems.,Mobile,Advanced,Firebase|Kotlin|Flutter|Swift,true,3
+621,Advanced AR/VR Assistant,A comprehensive ar/vr project focusing on C# and Unity to solve real-world problems.,AR/VR,Intermediate,C#|Unity|ARKit|Blender,true,6
+622,Real-time Web Tracker for Agriculture,A comprehensive web project focusing on Django and PostgreSQL to solve real-world problems.,Web,Advanced,Django|PostgreSQL|Node.js|React,false,4
+623,Real-time IoT Tracker,A comprehensive iot project focusing on C++ and Sensors to solve real-world problems.,IoT,Beginner,C++|Sensors,true,6
+624,Automated Mobile Platform,A comprehensive mobile project focusing on Firebase and Kotlin to solve real-world problems.,Mobile,Beginner,Firebase|Kotlin,false,5
+625,Real-time Mobile Application,A comprehensive mobile project focusing on Firebase and Kotlin to solve real-world problems.,Mobile,Beginner,Firebase|Kotlin|React Native|Flutter,false,6
+626,Intelligent AI/ML Application for Healthcare,A comprehensive ai/ml project focusing on Scikit-learn and OpenCV to solve real-world problems.,AI/ML,Intermediate,Scikit-learn|OpenCV,false,5
+627,Intelligent IoT Tracker,A comprehensive iot project focusing on Raspberry Pi and Sensors to solve real-world problems.,IoT,Beginner,Raspberry Pi|Sensors|C++|Arduino,true,5
+628,Next-Gen AI/ML Application for Finance,A comprehensive ai/ml project focusing on NLP and Python to solve real-world problems.,AI/ML,Intermediate,NLP|Python,true,3
+629,Automated Mobile Tool,A comprehensive mobile project focusing on Flutter and React Native to solve real-world problems.,Mobile,Advanced,Flutter|React Native|Firebase|Swift,false,3
+630,Decentralized AI/ML Analyzer,A comprehensive ai/ml project focusing on NLP and OpenCV to solve real-world problems.,AI/ML,Intermediate,NLP|OpenCV,true,5
+631,Intelligent Mobile Tool,A comprehensive mobile project focusing on Firebase and Swift to solve real-world problems.,Mobile,Advanced,Firebase|Swift|Flutter|React Native,false,4
+632,Secure Blockchain Platform for Traffic,A comprehensive blockchain project focusing on Web3.js and Ethereum to solve real-world problems.,Blockchain,Beginner,Web3.js|Ethereum|Smart Contracts,false,5
+633,Next-Gen Security Application for Security,A comprehensive security project focusing on Cryptography and Linux to solve real-world problems.,Security,Advanced,Cryptography|Linux|Python,false,5
+634,Advanced AR/VR Assistant,A comprehensive ar/vr project focusing on Blender and C# to solve real-world problems.,AR/VR,Beginner,Blender|C#|ARKit|Unity,false,4
+635,Automated Data Science Assistant,A comprehensive data science project focusing on NumPy and R to solve real-world problems.,Data Science,Intermediate,NumPy|R|Pandas,false,4
+636,Smart Cloud Tracker for Education,A comprehensive cloud project focusing on Docker and Kubernetes to solve real-world problems.,Cloud,Advanced,Docker|Kubernetes|DevOps|Azure,true,4
+637,Next-Gen AR/VR Application for Finance,A comprehensive ar/vr project focusing on Unity and Blender to solve real-world problems.,AR/VR,Intermediate,Unity|Blender|ARKit|C#,true,6
+638,Smart Blockchain Application for Education,A comprehensive blockchain project focusing on Ethereum and Smart Contracts to solve real-world problems.,Blockchain,Intermediate,Ethereum|Smart Contracts,true,6
+639,Next-Gen Cloud System for Traffic,A comprehensive cloud project focusing on Kubernetes and Docker to solve real-world problems.,Cloud,Intermediate,Kubernetes|Docker|AWS,false,4
+640,Advanced Web Tracker for Traffic,A comprehensive web project focusing on Django and React to solve real-world problems.,Web,Advanced,Django|React,true,4
+641,Advanced Data Science Analyzer,A comprehensive data science project focusing on R and SQL to solve real-world problems.,Data Science,Beginner,R|SQL|Matplotlib,false,2
+642,Smart Mobile Platform,A comprehensive mobile project focusing on Firebase and Flutter to solve real-world problems.,Mobile,Intermediate,Firebase|Flutter|Kotlin|Swift,false,3
+643,Next-Gen Data Science Module,A comprehensive data science project focusing on NumPy and SQL to solve real-world problems.,Data Science,Intermediate,NumPy|SQL|Pandas,false,6
+644,Decentralized AR/VR Tool,A comprehensive ar/vr project focusing on Unity and ARKit to solve real-world problems.,AR/VR,Intermediate,Unity|ARKit,true,3
+645,Decentralized Data Science Application for Education,A comprehensive data science project focusing on Matplotlib and R to solve real-world problems.,Data Science,Beginner,Matplotlib|R|Pandas|SQL,false,5
+646,Real-time Blockchain Assistant for Traffic,A comprehensive blockchain project focusing on Ethereum and Solidity to solve real-world problems.,Blockchain,Beginner,Ethereum|Solidity|Smart Contracts|Web3.js,true,3
+647,Advanced Blockchain System,A comprehensive blockchain project focusing on Web3.js and Solidity to solve real-world problems.,Blockchain,Intermediate,Web3.js|Solidity|Ethereum|Smart Contracts,true,2
+648,Advanced IoT Tracker,A comprehensive iot project focusing on Sensors and C++ to solve real-world problems.,IoT,Beginner,Sensors|C++|Raspberry Pi|MQTT,false,6
+649,Real-time Cloud Platform for Healthcare,A comprehensive cloud project focusing on DevOps and Azure to solve real-world problems.,Cloud,Intermediate,DevOps|Azure|Docker,false,6
+650,Automated Security Platform,A comprehensive security project focusing on Python and Linux to solve real-world problems.,Security,Beginner,Python|Linux,true,6

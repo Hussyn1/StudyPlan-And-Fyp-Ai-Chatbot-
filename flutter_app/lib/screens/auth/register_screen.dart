@@ -19,6 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   final AuthController authController = Get.find<AuthController>();
+  bool _obscurePassword = true;
 
   @override
   void dispose() {
@@ -70,7 +71,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       const SizedBox(height: 16),
                       _buildTextField(_semesterController, 'Semester (1-8)', Icons.calendar_today_outlined, keyboardType: TextInputType.number),
                       const SizedBox(height: 16),
-                      _buildTextField(_passwordController, 'Password', Icons.lock_outline, obscureText: true),
+                      _buildTextField(
+                        _passwordController, 
+                        'Password', 
+                        Icons.lock_outline, 
+                        obscureText: _obscurePassword,
+                        isPasswordField: true,
+                        onTogglePassword: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                      ),
                       const SizedBox(height: 32),
                       Obx(() => SizedBox(
                             width: double.infinity,
@@ -104,7 +116,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Widget _buildTextField(TextEditingController controller, String label, IconData icon, {bool obscureText = false, TextInputType? keyboardType}) {
+  Widget _buildTextField(
+    TextEditingController controller, 
+    String label, 
+    IconData icon, {
+    bool obscureText = false, 
+    TextInputType? keyboardType,
+    bool isPasswordField = false,
+    VoidCallback? onTogglePassword,
+  }) {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
@@ -116,6 +136,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
         filled: true,
         fillColor: Colors.black,
         prefixIcon: Icon(icon, size: 22, color: Colors.grey),
+        suffixIcon: isPasswordField ? IconButton(
+          icon: Icon(
+            obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+            color: Colors.grey,
+          ),
+          onPressed: onTogglePassword,
+        ) : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
