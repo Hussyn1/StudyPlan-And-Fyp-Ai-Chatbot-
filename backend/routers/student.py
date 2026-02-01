@@ -562,7 +562,19 @@ async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
     # Convert JSON to Model
     phases = []
     for p_data in roadmap_json.get("phases", []):
-        topics = [RoadmapTopic(title=t) for t in p_data.get("topics", [])]
+        # Extract topics safely: could be strings or objects
+        raw_topics = p_data.get("topics", [])
+        topics = []
+        for t in raw_topics:
+            if isinstance(t, str):
+                topics.append(RoadmapTopic(title=t))
+            elif isinstance(t, dict):
+                topics.append(RoadmapTopic(
+                    title=t.get("title", "Topic"),
+                    status=t.get("status", "pending"),
+                    resources=t.get("resources", [])
+                ))
+                
         phases.append(RoadmapPhase(
             title=p_data.get("title", "Phase"),
             topics=topics,
@@ -573,7 +585,8 @@ async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
     new_roadmap = StudentRoadmap(
         student_id=student_id,
         interest=target_interest,
-        phases=phases
+        phases=phases,
+        resources=roadmap_json.get("resources", []) # Map global resources
     )
     await new_roadmap.insert()
     

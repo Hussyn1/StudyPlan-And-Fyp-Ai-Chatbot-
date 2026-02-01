@@ -97,6 +97,7 @@ class StudentRoadmap(Document):
     student_id: str
     interest: str
     phases: List[RoadmapPhase] = []
+    resources: List[str] = [] # Added for global roadmap resources
     current_phase_index: int = 0
     created_at: datetime = datetime.now()
     updated_at: datetime = datetime.now()
