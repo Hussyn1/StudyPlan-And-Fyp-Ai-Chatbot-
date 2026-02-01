@@ -29,10 +29,7 @@ class StudentUpdate(BaseModel):
     study_pace: Optional[str] = None
     learning_style: Optional[str] = None
 
-class StudentRoadmapUpdate(BaseModel):
-    interest: str
-    phase_index: int
-    topic_index: int
+class RoadmapStatusUpdate(BaseModel):
     status: str
 
 class EnrollmentRequest(BaseModel):
@@ -383,8 +380,10 @@ async def check_and_generate_remedial_tasks(student_id: str):
 
 @router.post("/tasks/{task_id}/ai-generate")
 async def generate_task_content(task_id: str):
+    print(f"DEBUG: AI-Generating content for Task ID: {task_id}")
     task = await Task.get(task_id)
     if not task:
+        print(f"DEBUG: Task not found for ID: {task_id}")
         raise HTTPException(status_code=404, detail="Task not found")
         
     if task.description and "Practice:" in task.title: # Simple check if already AI-fied
