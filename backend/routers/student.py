@@ -551,18 +551,24 @@ async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
     return new_roadmap.dict()
 
 @router.post("/students/{student_id}/roadmap/update")
-async def update_roadmap_progress(student_id: str, update: StudentRoadmapUpdate):
+async def update_roadmap_progress(
+    student_id: str, 
+    interest: str, 
+    phase_index: int, 
+    topic_index: int, 
+    update_data: RoadmapStatusUpdate
+):
     roadmap = await StudentRoadmap.find_one(
         StudentRoadmap.student_id == student_id,
-        StudentRoadmap.interest == update.interest
+        StudentRoadmap.interest == interest
     )
     if not roadmap:
         raise HTTPException(status_code=404, detail="Roadmap not found")
         
-    if 0 <= update.phase_index < len(roadmap.phases):
-        phase = roadmap.phases[update.phase_index]
-        if 0 <= update.topic_index < len(phase.topics):
-            phase.topics[update.topic_index].status = update.status
+    if 0 <= phase_index < len(roadmap.phases):
+        phase = roadmap.phases[phase_index]
+        if 0 <= topic_index < len(phase.topics):
+            phase.topics[topic_index].status = update_data.status
             await roadmap.save()
             return {"status": "success", "message": "Topic updated"}
             
