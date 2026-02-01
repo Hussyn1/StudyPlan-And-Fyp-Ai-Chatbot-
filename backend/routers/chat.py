@@ -173,27 +173,40 @@ async def generate_chat_task(request: GenerateTaskRequest):
     if not student:
         raise HTTPException(status_code=404, detail="Student not found")
         
-    course = await Course.get(request.course_id)
+    # course = await Course.get(request.course_id) # Old Mongo way
+    course = None
+    from utils.csv_manager import csv_manager
+    for c in csv_manager.get_courses():
+        if str(c.get('id')) == str(request.course_id):
+            course = c
+            break
+
     if not course:
+        print(f"DEBUG Error: Course {request.course_id} not found in CSV for chat-task generation.")
         raise HTTPException(status_code=404, detail="Course not found")
 
     # Generate task
-    ai_task = await ai_service.generate_personalized_task(
-        student.dict(), 
-        course.name, 
-        request.topic
-    )
-    
-    # Save to DB
-    new_task = Task(
-        student_id=request.student_id,
-        course_id=request.course_id,
-        title=ai_task.get("title", f"Practice {request.topic}"),
-        description=ai_task.get("description", "Generated practice task."),
-        type=ai_task.get("type", "theory"),
-        difficulty="medium",
-        status="pending"
-    )
-    await new_task.insert()
-    
-    return {"status": "success", "task": new_task, "message": "New practice task generated!"}
+    try:
+        from services.ai_service import ai_service
+        ai_task = await ai_service.generate_personalized_task(
+            student.dict(), 
+            course['name'], 
+            request.topic
+        )
+        
+        # Save to DB
+        new_task = Task(
+            student_id=request.student_id,
+            course_id=request.course_id,
+            title=ai_task.get("title", f"Practice {request.topic}"),
+            description=ai_task.get("description", "Generated practice task."),
+            type=ai_task.get("type", "theory"),
+            difficulty="medium",
+            status="pending"
+        )
+        await new_task.insert()
+        return {"status": "success", "task": new_task, "message": "New practice task generated!"}
+    except Exception as e:
+        print(f"DEBUG Error: Chat task generation failed: {e}")
+        raise HTTPException(status_code=500, detail="AI task generation failed.")
+

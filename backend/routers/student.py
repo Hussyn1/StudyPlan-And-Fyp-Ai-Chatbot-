@@ -380,38 +380,67 @@ async def check_and_generate_remedial_tasks(student_id: str):
 
 @router.post("/tasks/{task_id}/ai-generate")
 async def generate_task_content(task_id: str):
-    print(f"DEBUG: AI-Generating content for Task ID: {task_id}")
+    print(f"DEBUG: AI-Generate request for Task ID: {task_id}")
     task = await Task.get(task_id)
     if not task:
-        print(f"DEBUG: Task not found for ID: {task_id}")
-        raise HTTPException(status_code=404, detail="Task not found")
+        print(f"DEBUG Error: Task {task_id} not found in database.")
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
         
-    if task.description and "Practice:" in task.title: # Simple check if already AI-fied
+    if task.description and "Practice:" in task.title:
         return task
 
     student = await Student.get(task.student_id)
-    course = None
+    if not student:
+        print(f"DEBUG Error: Student {task.student_id} not found for task {task_id}")
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    # Resilience: Try to find course by ID in CSV, or fallback to Progress record
+    course_name = "Global"
+    matched_course = None
     for c in csv_manager.get_courses():
-        if str(c['id']) == str(task.course_id):
-            course = c
+        if str(c.get('id')) == str(task.course_id):
+            matched_course = c
+            course_name = c['name']
             break
     
-    if not student or not course:
-         raise HTTPException(status_code=404, detail="Student or Course not found")
+    if not matched_course:
+        print(f"DEBUG Warning: Task {task_id} has course_id {task.course_id} which wasn't found in CSV. Checking Progress...")
+        # Fallback to Progress record to get the course name
+        from models import Progress
+        progress = await Progress.find_one(
+            Progress.student_id == task.student_id,
+            Progress.course_id == task.course_id
+        )
+        if progress and progress.course_name:
+            course_name = progress.course_name
+            print(f"DEBUG: Found course name '{course_name}' from Progress record.")
+        else:
+            print(f"DEBUG Error: Could not determine course name for task {task_id}.")
+            course_name = "General Academic Subject"
 
+    print(f"DEBUG: Calling AI to generate task content for topic: {task.title} in course: {course_name}")
     # Call AI service to generate a real task
-    ai_task = await ai_service.generate_personalized_task(
-        student.dict(), 
-        course['name'], 
-        task.title # The topic is currently stored in title
-    )
-    
-    task.title = ai_task.get("title", task.title)
-    task.description = ai_task.get("description", task.description)
-    task.type = ai_task.get("type", task.type)
-    
-    await task.save()
-    return task
+    try:
+        # Import to be safe if not at top
+        from services.ai_service import ai_service
+        ai_task = await ai_service.generate_personalized_task(
+            student.dict(), 
+            course_name, 
+            task.title
+        )
+        
+        task.title = ai_task.get("title", task.title)
+        task.description = ai_task.get("description", task.description)
+        task.type = ai_task.get("type", task.type)
+        
+        await task.save()
+        print(f"DEBUG: Task {task_id} successfully updated with AI content.")
+        return task
+    except Exception as e:
+        print(f"DEBUG Error: AI Generation failed: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"AI content generation failed: {str(e)}")
 
 async def generate_tasks_for_student(student_id: str, course_id: str):
     # course = await Course.get(course_id)
