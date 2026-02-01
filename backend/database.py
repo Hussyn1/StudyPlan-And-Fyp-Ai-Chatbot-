@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
-from models import Student, Course, Task, Progress, FYPProject, ChatSession, StudentRoadmap, FYPProject, StudentRoadmap
+from models import Student, Course, Task, Progress, FYPProject, ChatSession, StudentRoadmap
 import os
 import certifi
 from dotenv import load_dotenv
@@ -33,7 +33,8 @@ async def init_db():
             Task,
             Progress,
             ChatSession,
-            FYPProject
+            FYPProject,
+            StudentRoadmap
         ])
     except Exception as e:
         print(f"Failed to connect to MongoDB: {e}")
