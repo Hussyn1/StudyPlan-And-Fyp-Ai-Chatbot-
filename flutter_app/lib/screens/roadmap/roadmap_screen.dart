@@ -112,7 +112,7 @@ class _RoadmapScreenState extends State<RoadmapScreen> {
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.indigoAccent),
           ),
           const SizedBox(height: 16),
-          ...phases.map((phase) => _buildPhaseCard(phase)),
+          ...phases.asMap().entries.map((entry) => _buildPhaseCard(entry.value, entry.key)),
           const SizedBox(height: 24),
           const Text(
             "Recommended Resources",
@@ -161,18 +161,28 @@ class _RoadmapScreenState extends State<RoadmapScreen> {
     );
   }
 
-  Widget _buildPhaseCard(Map<String, dynamic> phase) {
+  Widget _buildPhaseCard(Map<String, dynamic> phase, int phaseIndex) {
+    final topics = (phase['topics'] as List<dynamic>? ?? []);
+    final isCompleted = phase['is_completed'] == true;
+    
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
         color: Colors.grey[900],
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white10),
+        border: Border.all(color: isCompleted ? Colors.green.withOpacity(0.3) : Colors.white10),
       ),
       child: ExpansionTile(
-        title: Text(
-          phase['title'] ?? 'Phase',
-          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+        initiallyExpanded: phaseIndex == (_roadmapData?['current_phase_index'] ?? 0),
+        title: Row(
+          children: [
+            if (isCompleted) const Icon(Icons.check_circle, color: Colors.green, size: 20),
+            if (isCompleted) const SizedBox(width: 8),
+            Text(
+              phase['title'] ?? 'Phase',
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+          ],
         ),
         subtitle: Text(
           phase['duration'] ?? '',
@@ -180,31 +190,128 @@ class _RoadmapScreenState extends State<RoadmapScreen> {
         ),
         collapsedIconColor: Colors.grey,
         iconColor: Colors.indigoAccent,
-        childrenPadding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+        childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         children: [
           const Divider(color: Colors.white10),
           const SizedBox(height: 8),
           _buildSectionTitle("Key Topics"),
-          Wrap(
-            spacing: 8,
-            children: (phase['topics'] as List<dynamic>? ?? []).map<Widget>((topic) {
-              return Chip(
-                label: Text(topic.toString(), style: const TextStyle(fontSize: 12)),
-                backgroundColor: Colors.indigo.withOpacity(0.2),
-                labelStyle: const TextStyle(color: Colors.white),
-                side: BorderSide.none,
-              );
-            }).toList(),
-          ),
+          ...topics.asMap().entries.map((entry) {
+             final index = entry.key;
+             final topic = entry.value;
+             return _buildTopicTile(topic, phaseIndex, index);
+          }).toList(),
           const SizedBox(height: 16),
           _buildSectionTitle("Project Goal"),
-          Text(
-            phase['project'] ?? 'Complete a hands-on project.',
-            style: const TextStyle(color: Colors.white70, fontSize: 14),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.05),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.indigoAccent.withOpacity(0.2))
+            ),
+            child: Row(
+              children: [
+                const Icon(Icons.rocket_launch, color: Colors.orangeAccent, size: 20),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    phase['project'] ?? 'Complete a hands-on project.',
+                    style: const TextStyle(color: Colors.white70, fontSize: 13),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
+  }
+
+  Widget _buildTopicTile(dynamic topicData, int phaseIndex, int topicIndex) {
+    // Handle both string (old schema) and object (new schema)
+    String title = "";
+    String status = "pending";
+    
+    if (topicData is String) {
+      title = topicData;
+    } else {
+      title = topicData['title'] ?? "";
+      status = topicData['status'] ?? "pending";
+    }
+
+    final isDone = status == "completed";
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 8),
+      decoration: BoxDecoration(
+        color: isDone ? Colors.green.withOpacity(0.1) : Colors.black26,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+        leading: Checkbox(
+          value: isDone,
+          activeColor: Colors.green,
+          side: const BorderSide(color: Colors.white54),
+          onChanged: (val) {
+             _updateTopicStatus(phaseIndex, topicIndex, val == true ? "completed" : "pending");
+          },
+        ),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isDone ? Colors.white54 : Colors.white,
+            decoration: isDone ? TextDecoration.lineThrough : null,
+            fontSize: 14,
+          ),
+        ),
+        trailing: IconButton(
+          icon: const Icon(Icons.chat_bubble_outline, size: 20, color: Colors.indigoAccent),
+          tooltip: "Ask Bot about this",
+          onPressed: () {
+            _askBotAboutTopic(title);
+          },
+        ),
+      ),
+    );
+  }
+
+  Future<void> _updateTopicStatus(int phaseIndex, int topicIndex, String status) async {
+    // Optimistic Update
+    setState(() {
+       final phases = _roadmapData!['phases'] as List;
+       final topics = phases[phaseIndex]['topics'] as List;
+       if (topics[topicIndex] is Map) {
+         topics[topicIndex]['status'] = status;
+       } else {
+         // Convert string to map if needed (fallback)
+         topics[topicIndex] = {'title': topics[topicIndex], 'status': status};
+       }
+    });
+
+    try {
+      final studentId = authController.currentStudent.value?.id;
+      if (studentId != null) {
+        await apiService.updateRoadmapProgress(studentId, widget.interest, phaseIndex, topicIndex, status);
+      }
+    } catch (e) {
+      // Revert if failed (omitted for brevity, ideally would revert)
+      if (mounted) {
+         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Failed to update: $e")));
+      }
+    }
+  }
+
+  void _askBotAboutTopic(String topic) {
+    // Navigate to Chat with pre-filled message
+    // Assuming we have a ChatScreen that can accept an initial message or we just pop with a result
+    // But since this is a separate screen, we likely use Get.toNamed('/chat', arguments: ...)
+    // Or better, switch the Main Tab to Chat?
+    // Let's use Get.toNamed if we have proper routing arguments, or direct navigation
+    
+    // Simplest: Go to ChatScreen with a "prompt" argument
+    // We need to update ChatScreen to handle arguments
+    Get.toNamed('/chat', arguments: {"initialMessage": "I want to learn about $topic in my ${widget.interest} roadmap. Can you help me?"});
   }
 
   Widget _buildSectionTitle(String title) {

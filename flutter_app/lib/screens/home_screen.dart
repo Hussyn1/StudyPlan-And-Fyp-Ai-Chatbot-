@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'chat_screen.dart';
+import 'landing_home_screen.dart';
 import 'dashboard_screen.dart';
 import 'fyp_screen.dart';
 import 'profile_screen.dart';
@@ -15,9 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
+    const LandingHomeScreen(), // New Home
     const ChatScreen(),
-    const DashboardScreen(),
     const FypScreen(),
+    const DashboardScreen(), // Stats
     const ProfileScreen(),
   ];
 
@@ -33,14 +35,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildNavItem(0, Icons.chat_bubble_outline, Icons.chat_bubble, 'Bot'),
-                _buildNavItem(1, Icons.dashboard_outlined, Icons.dashboard, 'Stats'),
+                _buildNavItem(0, Icons.home_outlined, Icons.home, 'Home'),
+                _buildNavItem(1, Icons.chat_bubble_outline, Icons.chat_bubble, 'Bot'),
                 _buildNavItem(2, Icons.lightbulb_outline, Icons.lightbulb, 'FYP'),
-                _buildNavItem(3, Icons.person_outline, Icons.person, 'Profile'),
+                _buildNavItem(3, Icons.bar_chart_outlined, Icons.bar_chart, 'Stats'),
+                _buildNavItem(4, Icons.person_outline, Icons.person, 'Profile'),
               ],
             ),
           ),
@@ -56,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
       behavior: HitTestBehavior.opaque,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         decoration: BoxDecoration(
           color: isSelected ? Colors.white.withOpacity(0.1) : Colors.transparent,
           borderRadius: BorderRadius.circular(20),

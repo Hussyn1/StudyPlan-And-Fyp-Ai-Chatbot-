@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
-from models import Student, Course, Task, Progress, ChatSession, FYPProject
+from models import Student, Course, Task, Progress, FYPProject, ChatSession, StudentRoadmap, FYPProject, StudentRoadmap
 import os
 import certifi
 from dotenv import load_dotenv

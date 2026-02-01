@@ -16,13 +16,33 @@ class _ChatScreenState extends State<ChatScreen> {
   final ScrollController _scrollController = ScrollController();
   final ChatController chatController = Get.find<ChatController>();
 
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _checkArguments();
+    });
+  }
+
+  void _checkArguments() {
+    final args = Get.arguments;
+    if (args != null && args is Map && args.containsKey('initialMessage')) {
+      final msg = args['initialMessage'];
+      if (msg != null && msg is String && msg.isNotEmpty) {
+        // Automatically send the message
+        chatController.sendMessage(msg);
+        _scrollToBottom();
+      }
+    }
+  }
+
   void _scrollToBottom() {
     if (_scrollController.hasClients) {
       Future.delayed(const Duration(milliseconds: 100), () {
         _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
+            _scrollController.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOut,
         );
       });
     }

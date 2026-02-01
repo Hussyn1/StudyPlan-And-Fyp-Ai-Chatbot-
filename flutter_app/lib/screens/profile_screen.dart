@@ -215,24 +215,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _buildActionButtons() {
     return Column(
       children: [
-        SizedBox(
-          width: double.infinity,
-          height: 55,
-          child: ElevatedButton.icon(
-            onPressed: () {
-               final interest = _interestsController.text.split(',').firstOrNull?.trim() ?? "Computer Science";
-               Get.to(() => RoadmapScreen(interest: interest));
-            },
-            icon: const Icon(Icons.map, color: Colors.white),
-            label: const Text('Generate Roadmap', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.indigoAccent,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              elevation: 4,
-            ),
-          ),
-        ),
+        const SizedBox(height: 16),
         const SizedBox(height: 16),
         SizedBox(
           width: double.infinity,

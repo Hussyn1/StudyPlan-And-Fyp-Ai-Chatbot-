@@ -227,6 +227,20 @@ class ApiService {
       throw _handleError(e);
     }
   }
+  Future<Map<String, dynamic>> updateRoadmapProgress(String studentId, String interest, int phaseIndex, int topicIndex, String status) async {
+    try {
+      final response = await _dio.post('students/$studentId/roadmap/update', data: {
+        'status': status,
+      }, queryParameters: {
+        'interest': interest,
+        'phase_index': phaseIndex,
+        'topic_index': topicIndex,
+      });
+      return response.data;
+    } catch (e) {
+      throw _handleError(e);
+    }
+  }
 }
 
 final apiService = ApiService();

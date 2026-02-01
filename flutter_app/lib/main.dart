@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'controllers/auth_controller.dart';
 import 'bindings/global_binding.dart';
 import 'screens/home_screen.dart';
+import 'screens/splash_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/register_screen.dart';
 import 'screens/dashboard_screen.dart';
@@ -11,11 +12,11 @@ import 'screens/fyp_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Initialize AuthController first to load saved session
   final authController = Get.put(AuthController(), permanent: true);
   await authController.checkAuthStatus();
-  
+
   runApp(const MyApp());
 }
 
@@ -42,20 +43,27 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
           elevation: 0,
           centerTitle: true,
-          titleTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
           iconTheme: IconThemeData(color: Colors.white),
         ),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
           bodyMedium: TextStyle(color: Colors.white70),
-          titleLarge: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          titleLarge: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         useMaterial3: true,
       ),
       // Use AuthWrapper to determine initial route based on auth status
-      home: const AuthWrapper(),
+      home: const SplashScreen(),
       getPages: [
-        GetPage(name: '/', page: () => const AuthWrapper()),
+        GetPage(name: '/', page: () => const SplashScreen()), // Splash is root
         GetPage(name: '/home', page: () => const HomeScreen()),
         GetPage(name: '/login', page: () => const LoginScreen()),
         GetPage(name: '/register', page: () => const RegisterScreen()),
@@ -74,17 +82,13 @@ class AuthWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final AuthController authController = Get.find<AuthController>();
-    
+
     return Obx(() {
       // Show loading while checking auth status
       if (!authController.isInitialized.value) {
-        return const Scaffold(
-          body: Center(
-            child: CircularProgressIndicator(),
-          ),
-        );
+        return const Scaffold(body: Center(child: CircularProgressIndicator()));
       }
-      
+
       // Route based on authentication status
       if (authController.isAuthenticated.value) {
         return const HomeScreen();

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models import ChatSession, ChatMessage, Student, Task, Progress, Course
+from models import ChatSession, ChatMessage, Student, Task, Progress, Course, StudentRoadmap
 from services.ai_service import ai_service
 from typing import List
 from pydantic import BaseModel
@@ -49,6 +49,27 @@ async def chat(request: ChatRequest):
             "grade": p.grade
         })
 
+    # Get Active Roadmap Context
+    roadmap_context = None
+    if student.interests:
+        # Try to find roadmap for primary interest
+        active_roadmap = await StudentRoadmap.find_one(
+            StudentRoadmap.student_id == request.student_id, 
+            StudentRoadmap.interest == student.interests[0]
+        )
+        if active_roadmap:
+            # Create a summary of current progress
+            current_phase = active_roadmap.phases[active_roadmap.current_phase_index]
+            pending_topics = [t.title for t in current_phase.topics if t.status != "completed"]
+            
+            roadmap_context = {
+                "interest": active_roadmap.interest,
+                "current_phase": current_phase.title,
+                "project_goal": current_phase.project,
+                "pending_topics": pending_topics,
+                "completed_phases": active_roadmap.current_phase_index
+            }
+
     # Get AI response
     context = [{"role": m.role, "content": m.content} for m in session.messages[-10:]]
     try:
@@ -57,7 +78,8 @@ async def chat(request: ChatRequest):
             context, 
             student_profile=student.dict(),
             tasks_context=tasks_context,
-            courses_context=courses_context
+            courses_context=courses_context,
+            roadmap_context=roadmap_context
         )
         
         if ai_response_text.startswith("Error:"):

@@ -107,7 +107,7 @@ class AIService:
         
         return "Error: Maximum retries reached for AI service."
 
-    async def get_chat_response(self, message: str, context: List[Dict[str, str]], student_profile: Dict = None, tasks_context: List[Dict] = None, courses_context: List[Dict] = None) -> str:
+    async def get_chat_response(self, message: str, context: List[Dict[str, str]], student_profile: Dict = None, tasks_context: List[Dict] = None, courses_context: List[Dict] = None, roadmap_context: Dict = None) -> str:
         system_context = """
         You are an expert AI Study Assistant for Computer Science students. 
         Your goal is to provide highly structured, academic, and encouraging responses.
@@ -137,6 +137,10 @@ class AIService:
         if tasks_context:
             system_context += f"\nStudent's Recent Tasks & Performance:\n{json.dumps(tasks_context, default=str)}"
             system_context += "\nIf the student asks about their answers or progress, refer to the data above. If an answer was 'verified' as False, it means they were wrong."
+
+        if roadmap_context:
+            system_context += f"\nACTIVE ROADMAP CONTEXT:\n{json.dumps(roadmap_context, default=str)}"
+            system_context += "\nThe student is actively working on this roadmap. Guide them through the 'pending_topics'. If they ask 'what to do next', refer to the first pending topic."
 
         system_context += "\nAlways tailor your advice to their learning style and pace. If they mention a weak subject, be extra explanatory."
         

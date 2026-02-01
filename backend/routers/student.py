@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models import Student, Task, Progress, Course, FYPProject
+from models import Student, Task, Progress, Course, FYPProject, StudentRoadmap, RoadmapPhase, RoadmapTopic
 from services.ai_service import ai_service
 from services.ml_service import ml_service
 from utils.csv_manager import csv_manager
@@ -513,5 +513,52 @@ async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
         else:
             target_interest = "Computer Science General"
             
-    roadmap = await ai_service.generate_interest_roadmap(student.dict(), target_interest)
-    return roadmap
+    # Check if roadmap exists in DB
+    existing_roadmap = await StudentRoadmap.find_one(
+        StudentRoadmap.student_id == student_id,
+        StudentRoadmap.interest == target_interest
+    )
+    
+    if existing_roadmap:
+        return existing_roadmap.dict()
+
+    # Generate new roadmap via AI
+    roadmap_json = await ai_service.generate_interest_roadmap(student.dict(), target_interest)
+    
+    # Convert JSON to Model
+    phases = []
+    for p_data in roadmap_json.get("phases", []):
+        topics = [RoadmapTopic(title=t) for t in p_data.get("topics", [])]
+        phases.append(RoadmapPhase(
+            title=p_data.get("title", "Phase"),
+            topics=topics,
+            project=p_data.get("project"),
+            duration=p_data.get("duration")
+        ))
+        
+    new_roadmap = StudentRoadmap(
+        student_id=student_id,
+        interest=target_interest,
+        phases=phases
+    )
+    await new_roadmap.insert()
+    
+    return new_roadmap.dict()
+
+@router.post("/students/{student_id}/roadmap/update")
+async def update_roadmap_progress(student_id: str, interest: str, phase_index: int, topic_index: int, status: str):
+    roadmap = await StudentRoadmap.find_one(
+        StudentRoadmap.student_id == student_id,
+        StudentRoadmap.interest == interest
+    )
+    if not roadmap:
+        raise HTTPException(status_code=404, detail="Roadmap not found")
+        
+    if 0 <= phase_index < len(roadmap.phases):
+        phase = roadmap.phases[phase_index]
+        if 0 <= topic_index < len(phase.topics):
+            phase.topics[topic_index].status = status
+            await roadmap.save()
+            return {"status": "success", "message": "Topic updated"}
+            
+    raise HTTPException(status_code=400, detail="Invalid phase or topic index")
