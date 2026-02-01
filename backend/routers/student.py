@@ -29,6 +29,12 @@ class StudentUpdate(BaseModel):
     study_pace: Optional[str] = None
     learning_style: Optional[str] = None
 
+class StudentRoadmapUpdate(BaseModel):
+    interest: str
+    phase_index: int
+    topic_index: int
+    status: str
+
 class EnrollmentRequest(BaseModel):
     course_ids: List[str]
 
@@ -546,18 +552,18 @@ async def get_student_roadmap(student_id: str, interest: Optional[str] = None):
     return new_roadmap.dict()
 
 @router.post("/students/{student_id}/roadmap/update")
-async def update_roadmap_progress(student_id: str, interest: str, phase_index: int, topic_index: int, status: str):
+async def update_roadmap_progress(student_id: str, update: StudentRoadmapUpdate):
     roadmap = await StudentRoadmap.find_one(
         StudentRoadmap.student_id == student_id,
-        StudentRoadmap.interest == interest
+        StudentRoadmap.interest == update.interest
     )
     if not roadmap:
         raise HTTPException(status_code=404, detail="Roadmap not found")
         
-    if 0 <= phase_index < len(roadmap.phases):
-        phase = roadmap.phases[phase_index]
-        if 0 <= topic_index < len(phase.topics):
-            phase.topics[topic_index].status = status
+    if 0 <= update.phase_index < len(roadmap.phases):
+        phase = roadmap.phases[update.phase_index]
+        if 0 <= update.topic_index < len(phase.topics):
+            phase.topics[update.topic_index].status = update.status
             await roadmap.save()
             return {"status": "success", "message": "Topic updated"}
             
