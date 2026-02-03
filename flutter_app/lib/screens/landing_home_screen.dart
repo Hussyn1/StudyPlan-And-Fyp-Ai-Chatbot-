@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/auth_controller.dart';
+import '../controllers/task_controller.dart';
 import 'roadmap/roadmap_screen.dart';
 
-class LandingHomeScreen extends StatelessWidget {
+class LandingHomeScreen extends StatefulWidget {
   const LandingHomeScreen({super.key});
+
+  @override
+  State<LandingHomeScreen> createState() => _LandingHomeScreenState();
+}
+
+class _LandingHomeScreenState extends State<LandingHomeScreen> {
+  final TaskController taskController = Get.find<TaskController>();
+
+  @override
+  void initState() {
+    super.initState();
+    // Load tasks on startup to get the count
+    taskController.loadTasks();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +35,9 @@ class LandingHomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              // Navigate to notifications or settings if needed
+              taskController.loadTasks();
             },
-            icon: const Icon(Icons.notifications_none),
+            icon: const Icon(Icons.refresh),
           ),
         ],
       ),
@@ -67,7 +82,7 @@ class LandingHomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Row(
+            Obx(() => Row(
               children: [
                 Expanded(
                   child: _buildStatCard(
@@ -81,13 +96,13 @@ class LandingHomeScreen extends StatelessWidget {
                 Expanded(
                   child: _buildStatCard(
                     "Tasks Due",
-                    "3",
+                    "${taskController.pendingTasksCount}",
                     Icons.task_alt,
                     Colors.orangeAccent,
                   ),
-                ), // Placeholder data
+                ),
               ],
-            ),
+            )),
             const SizedBox(height: 16),
             // We can add more stats here or a "Recent Activity" list
             Container(

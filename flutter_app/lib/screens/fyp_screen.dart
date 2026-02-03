@@ -131,21 +131,23 @@ class _FypScreenState extends State<FypScreen> {
             ),
           ],
         ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(task.description),
-            const SizedBox(height: 16),
-            TextField(
-              controller: answerController,
-              maxLines: 4,
-              decoration: const InputDecoration(
-                hintText: 'Enter your answer or code here...',
-                border: OutlineInputBorder(),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(task.description),
+              const SizedBox(height: 16),
+              TextField(
+                controller: answerController,
+                maxLines: 4,
+                decoration: const InputDecoration(
+                  hintText: 'Enter your answer or code here...',
+                  border: OutlineInputBorder(),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         actions: [
           TextButton(onPressed: () => Get.back(), child: const Text('Cancel')),

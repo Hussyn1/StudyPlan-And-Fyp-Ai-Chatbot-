@@ -11,6 +11,8 @@ class TaskController extends GetxController {
   final RxBool isLoading = false.obs;
   final Rx<String?> errorMessage = Rx<String?>(null);
 
+  int get pendingTasksCount => tasks.where((t) => t.status != 'completed').length;
+
   Future<void> loadTasks({String? courseId, String? status}) async {
     final authController = Get.find<AuthController>();
     final studentId = authController.studentId.value;
@@ -63,7 +65,6 @@ class TaskController extends GetxController {
   }
 
   Future<Task?> generateAiTask(String taskId) async {
-    isLoading.value = true;
     try {
       final response = await _apiService.generateAiTask(taskId);
       final updatedTask = Task.fromJson(response);
@@ -78,8 +79,6 @@ class TaskController extends GetxController {
     } catch (e) {
       errorMessage.value = e.toString();
       return null;
-    } finally {
-      isLoading.value = false;
     }
   }
 

@@ -40,9 +40,9 @@ class _ChatScreenState extends State<ChatScreen> {
     if (_scrollController.hasClients) {
       Future.delayed(const Duration(milliseconds: 100), () {
         _scrollController.animateTo(
-            _scrollController.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeOut,
+          _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
         );
       });
     }
@@ -53,7 +53,12 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        leading: Navigator.canPop(context)
+            ? IconButton(
+                icon: const Icon(Icons.arrow_back, color: Colors.white),
+                onPressed: () => Get.back(),
+              )
+            : null,
         title: const Text('Learning Assistant'),
         centerTitle: true,
         actions: [
@@ -66,39 +71,55 @@ class _ChatScreenState extends State<ChatScreen> {
       body: Column(
         children: [
           Expanded(
-            child: Obx(() => ListView.builder(
-              controller: _scrollController,
-              padding: const EdgeInsets.all(16),
-              itemCount: chatController.messages.length,
-              itemBuilder: (context, index) {
-                return ChatBubble(message: chatController.messages[index]);
-              },
-            )),
+            child: Obx(
+              () => ListView.builder(
+                controller: _scrollController,
+                padding: const EdgeInsets.all(16),
+                itemCount: chatController.messages.length,
+                itemBuilder: (context, index) {
+                  return ChatBubble(message: chatController.messages[index]);
+                },
+              ),
+            ),
           ),
-          Obx(() => chatController.isLoading.value
-              ? const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: LinearProgressIndicator(backgroundColor: Colors.black, color: Colors.white),
-                )
-              : const SizedBox.shrink()),
-          Obx(() => chatController.errorMessage.value != null
-              ? Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  color: Colors.red.withOpacity(0.1),
-                  child: Text(
-                    'Error: ${chatController.errorMessage.value}',
-                    style: const TextStyle(color: Colors.redAccent),
-                    textAlign: TextAlign.center,
-                  ),
-                )
-              : const SizedBox.shrink()),
+          Obx(
+            () => chatController.isLoading.value
+                ? const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: LinearProgressIndicator(
+                      backgroundColor: Colors.black,
+                      color: Colors.white,
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
+          Obx(
+            () => chatController.errorMessage.value != null
+                ? Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
+                    ),
+                    color: Colors.red.withOpacity(0.1),
+                    child: Text(
+                      'Error: ${chatController.errorMessage.value}',
+                      style: const TextStyle(color: Colors.redAccent),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
               color: Colors.grey[900],
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
-              border: Border(top: BorderSide(color: Colors.white.withOpacity(0.05))),
+              borderRadius: const BorderRadius.vertical(
+                top: Radius.circular(32),
+              ),
+              border: Border(
+                top: BorderSide(color: Colors.white.withOpacity(0.05)),
+              ),
             ),
             child: SafeArea(
               child: Row(
@@ -108,7 +129,9 @@ class _ChatScreenState extends State<ChatScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(24),
-                        border: Border.all(color: Colors.white.withOpacity(0.1)),
+                        border: Border.all(
+                          color: Colors.white.withOpacity(0.1),
+                        ),
                       ),
                       child: TextField(
                         controller: _controller,
@@ -118,7 +141,10 @@ class _ChatScreenState extends State<ChatScreen> {
                           hintText: 'Type your question...',
                           hintStyle: TextStyle(color: Colors.grey),
                           border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          contentPadding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 12,
+                          ),
                         ),
                         onSubmitted: (value) {
                           if (value.trim().isNotEmpty) {
@@ -143,10 +169,16 @@ class _ChatScreenState extends State<ChatScreen> {
                       height: 48,
                       width: 48,
                       decoration: const BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.indigo, Colors.blue]),
+                        gradient: LinearGradient(
+                          colors: [Colors.indigo, Colors.blue],
+                        ),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.send_rounded, color: Colors.white, size: 20),
+                      child: const Icon(
+                        Icons.send_rounded,
+                        color: Colors.white,
+                        size: 20,
+                      ),
                     ),
                   ),
                 ],
