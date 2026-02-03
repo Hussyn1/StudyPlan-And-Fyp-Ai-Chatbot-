@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/onboarding/onboarding_screen.dart';
 import 'package:get/get.dart';
 import 'controllers/auth_controller.dart';
 import 'bindings/global_binding.dart';
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/dashboard', page: () => const DashboardScreen()),
         GetPage(name: '/chat', page: () => const ChatScreen()),
         GetPage(name: '/fyp', page: () => const FypScreen()),
+        GetPage(name: '/onboarding', page: () => const OnboardingScreen()),
       ],
     );
   }

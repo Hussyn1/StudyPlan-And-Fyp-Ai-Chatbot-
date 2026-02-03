@@ -10,7 +10,7 @@ import 'task_controller.dart';
 
 class AuthController extends GetxController {
   final ApiService _apiService = apiService;
-  
+
   // Reactive variables
   final Rx<String?> studentId = Rx<String?>(null);
   final Rx<Student?> currentStudent = Rx<Student?>(null);
@@ -49,12 +49,12 @@ class AuthController extends GetxController {
       if (response['student_id'] != null) {
         studentId.value = response['student_id'];
         isAuthenticated.value = true;
-        
+
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('student_id', response['student_id']);
-        
+
         await getStudentProfile(); // Fetch full profile data after login
-        
+
         isLoading.value = false;
         return true;
       } else {
@@ -65,7 +65,7 @@ class AuthController extends GetxController {
     } catch (e) {
       errorMessage.value = e.toString();
       Get.snackbar(
-        'Login Failed', 
+        'Login Failed',
         errorMessage.value!,
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.red[800],
@@ -89,12 +89,12 @@ class AuthController extends GetxController {
       if (response['_id'] != null || response['id'] != null) {
         studentId.value = response['_id'] ?? response['id'];
         isAuthenticated.value = true;
-        
+
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('student_id', studentId.value!);
-        
+
         await getStudentProfile(); // Fetch full profile data after registration
-        
+
         isLoading.value = false;
         return true;
       } else {
@@ -105,7 +105,7 @@ class AuthController extends GetxController {
     } catch (e) {
       errorMessage.value = e.toString();
       Get.snackbar(
-        'Registration Failed', 
+        'Registration Failed',
         errorMessage.value!,
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.red[800],
@@ -141,23 +141,28 @@ class AuthController extends GetxController {
     if (studentId.value == null) return false;
     isLoading.value = true;
     try {
-      final response = await _apiService.putRequest('students/${studentId.value}', updateData);
-      currentStudent.value = Student.fromJson(response); // Update reactive profile
-      
+      final response = await _apiService.putRequest(
+        'students/${studentId.value}',
+        updateData,
+      );
+      currentStudent.value = Student.fromJson(
+        response,
+      ); // Update reactive profile
+
       Get.snackbar(
-        'Success', 
+        'Success',
         'Profile updated successfully',
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green[800],
         colorText: Colors.white,
       );
-      
+
       isLoading.value = false;
       return true;
     } catch (e) {
       errorMessage.value = e.toString();
       Get.snackbar(
-        'Update Failed', 
+        'Update Failed',
         errorMessage.value!,
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.red[800],
@@ -170,7 +175,9 @@ class AuthController extends GetxController {
 
   Future<List<dynamic>> fetchSemesterCourses(int semester) async {
     try {
-      final response = await _apiService.getRequest('courses/semester/$semester');
+      final response = await _apiService.getRequest(
+        'courses/semester/$semester',
+      );
       return response as List<dynamic>;
     } catch (e) {
       errorMessage.value = e.toString();
@@ -197,12 +204,30 @@ class AuthController extends GetxController {
   Future<Map<String, dynamic>?> getStudentProfile() async {
     if (studentId.value == null) return null;
     try {
-      final response = await _apiService.getRequest('students/${studentId.value}');
+      final response = await _apiService.getRequest(
+        'students/${studentId.value}',
+      );
       currentStudent.value = Student.fromJson(response);
       return response as Map<String, dynamic>;
     } catch (e) {
       print("Error fetching profile: $e");
       return null;
+    }
+  }
+
+  Future<bool> checkEnrolledCourses() async {
+    if (studentId.value == null) return false;
+    try {
+      final response = await _apiService.getRequest(
+        'progress/${studentId.value}',
+      );
+      if (response is List && response.isNotEmpty) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      print("Error checking enrollment: $e");
+      return false;
     }
   }
 }

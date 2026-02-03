@@ -12,6 +12,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final AuthController authController = Get.find<AuthController>();
   final PageController _pageController = PageController();
+  final TextEditingController _weakSubjectsController = TextEditingController();
   int _currentStep = 0;
 
   // Step 1: Courses
@@ -22,15 +23,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   // Step 2: Interests
   final List<String> selectedInterests = [];
   final List<String> availableInterests = [
-    'AI/ML', 'Web Development', 'Mobile Development', 'Cybersecurity',
-    'Data Science', 'Cloud Computing', 'Blockchain', 'Game Development',
-    'Robotics', 'IoT', 'NLP', 'Computer Vision'
+    'AI/ML',
+    'Web Development',
+    'Mobile Development',
+    'Cybersecurity',
+    'Data Science',
+    'Cloud Computing',
+    'Blockchain',
+    'Game Development',
+    'Robotics',
+    'IoT',
+    'NLP',
+    'Computer Vision',
   ];
 
   // Step 3: Preferences
   String selectedPace = 'Moderate';
   String selectedStyle = 'Reading';
   final List<String> selectedWeakSubjects = [];
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    _weakSubjectsController.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -43,9 +60,42 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     if (profile != null) {
       final semester = profile['current_semester'] ?? 1;
       final courses = await authController.fetchSemesterCourses(semester);
+
       setState(() {
         semesterCourses = courses;
         isLoadingCourses = false;
+
+        // Pre-fill interests
+        if (profile['interests'] != null && profile['interests'] is List) {
+          selectedInterests.clear();
+          for (var i in profile['interests']) {
+            if (availableInterests.contains(i.toString())) {
+              selectedInterests.add(i.toString());
+            }
+          }
+        }
+
+        // Pre-fill preferences
+        if (profile['study_pace'] != null) {
+          selectedPace = profile['study_pace'];
+        }
+
+        if (profile['learning_style'] != null) {
+          final style = profile['learning_style'];
+          if (['Visual', 'Reading', 'Practice', 'Auditary'].contains(style)) {
+            selectedStyle = style;
+          }
+        }
+
+        if (profile['weak_subjects'] != null &&
+            profile['weak_subjects'] is List) {
+          selectedWeakSubjects.clear();
+          final subjects = (profile['weak_subjects'] as List)
+              .map((e) => e.toString())
+              .toList();
+          selectedWeakSubjects.addAll(subjects);
+          _weakSubjectsController.text = subjects.join(', ');
+        }
       });
     }
   }
@@ -112,18 +162,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Obx(() => ElevatedButton(
-            onPressed: authController.isLoading.value ? null : _nextStep,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
-              minimumSize: const Size(double.infinity, 56),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Obx(
+            () => ElevatedButton(
+              onPressed: authController.isLoading.value ? null : _nextStep,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                minimumSize: const Size(double.infinity, 56),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: authController.isLoading.value
+                  ? const CircularProgressIndicator(color: Colors.black)
+                  : Text(
+                      _currentStep == 2 ? 'Finish' : 'Next',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
             ),
-            child: authController.isLoading.value 
-              ? const CircularProgressIndicator(color: Colors.black)
-              : Text(_currentStep == 2 ? 'Finish' : 'Next', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-          )),
+          ),
         ),
       ),
     );
@@ -141,7 +201,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Your Semester Courses',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 8),
           const Text(
@@ -154,22 +218,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               itemCount: semesterCourses.length,
               itemBuilder: (context, index) {
                 final course = semesterCourses[index];
-                final isSelected = selectedCourseIds.contains(course['id'] ?? course['_id']);
+                final courseId = (course['id'] ?? course['_id']).toString();
+                final isSelected = selectedCourseIds.contains(courseId);
                 return CheckboxListTile(
-                  title: Text(course['name'], style: const TextStyle(color: Colors.white)),
-                  subtitle: Text(course['code'], style: const TextStyle(color: Colors.grey)),
+                  title: Text(
+                    course['name'],
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                  subtitle: Text(
+                    course['code'],
+                    style: const TextStyle(color: Colors.grey),
+                  ),
                   value: isSelected,
                   onChanged: (val) {
                     setState(() {
                       if (val == true) {
-                        selectedCourseIds.add(course['id'] ?? course['_id']);
+                        selectedCourseIds.add(courseId);
                       } else {
-                        selectedCourseIds.remove(course['id'] ?? course['_id']);
+                        selectedCourseIds.remove(courseId);
                       }
                     });
                   },
-                  activeColor: Colors.white,
-                  checkColor: Colors.black,
+                  activeColor: Colors.indigoAccent,
+                  checkColor: Colors.white,
                 );
               },
             ),
@@ -187,7 +258,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Areas of Interest',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 8),
           const Text(
@@ -202,7 +277,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: availableInterests.map((interest) {
                 final isSelected = selectedInterests.contains(interest);
                 return FilterChip(
-                  label: Text(interest, style: TextStyle(color: isSelected ? Colors.black : Colors.white70)),
+                  label: Text(
+                    interest,
+                    style: TextStyle(
+                      color: isSelected ? Colors.black : Colors.white70,
+                    ),
+                  ),
                   selected: isSelected,
                   onSelected: (selected) {
                     setState(() {
@@ -234,10 +314,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Text(
             'Personalize Your Plan',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 24),
-          const Text('Study Pace', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const Text(
+            'Study Pace',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
           const SizedBox(height: 12),
           SegmentedButton<String>(
             segments: const [
@@ -246,7 +333,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ButtonSegment(value: 'Fast', label: Text('Fast')),
             ],
             selected: {selectedPace},
-            onSelectionChanged: (set) => setState(() => selectedPace = set.first),
+            onSelectionChanged: (set) =>
+                setState(() => selectedPace = set.first),
             style: SegmentedButton.styleFrom(
               backgroundColor: Colors.black,
               selectedBackgroundColor: Colors.white,
@@ -255,42 +343,71 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           const SizedBox(height: 32),
-          const Text('Learning Style', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const Text(
+            'Learning Style',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
           const SizedBox(height: 12),
           DropdownButtonFormField<String>(
             value: selectedStyle,
             dropdownColor: Colors.grey[900],
             style: const TextStyle(color: Colors.white),
             items: ['Visual', 'Reading', 'Practice', 'Auditary']
-                .map((s) => DropdownMenuItem(value: s, child: Text(s, style: const TextStyle(color: Colors.white))))
+                .map(
+                  (s) => DropdownMenuItem(
+                    value: s,
+                    child: Text(s, style: const TextStyle(color: Colors.white)),
+                  ),
+                )
                 .toList(),
             onChanged: (val) => setState(() => selectedStyle = val!),
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.grey[900],
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+              ),
             ),
           ),
           const SizedBox(height: 32),
-          const Text('Weak Subjects (Optional)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          const Text(
+            'Weak Subjects (Optional)',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
           const SizedBox(height: 12),
           TextField(
+            controller: _weakSubjectsController,
             style: const TextStyle(color: Colors.white),
             decoration: InputDecoration(
               hintText: 'e.g. Mathematics, Algorithms',
               hintStyle: const TextStyle(color: Colors.grey),
               filled: true,
               fillColor: Colors.grey[900],
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withOpacity(0.1))),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+              ),
               helperText: 'Type subjects you struggle with, separate by comma',
               helperStyle: const TextStyle(color: Colors.grey),
             ),
             onChanged: (val) {
               setState(() {
                 selectedWeakSubjects.clear();
-                selectedWeakSubjects.addAll(val.split(',').map((s) => s.trim()).where((s) => s.isNotEmpty));
+                selectedWeakSubjects.addAll(
+                  val
+                      .split(',')
+                      .map((s) => s.trim())
+                      .where((s) => s.isNotEmpty),
+                );
               });
             },
           ),

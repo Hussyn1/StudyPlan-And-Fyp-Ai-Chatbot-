@@ -32,7 +32,16 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
       if (success) {
-        Get.offAllNamed('/home');
+        // Check if student has enrolled courses
+        final hasCourses = await authController.checkEnrolledCourses();
+
+        if (!hasCourses) {
+          // No courses enrolled, go to onboarding
+          Get.offAllNamed('/onboarding');
+        } else {
+          // Courses exist, go to home
+          Get.offAllNamed('/home');
+        }
       } else {
         Get.snackbar(
           'Login Failed',
@@ -75,13 +84,22 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: Colors.white.withOpacity(0.05),
                             shape: BoxShape.circle,
                           ),
-                          child: const Icon(Icons.psychology, size: 64, color: Colors.indigoAccent),
+                          child: const Icon(
+                            Icons.psychology,
+                            size: 64,
+                            color: Colors.indigoAccent,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 24),
                       const Text(
                         'AI Study Guide',
-                        style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, letterSpacing: -1, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: -1,
+                          color: Colors.white,
+                        ),
                       ),
                       const SizedBox(height: 8),
                       Text(
@@ -99,15 +117,23 @@ class _LoginScreenState extends State<LoginScreen> {
                           fillColor: Colors.black,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(16),
-                            borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+                            borderSide: BorderSide(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(16),
-                            borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+                            borderSide: BorderSide(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
                           ),
-                          prefixIcon: const Icon(Icons.person_outline, color: Colors.grey),
+                          prefixIcon: const Icon(
+                            Icons.person_outline,
+                            color: Colors.grey,
+                          ),
                         ),
-                        validator: (value) => value!.isEmpty ? 'Enter roll number' : null,
+                        validator: (value) =>
+                            value!.isEmpty ? 'Enter roll number' : null,
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
@@ -121,16 +147,25 @@ class _LoginScreenState extends State<LoginScreen> {
                           fillColor: Colors.black,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(16),
-                            borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+                            borderSide: BorderSide(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(16),
-                            borderSide: BorderSide(color: Colors.white.withOpacity(0.1)),
+                            borderSide: BorderSide(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
                           ),
-                          prefixIcon: const Icon(Icons.lock_outline, color: Colors.grey),
+                          prefixIcon: const Icon(
+                            Icons.lock_outline,
+                            color: Colors.grey,
+                          ),
                           suffixIcon: IconButton(
                             icon: Icon(
-                              _obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                              _obscurePassword
+                                  ? Icons.visibility_off_outlined
+                                  : Icons.visibility_outlined,
                               color: Colors.grey,
                             ),
                             onPressed: () {
@@ -140,33 +175,57 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                           ),
                         ),
-                        validator: (value) => value!.isEmpty ? 'Enter password' : null,
+                        validator: (value) =>
+                            value!.isEmpty ? 'Enter password' : null,
                       ),
                       const SizedBox(height: 32),
-                      Obx(() => SizedBox(
-                            width: double.infinity,
-                            height: 56,
-                            child: ElevatedButton(
-                              onPressed: authController.isLoading.value ? null : _login,
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white,
-                                foregroundColor: Colors.black,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                elevation: 0,
+                      Obx(
+                        () => SizedBox(
+                          width: double.infinity,
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: authController.isLoading.value
+                                ? null
+                                : _login,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.black,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
                               ),
-                              child: authController.isLoading.value
-                                  ? const CircularProgressIndicator(color: Colors.black)
-                                  : const Text('Sign In', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                              elevation: 0,
                             ),
-                          )),
+                            child: authController.isLoading.value
+                                ? const CircularProgressIndicator(
+                                    color: Colors.black,
+                                  )
+                                : const Text(
+                                    'Sign In',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                          ),
+                        ),
+                      ),
                       const SizedBox(height: 24),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("New here?", style: TextStyle(color: Colors.grey[500])),
+                          Text(
+                            "New here?",
+                            style: TextStyle(color: Colors.grey[500]),
+                          ),
                           TextButton(
                             onPressed: () => Get.toNamed('/register'),
-                            child: const Text('Create Account', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                            child: const Text(
+                              'Create Account',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ],
                       ),

@@ -11,7 +11,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -22,28 +23,33 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       duration: const Duration(seconds: 2),
       vsync: this,
     )..repeat(reverse: true);
-    
+
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
 
     _checkAuthAndNavigate();
   }
 
   Future<void> _checkAuthAndNavigate() async {
-    // Artificial delay for branding
+    // Delay for splash screen (3 seconds)
     await Future.delayed(const Duration(seconds: 3));
 
     final AuthController authController = Get.find<AuthController>();
-    
+
     // Wait for auth initialization if needed
     if (!authController.isInitialized.value) {
-       // Simple retry or wait (in real app, use reaction)
-       await Future.delayed(const Duration(seconds: 1));
+      // Simple retry or wait (in real app, use reaction)
+      await Future.delayed(const Duration(milliseconds: 800));
     }
 
     if (authController.isAuthenticated.value) {
-      Get.offAll(() => const HomeScreen());
+      final hasCourses = await authController.checkEnrolledCourses();
+      if (!hasCourses) {
+        Get.offAllNamed('/onboarding');
+      } else {
+        Get.offAllNamed('/home');
+      }
     } else {
-      Get.offAll(() => const LoginScreen());
+      Get.offAllNamed('/login');
     }
   }
 
